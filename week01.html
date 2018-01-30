@@ -3,67 +3,32 @@
   <head>
     <meta charset="utf-8">
     <title>title</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+    <!--  
+		<link tylesheet" href="style.css">
+    <script src="script.js"></script> 
+		-->
   </head>
   <body>
     <script src="https://cdn.jsdelivr.net/npm/hanzi-writer@0.3/dist/hanzi-writer.min.js"></script>  
     <script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script> 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-    <script src="./hanzi-writer.min.js"></script>  
+    <script src="./hanzi-writer.js"></script>  
     <script src="./polyfill.min.js"></script> 
     <script src="./jquery.min.js"></script> 
+    <script src="./howler-2.0.8.js"></script>
+		
     <style>
       .list .zi { display: inline-block; }
       .list .play { width: 150px }
       .list .write { width: 300px; height: 300px;}
     </style>
 
-    <div class="list play">
-    </div>
-    <div class="list write">
-    </div>
+    <div class="list play"></div>
+    <div class="list write"></div>
+    <div class="list audio"></div>
+		    <script src="./main.js"></script>
     <script>
-      alert("hi")
-      alert($("h3").text())
-      var style = {
-        player : { width: 150, height: 150, padding: 5,strokeColor:"#333" },
-        writer : { width: 300, height: 300, padding: 5,strokeColor:"#333",
-                  showCharacter: false, showHintAfterMisses: 1, highlightOnComplete: true, highlightColor: "#B16666" }
-      };
-
-      var list  = ["中","王","国","大","日","本","小","马","吗","很","不"];
-      var player = [], 
-          writer = [];
-      for (var i=0;i<list.length; i++){
-        var zi=list[i],
-            elementPlayer='<div id="play'+zi+'" class="play zi" zi="'+zi+'"></div>';
-        $(".list.play").append(elementPlayer);
-        player[zi] = new HanziWriter("play"+zi, zi, style.player);
-      }
-      console.log(player);
-      for (var i=0;i<list.length; i++){
-        var zi=list[i],
-            elementWriterGlyph='<div id="write'+zi+'" class="write zi" zi="'+zi+'"></div>',
-            elementWriterResetButton = '<div id="writeReset'+zi+'" class="writeReset zi" zi="'+zi+'">Reset '+zi+'</div>';
-        $(".list.write").append(elementWriterGlyph+elementWriterResetButton);
-        writer[zi] = new HanziWriter("write"+zi, zi, style.writer);
-        writer[zi].quiz({onComplete: function(d){ console.log(d)}});
-      }
-      console.log(writer);
-
-
-      // Animate "play" items on click
-      $('.play').on('click', function() {  
-        var zi= $(this).attr("zi") || $(this).data("zi"); console.log(zi) 
-        player[zi].animateCharacter();
-      });
-      $(".writeReset").on('click', function(){ 
-        var zi= $(this).attr("zi");
-        console.log('#writeReset'+zi)
-        writer[zi].quiz({});
-      });
     </script>
   </body>
 </html>
