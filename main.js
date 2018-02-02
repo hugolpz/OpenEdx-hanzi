@@ -1,3 +1,4 @@
+/* https://github.com/hugolpz/OpenEdx-hanzi/issues */
 
 /* *********************************************************************** */
 /* INITIALISATION ******************************************************** */
@@ -6,8 +7,12 @@ var player = [],
 		writer = [],
 		audios = [];
 
-
-/* https://github.com/hugolpz/OpenEdx-hanzi/issues */
+var voc;
+$.ajax({ type: 'GET', data: {},
+    url: "./vocabulary.json", dataType: 'json',
+    success: function(data) { voc = data; },
+    async: false 
+});
 
 
 /* *********************************************************************** */
@@ -29,44 +34,42 @@ if (dataLoadingApproach === 'local'){
 		opts.writer[attrname] = opts.localLoader[attrname];
 	}
 }
-/* 
-var approach = 'API' || 'local';
-var writer = new HanziWriter('target', '我', {
-  charDataLoader: function(char, onComplete) {
-    $.getJSON("/" + char + ".json", function(charData) { onComplete(charData); });
-  }
-}); */
-
 
 /* *********************************************************************** */
 /* TOOLBOX *************************************************************** */
-var injectStrokeOrderDisplay = function(elementSelector,zi) {
-	var elementPlayer='<div id="play'+zi+'" class="play zi" zi="'+zi+'"></div>';
+var injectStrokeOrderDisplay = function(elementSelector,item) {
+	var hans = item.hans, pin1yin1 = item.pinyin;
+	var elementPlayer='<div id="play'+hans+'" class="play zi" zi="'+hans+'"></div>';
 	$(elementSelector).append(elementPlayer);
-	player[zi] = new HanziWriter("play"+zi, zi, opts.player);
+	player[hans] = new HanziWriter("play"+hans, hans, opts.player);
 };
 
-var injectStrokeOrderQuiz = function(elementSelector,zi) { 
-	var elementWriterGlyph ='<div id="write'+zi+'" class="write zi" zi="'+zi+'"></div>',
-			elementWriterResetButton = '<div id="writeReset'+zi+'" class="writeReset zi" zi="'+zi+'">Reset '+zi+'</div>';
+var injectStrokeOrderQuiz = function(elementSelector,item) {
+	var hans = item.hans, pin1yin1 = item.pinyin;
+	var elementWriterGlyph ='<div id="write'+hans+'" class="write zi" zi="'+hans+'"></div>',
+			elementWriterResetButton = '<div id="writeReset'+hans+'" class="writeReset zi" zi="'+hans+'">Reset '+hans+'</div>';
 	$(elementSelector).append(elementWriterGlyph+elementWriterResetButton);
-	writer[zi] = new HanziWriter("write"+zi, zi, opts.writer);
-	writer[zi].quiz({onComplete: function(d){ console.log(d);}});
+	writer[hans] = new HanziWriter("write"+hans, hans, opts.writer);
+	writer[hans].quiz({onComplete: function(d){ console.log(d);}});
 };
 
-var injectAudio = function(elementSelector,zi){
-	var sound = new Howl({ src: [ 'https://github.com/hugolpz/audio-cmn/raw/master/64k/hsk/cmn-'+zi+'.mp3']});
-  audios[zi] = sound;
-	var elementAudioButton = '<div id="audio'+zi+'" class="audio zi" zi="'+zi+'">Play '+zi+'</div>';
+var injectAudio = function(elementSelector,item){
+	var hans = item.hans, pin1yin1 = item.pin1yin1.replace("5", "1");
+	var sound = new Howl({ src: [ 'https://raw.githubusercontent.com/hugolpz/audio-cmn/master/64k/syllabs/cmn-'+pin1yin1+'.mp3', 'https://raw.githubusercontent.com/hugolpz/audio-cmn/master/64k/hsk/cmn-'+hans+'.mp3']});
+  audios[hans] = sound;
+	var elementAudioButton = '<div id="audio'+hans+'" class="audio zi" zi="'+hans+'">Play '+hans+'</div>';
 	$(elementSelector).append(elementAudioButton);
 };
 /* *********************************************************************** */
 /* INJECTIONS ************************************************************ */
-for (var i=0;i<list.length; i++){
-	var zi = list[i];
-	injectStrokeOrderDisplay(".list.play", zi);
-	injectStrokeOrderQuiz(".list.write", zi);
-	injectAudio(".list.audio",zi);
+for (var i=0;i<voc.length; i++){
+	var item = voc[i];
+	var hans = item.hans;
+	if (hans.length == 1) {
+		injectStrokeOrderDisplay(".list.play", item);
+		injectStrokeOrderQuiz(".list.write", item);
+		injectAudio(".list.audio",item);
+	}
 }
 //console.log(player);
 //console.log(writer);
@@ -78,7 +81,7 @@ $('.play').on('click', function() {
 	var zi = $(this).attr("zi");
 	// console.log(zi+"dfvdrf",JSON.stringify(player[zi][0]));
 	player[zi].animateCharacter();
-	console.log(zi);
+	console.log('.play',zi);
 });
 $(".writeReset").on('click', function(){ 
 	var zi= $(this).attr("zi");
