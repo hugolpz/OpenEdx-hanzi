@@ -7,8 +7,8 @@
 
 		<!--		    <script src="https://cdn.jsdelivr.net/npm/hanzi-writer@0.3/dist/hanzi-writer.min.js"></script>  
     <script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script> 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>   -->
-		
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+-->
 
     <script src="./jquery.min.js"></script> 
     <script src="./hanzi-writer.js"></script>  
@@ -25,9 +25,10 @@
 			width: 400px;
 			margin: 0 .3em .6em 0;
 			display: inline-block; }
-
-		.card figure .writer { width: 300px; height: 300px;}
+		.card figure .writer { width: 300px; height: 300px; margin:auto;}
 		.card figure .play { width: 96px; height: 96px; }
+		.card-footer-item span { margin: 0 0 0 .5em; }
+		.hide {display:none;}
 	</style>
 
 <nav class="navbar is-red">
@@ -45,15 +46,16 @@
 
   <div id="navbar-menu" class="navbar-menu">
     <div class="navbar-start">
-      <a class="navbar-item has-text-grey-dark">L1</a>
-      <a class="navbar-item has-text-grey-dark">L2</a>
-      <a class="navbar-item has-text-grey-dark">L3</a>
-      <a class="navbar-item has-text-grey-dark">L4</a>
-      <a class="navbar-item has-text-grey-dark">L5</a>
-      <a class="navbar-item has-text-grey-dark">L6</a>
-      <a class="navbar-item has-text-grey-dark">Num</a>
-      <a class="navbar-item has-text-grey-dark">Radicaux</a>
-      <div class="navbar-item has-text-grey-dark has-dropdown is-hoverable">
+      <a class="navbar-item has-text-grey-dark  selectors" lesson="1">L1</a>
+      <a class="navbar-item has-text-grey-dark  selectors" lesson="2">L2</a>
+      <a class="navbar-item has-text-grey-dark  selectors" lesson="3">L3</a>
+      <a class="navbar-item has-text-grey-dark  selectors" lesson="4">L4</a>
+      <a class="navbar-item has-text-grey-dark  selectors" lesson="5">L5</a>
+      <a class="navbar-item has-text-grey-dark selectors" lesson="6">L6</a>
+      <a class="navbar-item has-text-grey-dark  selectors" lesson="num">Num</a>
+      <a class="navbar-item has-text-grey-dark  selectors" lesson="date">Date</a>
+      <a class="navbar-item has-text-grey-dark  selectors" lesson="rad">Radicaux</a>
+      <div class="navbar-item has-text-grey-dark has-dropdown is-hoverable hide">
 				<a class="navbar-link has-text-grey-dark">Afficher...</a>
 				<div class="navbar-dropdown">
 					<a class="navbar-item has-text-grey-dark">Prononciations</a>
@@ -64,7 +66,7 @@
 
     <div class="navbar-end">
 		<span class="navbar-item">
-			<a class="button" href="https://twitter.com/intent/tweet?text=Venez voir le vocabulaire interactif du MOOCdechinois&amp;hashtags=MOOCdechinois,Chinois&amp;url=http://en.wikipedia.org/jobs&amp;via=Thanks @Inalco_Officiel et @CRIparis">
+			<a class="button" href="https://twitter.com/intent/tweet?text=Venez voir le vocabulaire interactif du MOOCdechinois&amp;hashtags=MOOCdechinois,Chinois,MOOC&amp;url=https://www.fun-mooc.fr/courses/course-v1:Inalco+52004+session02/about&amp;via=@Inalco_Officiel @CRIparis @hugo_lz">
 				<span class="icon"><i class="fab fa-twitter"></i></span>
 				<span>Tweet</span>
 			</a>
@@ -88,21 +90,14 @@
 
 <section class="section">
 	<div class="container">
-		<h1 class="title">Lesson 1</h1>
-		<h2 class="subtitle">
-			Sinogrammes : 中,王,国,大,日,本,小,马,吗,很,不.
-		</h2>
 		<div id="hook"></div>
-		<div class="list play"></div>
-		<div class="list write"></div>
-		<div class="list audio"></div>
 	</div>
 </section>
 	<footer class="footer">
 <div class="container">
 	<div class="content has-text-centered">
 		<p>
-			<strong>Activity for Chinese Characters on OpenEdX</strong> par <a href="https://github.com/hugolpz">Hugo Lopez</a> (<a href="https://cri-paris.org">Centre de Recherche Interdisciplinaire</a>). Données SVG par <a href="https://github.com/skishore/MakeMeAHanzi">MakeMeAHanzi</a>, animations et quiz par <a href="https://github.com/chanind/hanzi-writer/">Hanzi-Writer</a>.<br>Ces projets et codes sont <a>#OpenSource<span class="icon is-small"><i class="fas fa-heart"></i></span></a> sous <a href="http://opensource.org/licenses/mit-license.php">Licence MIT</a>.
+			<strong>Activity for Chinese Characters on OpenEdX</strong> par le <a href="https://cri-paris.org">Centre de Recherche Interdisciplinaire</a> (<a href="https://github.com/hugolpz">Hugo Lopez</a> > <a href="https://github.com/hugolpz/OpenEdx-hanzi">OpenEdx-hanzi</a>).<br>Données SVG par <a href="https://github.com/skishore/MakeMeAHanzi">MakeMeAHanzi</a>. Animations et quiz par <a href="https://github.com/chanind/hanzi-writer/">Hanzi-Writer</a>.<br>Ces projets et codes sont au service des citoyens, en <a>#OpenSource<span class="icon is-small"><i class="fas fa-heart"></i></span></a> sous <a href="http://opensource.org/licenses/mit-license.php">Licence MIT</a>.
 		</p>
 	</div>
 </div>

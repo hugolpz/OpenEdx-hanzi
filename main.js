@@ -3,7 +3,7 @@
 /* *********************************************************************** */
 /* INITIALISATION ******************************************************** */
 var list  = ['中','王','国','大','日','本','小','马','吗','很','不'];
-var player = [], 
+var player = [],
 		writer = [],
 		audios = [];
 
@@ -37,13 +37,19 @@ if (dataLoadingApproach === 'local'){
 /* *********************************************************************** */
 /* CMNCARD *************************************************************** */
 var cardTpl = function(item, i) { 
-	var lesson = 'L'+item.lesson, hans = item.hans, pin1yin1 = item.pin1yin1; //.replace("5", "1");
+	var lesson = 'L'+item.lesson, hans = item.hans, pin1yin1 = item.pin1yin1, decomposition="", decompzh="", decompfr="";
+	if(item.decompositionzh && item.decompositionzh !== "--") {
+		decompzh = item.decompositionzh,
+		decompfr = item.decomposition;
+	}
+ decomposition = `<i class="fas fa-cubes"></i>&nbsp;`+item.decompzh+` `+decompfr;
+	var root = item.root && item.root != "--"?'<i class="fas fa-clock"></i>&nbsp;'+item.root:"";
 	var key = lesson+hans+i;
 	var tpl = `
 		<div class="card `+lesson+`" lesson="`+lesson+`" zi="`+hans+`" i="`+i+`">
 			<div class="card-image">
 				<figure class="image is-4by4">
-					<div id="write`+key+`" class="writer"></div>
+					<div id="write`+key+`" class="writer is-centered"></div>
 				</figure>
 			</div>
 
@@ -52,27 +58,28 @@ var cardTpl = function(item, i) {
 					<div class="media-left">
 						<figure class="image is-4by4 is-centered">
 							<div id="play`+key+`" class="play"></div>
+							<p class="decompositionzh has-text-centered">`+decompzh+`</p>
 						</figure>
 					</div>
 					<div class="media-content play audio">
-						<p class="title is-4">`+hans+` `+item.pinyin+`</p>
-						<p class="subtitle is-6">`+item.definition+`</p>
+						<br>
+						<p class="title is-3">`+hans+` `+item.pinyin+`</p>
+						<p class="subtitle is-5">`+item.definition+`</p>
+						
 					</div>
 				</div>
 
 				<div class="content">
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-					Phasellus nec iaculis mauris. <a>@bulmaio</a>.
-					<a href="#">#`+lesson+`</a>
-					<br>
-					<span class="icon is-small"><i class="fas fa-retweet"></i></span>
+					`+root+`
+					<br><a>#`+lesson+`</a>
+					<span class="icon is-small hide"><i class="fas fa-retweet"></i></span>
 				</div>
 			</div>
 
 			<footer class="card-footer">
-				<a class="card-footer-item play">Ecriture</a>
-				<a class="card-footer-item audio">Audio</a>
-				<a class="card-footer-item writeReset">Effacer mon pinceau</a>
+				<a class="card-footer-item play"><i class="fas fa-eye"></i><span>Ecriture</span></a>
+				<a class="card-footer-item audio"><i class="fas fa-headphones"></i><span>Audio</span></a>
+				<a class="card-footer-item writeReset"><i class="fas fa-eraser"></i><span>Effacer</span></a>
 			</footer>
 		</div>`;
 	return tpl;
@@ -118,7 +125,8 @@ var injectMultimedia = function(item,i) {
 	}
 } */
 var injectMultimedia = function (item,i) {
-	var lesson = 'L'+item.lesson, hans = item.hans, pin1yin1 = item.pin1yin1; //.replace("5", "1");
+	// console.log(`{{user:yug/hz|`+item.lesson+`|`+item.hans+`|`+item.hant+`}}`)
+	var lesson = 'L'+item.lesson, hans = item.hans, pin1yin1 = item.pin1yin1.replace('5', '1');
 	var key = lesson+hans+i;
 	
 	//Inject HTML
@@ -145,6 +153,21 @@ for (var i=0;i<voc.length; i++){
 //console.log(writer);
 //console.log(audios);
 
+/* *********************************************************************** */
+/* SECTIONS ************************************************************** */
+var sections = [ '1','2','3','4','5','6','7','num','rad','date' ];
+
+for (var i=0;i<sections.length; i++){
+	var lesson = sections[i], sinogrammes = "", html, counter=0,
+			orComponents = lesson=='rad'? ', clefs ou éléments graphiques ' : '';
+  var $lesson = $(".L"+lesson);
+	for(var j =0; j < $lesson.length; j++){
+		sinogrammes = sinogrammes + $($lesson[j]).attr('zi')+`,`;
+		counter = ++counter;
+	};
+	html = 	'<h1 class="title lessonHeader has-text-grey" lesson="'+lesson+'">Lesson '+lesson+'</h1><h2 class="subtitle lessonHeader has-text-grey" lesson="'+lesson+'">Sinogrammes '+ orComponents +'('+counter+') : '+sinogrammes.slice(0, -1)+'.</h2>';
+		$lesson.first().before(html);
+}
 
 /* *********************************************************************** */
 /* INTERACTIONS ********************************************************** */
@@ -171,3 +194,14 @@ $('.audio, .play').on('click', function() {
 //	audios[key].fade(1,0,1000);
 	console.log('.audio',key);
 }); /**/
+
+/* *********************************************************************** */
+/* SELECT VIEW ********************************************************** */
+
+$('.selectors, .lessonHeader').on('click', function() {
+	var lesson = $(this).attr('lesson'),
+			$lesson = $('.card.L'+lesson);
+	$('.card').hide();
+	$lesson.show();
+});
+
