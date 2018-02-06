@@ -18,8 +18,8 @@ Javascript:
 ### Dependencies
 - [MakeMeAHanzi](http://github.com/Skishore/MakeMeAHanzi) -- CJK characters and strokes in xml data
 - [Hanzi-Writer](http://github.com/Chanind/Hanzi-Write) -- JS library to animate strokes
-- [Audio-cmn](http://github.com/hugolpz/audio-cmn/)
-- [Bulma.css](https://bulma.io/documentation/)
+- [Audio-cmn](http://github.com/hugolpz/audio-cmn/) -- audio database for Chinese syllables
+- [Bulma.css](https://bulma.io/documentation/) -- CSS framework
 
 ### Data
 * [Chinese MOOC (French language)](https://www.fun-mooc.fr/courses/course-v1:Inalco+52004+session02/about)
