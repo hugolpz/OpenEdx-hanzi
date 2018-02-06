@@ -51,7 +51,7 @@ var cardTpl = function(item, i) {
 	var root = item.root && item.root != "--"?'<i class="fas fa-clock"></i>&nbsp;'+item.root:"";
 	var key = lesson+hans+i;
 	var tpl = `
-		<div class="card `+lesson+`" lesson="`+lesson+`" zi="`+hans+`" i="`+i+`">
+		<div class="card `+lesson+` is-centered" lesson="`+lesson+`" zi="`+hans+`" i="`+i+`">
 			<div class="card-image">
 				<figure class="image is-4by4">
 					<div id="write`+key+`" class="writer is-centered"></div>
