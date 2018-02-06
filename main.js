@@ -9,12 +9,16 @@ var player = [],
 
 /* *********************************************************************** */
 /* DATA LOADING APPROACH ************************************************* */
-var voc;
+var vocabulary,
+		singleSinogramOnly = function (obj){ return obj.hans.length == 1; },
+		sinograms;
 $.ajax({ type: 'GET', data: {},
     url: "./vocabulary.json", dataType: 'json',
-    success: function(data) { voc = data; },
+    success: function(data) { vocabulary = data; },
     async: false
 });
+sinograms = vocabulary.filter(singleSinogramOnly);
+
 var opts = {
 	player : { width: 96, height: 96, padding: 5, 
 						strokeColor:"#333", radicalColor: '#660000' },
@@ -33,6 +37,7 @@ if (dataLoadingApproach === 'local'){
 		opts.writer[attrname] = opts.localLoader[attrname];
 	}
 }
+
 
 /* *********************************************************************** */
 /* CMNCARD *************************************************************** */
@@ -63,15 +68,18 @@ var cardTpl = function(item, i) {
 					</div>
 					<div class="media-content play audio">
 						<br>
-						<p class="title is-3">`+hans+` `+item.pinyin+`</p>
-						<p class="subtitle is-5">`+item.definition+`</p>
+						<p class="title is-3">
+							<span class="hans">`+hans+`</span> 
+							<span class="pinyin">`+item.pinyin+`</span>
+						</p>
+						<p class="subtitle is-5"><span class="definition">`+item.definition+`</span></p>
 						
 					</div>
 				</div>
 
 				<div class="content">
-					`+root+`
-					<br><a>#`+lesson+`</a>
+					<span class="root">`+root+`</span>
+					<br><span class="lesson"><a>#`+lesson+`</a></span>
 					<span class="icon is-small hide"><i class="fas fa-retweet"></i></span>
 				</div>
 			</div>
@@ -124,6 +132,24 @@ var injectMultimedia = function(item,i) {
 		injectAudio(".list.audio",item, i);
 	}
 } */
+
+/* SECTIONS ************************************************************** */
+var sections = [];
+var	filterSinogramsInLesson = function(obj, lesson) {if (obj.lesson == lesson) { return obj.hans;} };
+
+var addSection = function (arrayDictionary,lesson,item){
+	var html, counter, sinogramsInLesson=[], orComponents = lesson=='rad'? ', clefs ou éléments graphiques ' : '';
+	// sinogramsInLesson = arrayDictionary.map(filterSinogramsInLesson(o, lesson));
+	var sinogramsObjInLesson = sinograms.filter(function (obj){ return obj.lesson == lesson; });
+	for (var k = 0; k<sinogramsObjInLesson.length; k++) { sinogramsInLesson.push(sinogramsObjInLesson[k].hans); }
+	counter = sinogramsInLesson.length;
+	// console.log('item 3: ',item , sinogramsObjInLesson, counter , sinogramsInLesson);
+
+	html = `<h1 class="title lessonHeader has-text-grey" lesson="`+lesson+`">Lesson `+lesson+`</h1><h2 class="subtitle lessonHeader has-text-grey" lesson="`+lesson+`">Sinogrammes `+ orComponents +`(<span class="counter">`+counter+`</span>) : `+sinogramsInLesson.join(',')+`.</h2><div class="hooks L`+lesson+`" lesson="`+lesson+`"></div>`;
+	$('#hook').append(html);
+};
+
+/* CARDS w MEDIA ********************************************************* */
 var injectMultimedia = function (item,i) {
 	// console.log(`{{user:yug/hz|`+item.lesson+`|`+item.hans+`|`+item.hant+`}}`)
 	var lesson = 'L'+item.lesson, hans = item.hans, pin1yin1 = item.pin1yin1.replace('5', '1');
@@ -131,7 +157,7 @@ var injectMultimedia = function (item,i) {
 	
 	//Inject HTML
 	var cardHTML = cardTpl(item,i);
-	$('#hook').append(cardHTML)
+	$('.hooks.L'+item.lesson).append(cardHTML);
 	
 	// Inject and assing activities to arrays
 	// Player (Stroke Order)
@@ -145,29 +171,18 @@ var injectMultimedia = function (item,i) {
   audios[key] = sound;
 }
 
-
-for (var i=0;i<voc.length; i++){
-	if (voc[i].hans.length == 1) { injectMultimedia(voc[i],i) }
+/* LOOP ****************************************************************** */
+for (var i=0;i<sinograms.length; i++){
+	var item = sinograms[i], lesson = item.lesson;
+	if(!sections.find(function (s){return s==lesson;}) ){ 
+		sections.push(lesson);
+		addSection(sinograms,lesson,item);
+	}
+	if (sinograms[i].hans.length == 1) { injectMultimedia(sinograms[i],i) }
 }
-//console.log(player);
-//console.log(writer);
-//console.log(audios);
 
-/* *********************************************************************** */
-/* SECTIONS ************************************************************** */
-var sections = [ '1','2','3','4','5','6','7','num','rad','date' ];
 
-for (var i=0;i<sections.length; i++){
-	var lesson = sections[i], sinogrammes = "", html, counter=0,
-			orComponents = lesson=='rad'? ', clefs ou éléments graphiques ' : '';
-  var $lesson = $(".L"+lesson);
-	for(var j =0; j < $lesson.length; j++){
-		sinogrammes = sinogrammes + $($lesson[j]).attr('zi')+`,`;
-		counter = ++counter;
-	};
-	html = 	'<h1 class="title lessonHeader has-text-grey" lesson="'+lesson+'">Lesson '+lesson+'</h1><h2 class="subtitle lessonHeader has-text-grey" lesson="'+lesson+'">Sinogrammes '+ orComponents +'('+counter+') : '+sinogrammes.slice(0, -1)+'.</h2>';
-		$lesson.first().before(html);
-}
+
 
 /* *********************************************************************** */
 /* INTERACTIONS ********************************************************** */
