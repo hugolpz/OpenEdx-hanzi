@@ -1,4 +1,4 @@
-## OpenEdx-hanzi
+> Coming soon.
 
 ### Usage
 Given a list "中,國,国".
@@ -18,6 +18,11 @@ Javascript:
 ### Dependencies
 - [MakeMeAHanzi](http://github.com/Skishore/MakeMeAHanzi) -- CJK characters and strokes in xml data
 - [Hanzi-Writer](http://github.com/Chanind/Hanzi-Write) -- JS library to animate strokes
+- [Audio-cmn](http://github.com/hugolpz/audio-cmn/)
+- [Bulma.css](https://bulma.io/documentation/)
+
+### Data
+* [Chinese MOOC (French language)](https://www.fun-mooc.fr/courses/course-v1:Inalco+52004+session02/about)
 
 ### License
 - MIT License
