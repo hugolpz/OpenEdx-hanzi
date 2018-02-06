@@ -49,10 +49,11 @@ jQuery(document).ready(function ($) {
     $(this).parent().children('pre').css('max-height', 'none');
   });
 
+	/*
   new Clipboard('.copy', {
     target: function(trigger) {
       return trigger.previousSibling;
     }
-  });
+  });*/
 
 });

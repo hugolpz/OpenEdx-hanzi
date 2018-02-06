@@ -13,7 +13,7 @@ var vocabulary,
 		singleSinogramOnly = function (obj){ return obj.hans.length == 1; },
 		sinograms;
 $.ajax({ type: 'GET', data: {},
-    url: "./vocabulary.json", dataType: 'json',
+    url: "./data/vocabulary.json", dataType: 'json',
     success: function(data) { vocabulary = data; },
     async: false
 });
