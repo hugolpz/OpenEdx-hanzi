@@ -85,7 +85,7 @@ var cardTpl = function(item, i) {
 			</div>
 
 			<footer class="card-footer">
-				<a class="card-footer-item play"><i class="fas fa-eye"></i><span>Ecriture</span></a>
+				<a class="card-footer-item play"><i class="fas fa-eye"></i><span>Ecrit/Audio</span></a>
 				<a class="card-footer-item audio"><i class="fas fa-headphones"></i><span>Audio</span></a>
 				<a class="card-footer-item writeReset"><i class="fas fa-eraser"></i><span>Effacer</span></a>
 			</footer>
@@ -166,8 +166,10 @@ var injectMultimedia = function (item,i) {
 	writer[key] = new HanziWriter('write'+key, hans, opts.writer);
 	writer[key].quiz({onComplete: function(d){ console.log(d);}});
 	// Audio
-	var audioRoot = 'https://raw.githubusercontent.com/hugolpz/audio-cmn/master/64k';
-	var sound = new Howl({ src: [ audioRoot+'/syllabs/cmn-'+pin1yin1+'.mp3', audioRoot+'/hsk/cmn-'+hans+'.mp3']});
+	var audioRoot = 'https://raw.githubusercontent.com/hugolpz/audio-cmn/master/64k',
+			audioSuffix = item.audio ?'/hsk/cmn-'+hans+'.mp3':'/syllabs/cmn-'+pin1yin1+'.mp3',
+			audioUrl = audioRoot + audioSuffix; 
+	var sound = new Howl({ src: [ audioUrl ]});
   audios[key] = sound;
 }
 
