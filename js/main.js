@@ -79,7 +79,7 @@ var cardTpl = function(item, i) {
 
 				<div class="content">
 					<span class="root">`+root+`</span>
-					<br><span class="lesson"><a>#`+lesson+`</a></span> • <span class="idlink"><a href="#`+lesson+hans+`"><i class="fas fa-link fa-1x"></i>`+lesson+hans+`</a></span>
+					<br><span class="lesson"><a href="#`+lesson+`">#`+lesson+`</a></span> • <span class="idlink"><a href="#`+lesson+hans+`"><i class="fas fa-link fa-1x"></i>`+lesson+hans+`</a></span>
 <span class="icon is-small hide"><i class="fas fa-retweet"></i></span>
 				</div>
 			</div>
