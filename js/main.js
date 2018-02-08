@@ -51,7 +51,7 @@ var cardTpl = function(item, i) {
 	var root = item.root && item.root != "--"?'<i class="fas fa-clock"></i>&nbsp;'+item.root:"";
 	var key = lesson+hans+i;
 	var tpl = `
-		<div class="card `+lesson+` is-centered" lesson="`+lesson+`" zi="`+hans+`" i="`+i+`">
+		<div id="L`+item.lesson+hans+`" class="card `+lesson+` is-centered" lesson="`+lesson+`" zi="`+hans+`" i="`+i+`">
 			<div class="card-image">
 				<figure class="image is-4by4">
 					<div id="write`+key+`" class="writer is-centered"></div>
@@ -79,8 +79,8 @@ var cardTpl = function(item, i) {
 
 				<div class="content">
 					<span class="root">`+root+`</span>
-					<br><span class="lesson"><a>#`+lesson+`</a></span>
-					<span class="icon is-small hide"><i class="fas fa-retweet"></i></span>
+					<br><span class="lesson"><a>#`+lesson+`</a></span> • <span class="idlink"><a href="#`+lesson+hans+`"><i class="fas fa-link fa-1x"></i>`+lesson+hans+`</a></span>
+<span class="icon is-small hide"><i class="fas fa-retweet"></i></span>
 				</div>
 			</div>
 
@@ -145,7 +145,7 @@ var addSection = function (arrayDictionary,lesson,item){
 	counter = sinogramsInLesson.length;
 	// console.log('item 3: ',item , sinogramsObjInLesson, counter , sinogramsInLesson);
 
-	html = `<h1 class="title lessonHeader has-text-grey" lesson="`+lesson+`">Lesson `+lesson+`</h1><h2 class="subtitle lessonHeader has-text-grey" lesson="`+lesson+`">Sinogrammes `+ orComponents +`(<span class="counter">`+counter+`</span>) : `+sinogramsInLesson.join(',')+`.</h2><div class="hooks L`+lesson+`" lesson="`+lesson+`"></div>`;
+	html = `<h1 id="L`+lesson+`" class="title lessonHeader has-text-grey" lesson="`+lesson+`">Lesson `+lesson+`</h1><h2 class="subtitle lessonHeader has-text-grey" lesson="`+lesson+`">Sinogrammes `+ orComponents +`(<span class="counter">`+counter+`</span>) : `+sinogramsInLesson.join(',')+`.</h2><div class="hooks L`+lesson+`" lesson="`+lesson+`"></div>`;
 	$('#hook').append(html);
 };
 
