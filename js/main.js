@@ -48,6 +48,13 @@ var cardTpl = function(item, i) {
 		decompfr = item.decomposition;
 	}
  decomposition = `<i class="fas fa-cubes"></i>&nbsp;`+item.decompzh+` `+decompfr;
+	var lineJump = encodeURI(String.fromCharCode(10)),
+			hash = "%23", arobase="%40",
+			tweetText = 'https://twitter.com/intent/tweet?text=Le signe chinois '+hans+' '+item.pinyin+': '+item.definition.replace(";",",")+'.'
+			+lineJump+'Merci '+arobase+'Inalco_Officiel '+arobase+'CRIparis ❤️🇨🇳 '
+			+lineJump+hash+'Chinois '+hash+'MOOC'
+			+lineJump+'https://hanzi.cri-paris.org/',
+			tweetTxtUrlEncoded = tweetText+ "" +encodeURIComponent('#'+lesson+encodeURIComponent(hans));
 	var root = item.root && item.root != "--"?'<i class="fas fa-clock"></i>&nbsp;'+item.root:"";
 	var key = lesson+hans+i;
 	var tpl = `
@@ -79,8 +86,10 @@ var cardTpl = function(item, i) {
 
 				<div class="content">
 					<span class="root">`+root+`</span>
-					<br><span class="lesson"><a href="#`+lesson+`">#`+lesson+`</a></span> • <span class="idlink"><a href="#`+lesson+hans+`"><i class="fas fa-link fa-1x"></i>`+lesson+hans+`</a></span>
-<span class="icon is-small hide"><i class="fas fa-retweet"></i></span>
+					<br>
+					<span class="lesson"><a href="#`+lesson+`">#`+lesson+`</a></span>
+					 • <span class="ziLink"><a href="#`+lesson+hans+`">#`+lesson+hans+`</a></span>
+					 • <span class="icon is-small hidde"><a href="`+tweetTxtUrlEncoded+`"><i class="fas fa-share"></i></a></span>
 				</div>
 			</div>
 
@@ -145,7 +154,7 @@ var addSection = function (arrayDictionary,lesson,item){
 	counter = sinogramsInLesson.length;
 	// console.log('item 3: ',item , sinogramsObjInLesson, counter , sinogramsInLesson);
 
-	html = `<h1 id="L`+lesson+`" class="title lessonHeader has-text-grey" lesson="`+lesson+`">Lesson `+lesson+`</h1><h2 class="subtitle lessonHeader has-text-grey" lesson="`+lesson+`">Sinogrammes `+ orComponents +`(<span class="counter">`+counter+`</span>) : `+sinogramsInLesson.join(',')+`.</h2><div class="hooks L`+lesson+`" lesson="`+lesson+`"></div>`;
+	html = `<h1 id="L`+lesson+`" class="title lessonHeader has-text-grey" lesson="`+lesson+`"><a href="#L`+lesson+`" style="font-size:.6em;font-weight:normal;">#</a> Lesson `+lesson+`</h1><h2 class="subtitle lessonHeader has-text-grey" lesson="`+lesson+`">Sinogrammes `+ orComponents +`(<span class="counter">`+counter+`</span>) : `+sinogramsInLesson.join(',')+`.</h2><div class="hooks L`+lesson+`" lesson="`+lesson+`"></div>`;
 	$('#hook').append(html);
 };
 
