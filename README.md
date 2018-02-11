@@ -1,19 +1,41 @@
-> Coming soon.
+**OpenEdx-hanzi** is a web app developed to support teaching of the French MOOC de chinois "[Kit de contact en langues orientales : chinois](https://www.fun-mooc.fr/courses/course-v1:Inalco+52004+session02/about)".
+
+### Features
+- [x] Official pages:
+  - [x] https://hanzi.cri-paris.org
+  - [x] http://hanzi.cri-paris.org
+- [x] Treatment of the listed sinograms for learners
+- [x] OpenEdX / FUN compatible
+- [x] Desktop and mobile friendly
+- [x] Large support for modern browsers: IE10 +, Chrome, Firefox and others.
+- [x] Easy integration [via iframe] (https://jsfiddle.net/752utup0/4/)
+- [x] Stroke order animation
+- [x] Pronunciation via audio and pinyin text
+- [x] Semantics via text
+- [x] Writing skill learning by doing via "Quiz" (no grading)
+- [x] Easy to update on request to CRI developer
+- [x] Hypertext to ...
+  - [x] target lesson: `<a href="//hanzi.cri-paris.org/#L3"> Text </a>`
+  - [x] target character: `<a href="//hanzi.cri-paris.org/#L3们"> Text </a>`
+- [x] Social Web for visibility
+- [x] Elegant
+
+### Soon
+- [x] Improved audio
+- [ ] Vocabulary of the MOOC de Chinois
+- [ ] anonymous learning monitoring / surveils
+- [ ] English readme.md
 
 ### Usage
-Given a list "中,國,国".
+aEsy integration [via iframe](https://jsfiddle.net/752utup0/4/)
 
-Minimal HTML5:
-
-    <!-- Coming soon -->
-
-Javascript:
-
-    var list = [ '中','國','国'];
-    // display stroke order animation, for learning
-    /* Coming soon  */
-    // display writing area, for practice
-    /* Coming soon  */
+```
+<h4><strong>Exercice d'écriture (<a href="http://hanzi.cri-paris.org/">pleine page</a>):</strong></h4>
+<p>
+  <iframe seamless="" title="Pratiquer l'&eacute;criture" src="https://hugolpz.github.io/OpenEdx-hanzi/" style="background-color: transparent; border: 0px none transparent; padding: 0; margin: 0; overflow: hidden; width: 100%; height: 1200px;">
+  </iframe>
+</p>
+```
 
 ### Dependencies
 - [MakeMeAHanzi](http://github.com/Skishore/MakeMeAHanzi) -- CJK characters and strokes in xml data
