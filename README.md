@@ -2,8 +2,8 @@
 
 ### Features
 - [x] Official pages:
-   - [x] https://hanzi.cri-paris.org
-   - [x] http://hanzi.cri-paris.org
+  - [x] https://hanzi.cri-paris.org
+  - [x] http://hanzi.cri-paris.org
 - [x] Treatment of the listed sinograms for learners
 - [x] OpenEdX / FUN compatible
 - [x] Desktop and mobile friendly
@@ -15,8 +15,8 @@
 - [x] Writing skill learning by doing via "Quiz" (no grading)
 - [x] Easy to update on request to CRI developer
 - [x] Hypertext to ...
-    - [x] target lesson: `<a href="//hanzi.cri-paris.org/#L3"> Text </a>`
-    - [x] target character: `<a href="//hanzi.cri-paris.org/#L3们"> Text </a>`
+  - [x] target lesson: `<a href="//hanzi.cri-paris.org/#L3"> Text </a>`
+  - [x] target character: `<a href="//hanzi.cri-paris.org/#L3们"> Text </a>`
 - [x] Social Web for visibility
 - [x] Elegant
 
@@ -27,7 +27,7 @@
 - [ ] English readme.md
 
 ### Usage
-aEsy integration [via iframe](https://jsfiddle.net/752utup0/4/)
+Easy integration [via iframe](https://jsfiddle.net/752utup0/4/)
 
 ```
 <h4><strong>Exercice d'écriture (<a href="http://hanzi.cri-paris.org/">pleine page</a>):</strong></h4>
