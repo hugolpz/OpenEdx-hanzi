@@ -23,7 +23,7 @@
 ### Soon
 - [x] Improved audio
 - [ ] Vocabulary of the MOOC de Chinois
-- [ ] anonymous learning monitoring / surveils
+- [ ] Anonymous learning monitoring / surveils
 - [ ] English readme.md
 
 ### Usage
