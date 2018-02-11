@@ -30,9 +30,9 @@
 Easy integration [via iframe](https://jsfiddle.net/752utup0/4/)
 
 ```
-<h4><strong>Exercice d'écriture (<a href="http://hanzi.cri-paris.org/">pleine page</a>):</strong></h4>
+<h4><strong>Exercice d'écriture (<a href="https://hanzi.cri-paris.org/#L2">pleine page</a>):</strong></h4>
 <p>
-  <iframe seamless="" title="Pratiquer l'&eacute;criture" src="https://hugolpz.github.io/OpenEdx-hanzi/" style="background-color: transparent; border: 0px none transparent; padding: 0; margin: 0; overflow: hidden; width: 100%; height: 1200px;">
+  <iframe seamless="" title="Pratiquer l'&eacute;criture" src="https://hanzi.cri-paris.org/#L2" style="background-color: transparent; border: 0px none transparent; padding: 0; margin: 0; overflow: hidden; width: 100%; height: 1200px;">
   </iframe>
 </p>
 ```
