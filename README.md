@@ -1,5 +1,9 @@
 **OpenEdx-hanzi** is an open sources web app developed to support teaching of the French MOOC de chinois "[Kit de contact en langues orientales : chinois](https://www.fun-mooc.fr/courses/course-v1:Inalco+52004+session02/about)".
 
+<p align="center">
+  <img width="600px" src="./img/index.png?raw=true" alt="Home page"/>
+</p>
+
 ### Features
 - [x] Official pages:
   - [x] https://hanzi.cri-paris.org
