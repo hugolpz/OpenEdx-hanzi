@@ -226,11 +226,13 @@ var postHanziStrokeActivity = function(item, strokeNum, mistakesOnStroke,totalMi
     'entry.576376173' : device || '',
     'entry.123309060' : browser || '',
     'submit':'Send' };
-  $.ajax({
-    'url': form.api,
-    'type': "post",
-    'data': data
-  });
+	if (mistakesOnStroke>0) {
+		$.ajax({
+			'url': form.api,
+			'type': "post",
+			'data': data
+		});
+	}
 }
 /* function(d){ 
 	var status = 'ongoing' || 'complete';
@@ -245,7 +247,7 @@ for (var i=0;i<sinograms.length; i++){
 		sections.push(lesson);
 		addSection(sinograms,lesson,item);
 	}
-	if (sinograms[i].hans.length == 1) { injectMultimedia(sinograms[i],i) }
+	if (sinograms[i].hans.length == 1) { d.mistakesOnStrokeinjectMultimedia(sinograms[i],i) }
 }
 
 /* *********************************************************************** */
