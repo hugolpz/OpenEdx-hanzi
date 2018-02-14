@@ -173,7 +173,17 @@ var injectMultimedia = function (item,i) {
 	player[key] = new HanziWriter('play'+key, hans, opts.player); 
 	// Writer
 	writer[key] = new HanziWriter('write'+key, hans, opts.writer);
-	writer[key].quiz({onComplete: function(d){ console.log(d);}});
+	writer[key].quiz({ 
+		// d = {character: "中", strokeNum: 1, mistakesOnStroke: 1, totalMistakes: 1, strokesRemaining: 3}
+		onMistake : function(d){ console.log('onMistake',d) }, 
+		onCorrectStroke: function(d){ 
+			console.log('onCorrectStroke',d) 
+			var status = 'ongoing' || 'complete';
+			postHanziStrokeActivity(d.character, d.strokeNum, d.mistakesOnStroke,d.totalMistakes,d.strokesRemaining,status)
+		
+		},
+		onComplete: function(d){ updateKnol(d) }
+	});
 	// Audio
 	var audioRoot = 'https://raw.githubusercontent.com/hugolpz/audio-cmn/master/64k',
 			audioSuffix = item.audio ?'/hsk/cmn-'+hans+'.mp3':'/syllabs/cmn-'+pin1yin1+'.mp3',
@@ -181,6 +191,52 @@ var injectMultimedia = function (item,i) {
 	var sound = new Howl({ src: [ audioUrl ]});
   audios[key] = sound;
 }
+
+/* *********************************************************************** */
+/* MEMORY **************************************************************** */
+localStorage.knol= {};
+var updateKnol = function(data) { 
+	console.log(data.character,data); 
+	localStorage.knol[data.character] = data;
+	// console.log(data); // => {character: "中", totalMistakes: 0}
+	console.log(JSON.stringify(localStorage.knol));
+}
+/* *********************************************************************** */
+/* MONITORING-NANO ******************************************************* */
+var postHanziStrokeActivity = function(item, strokeNum, mistakesOnStroke,totalMistakes,strokesRemaining,status,device,browser) { 
+	var now = new Date().toJSON().replace(/[-:.]/g,':').replace(/Z/g,''),
+			timezone = -new Date().getTimezoneOffset()/60,
+// var url1 = 'https://docs.google.com/forms/d/1s9UqzwVLQNajSnfgUE6GZ1yam38rxdWpILx_49KYknI/formResponse';
+	form = {
+		edit: 'https://docs.google.com/forms/d/10AElkFjLXHXOsfObsOmjoDgQp0glGW6WmCZ9JdYsewQ/edit',
+		api: 'https://docs.google.com/forms/d/10AElkFjLXHXOsfObsOmjoDgQp0glGW6WmCZ9JdYsewQ/formResponse',
+		table:'https://docs.google.com/spreadsheets/d/1wsI0YuTMa9Qx-cGml5WGTFZSoJHOyenjGcRBxFlWXbM/edit'};
+	localStorage.username = localStorage.username || now;
+	var device,browser;
+  var data = { 
+    'entry.1761026478': localStorage.username,
+    'entry.438665866' : now,
+		'entry.1395362580': timezone,
+    'entry.1426290596': item,
+    'entry.76376835'  : strokeNum,
+    'entry.1137969634': mistakesOnStroke,
+    'entry.588973715' : totalMistakes,
+		'entry.1552943138': strokesRemaining,
+    'entry.726465628' : strokesRemaining>0? 'ongoing':'completed',
+    'entry.576376173' : device || '',
+    'entry.123309060' : browser || '',
+    'submit':'Send' };
+  $.ajax({
+    'url': form.api,
+    'type': "post",
+    'data': data
+  });
+}
+/* function(d){ 
+	var status = 'ongoing' || 'complete';
+	postHanziStrokeActivity(d.character, d.strokeNum, d.mistakesOnStroke,d.totalMistakes,d.strokesRemaining,status); 
+} */
+
 
 /* LOOP ****************************************************************** */
 for (var i=0;i<sinograms.length; i++){
@@ -191,9 +247,6 @@ for (var i=0;i<sinograms.length; i++){
 	}
 	if (sinograms[i].hans.length == 1) { injectMultimedia(sinograms[i],i) }
 }
-
-
-
 
 /* *********************************************************************** */
 /* INTERACTIONS ********************************************************** */
@@ -230,4 +283,5 @@ $('.selectors, .lessonHeader').on('click', function() {
 	$('.card').hide();
 	$lesson.show();
 });
+
 
