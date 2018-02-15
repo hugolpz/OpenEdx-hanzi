@@ -153,9 +153,9 @@ var addSection = function (arrayDictionary,lesson,item){
 	for (var k = 0; k<sinogramsObjInLesson.length; k++) { sinogramsInLesson.push(sinogramsObjInLesson[k].hans); }
 	counter = sinogramsInLesson.length;
 	// console.log('item 3: ',item , sinogramsObjInLesson, counter , sinogramsInLesson);
-	var type = lesson.length>1?"Section":"Semaine";
-
-	html = `<h1 id="S`+lesson+`" class="title lessonHeader has-text-grey" lesson="`+lesson+`"><a href="#S`+lesson+`" style="font-size:.6em;font-weight:normal;">#</a>`+type+` `+lesson+`</h1><h2 id="L`+lesson+`" class="subtitle lessonHeader has-text-grey" lesson="`+lesson+`">Sinogrammes `+ orComponents +`(<span class="counter">`+counter+`</span>) : `+sinogramsInLesson.join(',')+`.</h2><div class="hooks S`+lesson+`" lesson="`+lesson+`"></div>`;
+	var type = lesson.length>1?"Section":"Semaine",
+			sinogramsListHtml = sinogramsInLesson.join(',');
+	html = `<h1 id="S`+lesson+`" class="title lessonHeader has-text-grey" lesson="`+lesson+`"><a href="#S`+lesson+`" style="font-size:.6em;font-weight:normal;">#</a>`+type+` `+lesson+`</h1><h2 id="L`+lesson+`" class="subtitle lessonHeader has-text-grey" lesson="`+lesson+`">Sinogrammes `+ orComponents +`(<span class="counter">`+counter+`</span>) : `+sinogramsListHtml+`.</h2><div class="hooks S`+lesson+`" lesson="`+lesson+`"></div>`;
 	$('#hook').append(html);
 };
 
@@ -204,6 +204,7 @@ var updateKnol = function(data) {
 }
 /* *********************************************************************** */
 /* MONITORING-NANO ******************************************************* */
+/* Get real info on where the learners meet counter-intuitive stroke order */
 var postHanziStrokeActivity = function(item, strokeNum, mistakesOnStroke,totalMistakes,strokesRemaining,status,device,browser) { 
 	var now = new Date().toJSON().replace(/[-:.]/g,':').replace(/Z/g,''),
 			timezone = -new Date().getTimezoneOffset()/60,
