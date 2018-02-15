@@ -42,7 +42,7 @@ if (dataLoadingApproach === 'local'){
 /* *********************************************************************** */
 /* CMNCARD *************************************************************** */
 var cardTpl = function(item, i) { 
-	var lesson = 'L'+item.lesson, hans = item.hans, pin1yin1 = item.pin1yin1, decomposition="", decompzh="", decompfr="";
+	var lesson = 'S'+item.lesson, hans = item.hans, pin1yin1 = item.pin1yin1, decomposition="", decompzh="", decompfr="";
 	if(item.decompositionzh && item.decompositionzh !== "--") {
 		decompzh = item.decompositionzh,
 		decompfr = item.decomposition;
@@ -58,8 +58,8 @@ var cardTpl = function(item, i) {
 	var root = item.root && item.root != "--"?'<i class="fas fa-clock"></i>&nbsp;'+item.root:"";
 	var key = lesson+hans+i;
 	var tpl = `
-		<div id="L`+item.lesson+hans+`" class="card `+lesson+` is-centered" lesson="`+lesson+`" zi="`+hans+`" i="`+i+`">
-			<div class="card-image">
+		<div id="S`+item.lesson+hans+`" class="card `+lesson+` is-centered" lesson="`+lesson+`" zi="`+hans+`" i="`+i+`">
+			<div id="L`+item.lesson+hans+`" class="card-image">
 				<figure class="image is-4by4">
 					<div id="write`+key+`" class="writer is-centered"></div>
 				</figure>
@@ -107,7 +107,7 @@ var cardTpl = function(item, i) {
 /* *********************************************************************** */
 /* TOOLBOX *************************************************************** 
 var injectStrokeOrderDisplay = function(elementSelector,item, i) {
-	var lesson = 'L'+item.lesson, hans = item.hans, pin1yin1 = item.pinyin;
+	var lesson = 'S'+item.lesson, hans = item.hans, pin1yin1 = item.pinyin;
 	var key = lesson+hans+i;
 	var elementPlayer='<div id="play'+key+'" class="play zi '+lesson+'" lesson="'+lesson+'" zi="'+hans+'" i="'+i+'"></div>';
 	$(elementSelector).append(elementPlayer);
@@ -115,7 +115,7 @@ var injectStrokeOrderDisplay = function(elementSelector,item, i) {
 };
 
 var injectStrokeOrderQuiz = function(elementSelector,item, i) {
-	var lesson = 'L'+item.lesson, hans = item.hans, pin1yin1 = item.pinyin;
+	var lesson = 'S'+item.lesson, hans = item.hans, pin1yin1 = item.pinyin;
 	var key = lesson+hans+i;
 	var elementWriterGlyph ='<div id="write'+key+'" class="write zi '+lesson+'" lesson="'+lesson+'" zi="'+hans+'" i="'+i+'"></div>',
 			elementWriterResetButton = '<div id="writeReset'+key+'" class="writeReset zi '+lesson+'" lesson="'+lesson+'" zi="'+hans+'" i="'+i+'">Reset '+hans+'</div>';
@@ -125,7 +125,7 @@ var injectStrokeOrderQuiz = function(elementSelector,item, i) {
 };
 
 var injectAudio = function(elementSelector,item, i){
-	var lesson = 'L'+item.lesson, hans = item.hans, pin1yin1 = item.pin1yin1.replace("5", "1");
+	var lesson = 'S'+item.lesson, hans = item.hans, pin1yin1 = item.pin1yin1.replace("5", "1");
 	var key = lesson+hans+i;
 	var sound = new Howl({ src: [ 'https://raw.githubusercontent.com/hugolpz/audio-cmn/master/64k/syllabs/cmn-'+pin1yin1+'.mp3', 'https://raw.githubusercontent.com/hugolpz/audio-cmn/master/64k/hsk/cmn-'+hans+'.mp3']});
   audios[lesson+hans+i] = sound;
@@ -153,20 +153,21 @@ var addSection = function (arrayDictionary,lesson,item){
 	for (var k = 0; k<sinogramsObjInLesson.length; k++) { sinogramsInLesson.push(sinogramsObjInLesson[k].hans); }
 	counter = sinogramsInLesson.length;
 	// console.log('item 3: ',item , sinogramsObjInLesson, counter , sinogramsInLesson);
+	var type = lesson.length>1?"Section":"Semaine";
 
-	html = `<h1 id="L`+lesson+`" class="title lessonHeader has-text-grey" lesson="`+lesson+`"><a href="#L`+lesson+`" style="font-size:.6em;font-weight:normal;">#</a> Lesson `+lesson+`</h1><h2 class="subtitle lessonHeader has-text-grey" lesson="`+lesson+`">Sinogrammes `+ orComponents +`(<span class="counter">`+counter+`</span>) : `+sinogramsInLesson.join(',')+`.</h2><div class="hooks L`+lesson+`" lesson="`+lesson+`"></div>`;
+	html = `<h1 id="S`+lesson+`" class="title lessonHeader has-text-grey" lesson="`+lesson+`"><a href="#S`+lesson+`" style="font-size:.6em;font-weight:normal;">#</a>`+type+` `+lesson+`</h1><h2 id="L`+lesson+`" class="subtitle lessonHeader has-text-grey" lesson="`+lesson+`">Sinogrammes `+ orComponents +`(<span class="counter">`+counter+`</span>) : `+sinogramsInLesson.join(',')+`.</h2><div class="hooks S`+lesson+`" lesson="`+lesson+`"></div>`;
 	$('#hook').append(html);
 };
 
 /* CARDS w MEDIA ********************************************************* */
 var injectMultimedia = function (item,i) {
 	// console.log(`{{user:yug/hz|`+item.lesson+`|`+item.hans+`|`+item.hant+`}}`)
-	var lesson = 'L'+item.lesson, hans = item.hans, pin1yin1 = item.pin1yin1.replace('5', '1');
+	var lesson = 'S'+item.lesson, hans = item.hans, pin1yin1 = item.pin1yin1.replace('5', '1');
 	var key = lesson+hans+i;
 	
 	//Inject HTML
 	var cardHTML = cardTpl(item,i);
-	$('.hooks.L'+item.lesson).append(cardHTML);
+	$('.hooks.S'+item.lesson).append(cardHTML);
 	
 	// Inject and assing activities to arrays
 	// Player (Stroke Order)
@@ -211,10 +212,10 @@ var postHanziStrokeActivity = function(item, strokeNum, mistakesOnStroke,totalMi
 		edit: 'https://docs.google.com/forms/d/10AElkFjLXHXOsfObsOmjoDgQp0glGW6WmCZ9JdYsewQ/edit',
 		api: 'https://docs.google.com/forms/d/10AElkFjLXHXOsfObsOmjoDgQp0glGW6WmCZ9JdYsewQ/formResponse',
 		table:'https://docs.google.com/spreadsheets/d/1wsI0YuTMa9Qx-cGml5WGTFZSoJHOyenjGcRBxFlWXbM/edit'};
-	localStorage.username = localStorage.username || now;
+	localStorage.firstUse = localStorage.firstUse || localStorage.username || now;
 	var device,browser;
   var data = { 
-    'entry.1761026478': localStorage.username,
+    'entry.1761026478': localStorage.firstUse, // day of first use of the app
     'entry.438665866' : now,
 		'entry.1395362580': timezone,
     'entry.1426290596': item,
@@ -226,13 +227,13 @@ var postHanziStrokeActivity = function(item, strokeNum, mistakesOnStroke,totalMi
     'entry.576376173' : device || '',
     'entry.123309060' : browser || '',
     'submit':'Send' };
-	if (mistakesOnStroke>0) {
+	// if (mistakesOnStroke>0 || strokesRemaining == 0) {
 		$.ajax({
 			'url': form.api,
 			'type': "post",
 			'data': data
 		});
-	}
+	// }
 }
 /* function(d){ 
 	var status = 'ongoing' || 'complete';
@@ -247,7 +248,7 @@ for (var i=0;i<sinograms.length; i++){
 		sections.push(lesson);
 		addSection(sinograms,lesson,item);
 	}
-	if (sinograms[i].hans.length == 1) { d.mistakesOnStrokeinjectMultimedia(sinograms[i],i) }
+	if (sinograms[i].hans.length == 1) { injectMultimedia(sinograms[i],i) }
 }
 
 /* *********************************************************************** */
@@ -281,7 +282,7 @@ $('.audio, .play').on('click', function() {
 
 $('.selectors, .lessonHeader').on('click', function() {
 	var lesson = $(this).attr('lesson'),
-			$lesson = $('.card.L'+lesson);
+			$lesson = $('.card.S'+lesson);
 	$('.card').hide();
 	$lesson.show();
 });
