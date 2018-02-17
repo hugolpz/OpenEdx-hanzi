@@ -35,9 +35,9 @@
 Easy integration [via iframe](https://jsfiddle.net/752utup0/4/)
 
 ```
-<h4><strong>Exercice d'écriture (<a href="https://hanzi.cri-paris.org/#L2">pleine page</a>):</strong></h4>
+<h4><strong>Exercice d'écriture, Semaine 2 (<a href="https://hanzi.cri-paris.org/#S2">pleine page</a>):</strong></h4>
 <p>
-  <iframe seamless="" title="Pratiquer l'&eacute;criture" src="https://hanzi.cri-paris.org/#L2" 
+  <iframe seamless="" title="Pratiquer l'&eacute;criture" src="https://hanzi.cri-paris.org/#S2" 
           style="background-color: transparent; border: 0px none transparent; 
                  padding: 0; margin: 0; overflow: hidden; width: 100%; height: 1200px;">
   </iframe>
@@ -46,8 +46,8 @@ Easy integration [via iframe](https://jsfiddle.net/752utup0/4/)
 
 ### Dependencies
 - [MakeMeAHanzi](http://github.com/Skishore/MakeMeAHanzi) -- CJK characters and strokes in xml data
-- [Hanzi-Writer](http://github.com/Chanind/Hanzi-Write) -- JS library to animate strokes
-- [Audio-cmn](http://github.com/hugolpz/audio-cmn/) -- audio database for Chinese syllables
+- [Hanzi-Writer](http://github.com/Chanind/Hanzi-Writer) -- JS library to animate strokes
+- [Audio-cmn](http://github.com/hugolpz/audio-cmn) -- audio database for Chinese syllables
 - [Bulma.css](https://bulma.io/documentation/) -- CSS framework
 
 ### Data
