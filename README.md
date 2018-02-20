@@ -48,7 +48,7 @@ Easy integration [via iframe](https://jsfiddle.net/752utup0/4/)
 - [MakeMeAHanzi](http://github.com/Skishore/MakeMeAHanzi) -- CJK characters and strokes in xml data
 - [Hanzi-Writer](http://github.com/Chanind/Hanzi-Writer) -- JS library to animate strokes
 - [Audio-cmn](http://github.com/hugolpz/audio-cmn) -- audio database for Chinese syllables
-- [Bulma.css](https://bulma.io/documentation/) -- CSS framework
+- [Bulma.css](https://bulma.io/documentation/overview/start/) -- CSS framework
 
 ### Data
 * [Chinese MOOC (French language)](https://www.fun-mooc.fr/courses/course-v1:Inalco+52004+session02/about)
