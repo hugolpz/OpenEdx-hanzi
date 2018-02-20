@@ -152,8 +152,14 @@ var addSection = function (arrayDictionary,lesson,item){
 	
 	sectionHtml = `
 		<h1 id="S`+lesson+`" class="title lessonHeader has-text-grey" lesson="`+lesson+`"><a href="#S`+lesson+`" style="font-size:.6em;font-weight:normal;">#</a>`+type+` `+lesson+`</h1>
-		<h2 id="L`+lesson+`" class="subtitle lessonHeader has-text-grey" lesson="`+lesson+`">Sinogrammes `+ orComponents +`(<span class="counter">`+counter+`</span>) : `+sinogramsInLessonHtml+`.</h2>
-		<div class="hooks S`+lesson+`" lesson="`+lesson+`"></div>`;
+		<h2 id="L`+lesson+`" class="subtitle lessonHeader has-text-grey" lesson="`+lesson+`">Sinogrammes `+ orComponents +`(<span class="counter">`+counter+`</span>) : `+sinogramsInLessonHtml+`.<!--
+	<div class="tags has-addons">
+		<span class="tag is-info"><span class="icon has-text-light"><i class="fas fa-info-circle"></i></span> En test </span>
+		<span class="tag is-light"> La couleur des sinogrammes listés ci-dessus indique votre degré de maitrise : <em class="masteryLevel5">⬤ vert</em> = maitrisé ; <em class="masteryLevel1">⬤ rouge</em> = à apprendre.</span>
+	</div> -->
+</h2>
+		<div class="hooks S`+lesson+`" lesson="`+lesson+`">
+</div>`;
 	$('#hook').append(sectionHtml);
 };
 
