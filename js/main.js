@@ -231,12 +231,16 @@ var postHanziStrokeActivity = function(item, strokeNum, mistakesOnStroke,totalMi
 // var url1 = 'https://docs.google.com/forms/d/1s9UqzwVLQNajSnfgUE6GZ1yam38rxdWpILx_49KYknI/formResponse';
 	form = {
 		edit: 'https://docs.google.com/forms/d/10AElkFjLXHXOsfObsOmjoDgQp0glGW6WmCZ9JdYsewQ/edit',
-		api: 'https://docs.google.com/forms/d/10AElkFjLXHXOsfObsOmjoDgQp0glGW6WmCZ9JdYsewQ/formResponse',
-		table:'https://docs.google.com/spreadsheets/d/1wsI0YuTMa9Qx-cGml5WGTFZSoJHOyenjGcRBxFlWXbM/edit'};
+		api:  'https://docs.google.com/forms/d/10AElkFjLXHXOsfObsOmjoDgQp0glGW6WmCZ9JdYsewQ/formResponse',
+		table:'https://docs.google.com/spreadsheets/d/1wsI0YuTMa9Qx-cGml5WGTFZSoJHOyenjGcRBxFlWXbM/edit'},
+	form2 = {
+		edit: 'https://docs.google.com/forms/d/1MG7FlNwwi-W4X1rOj88NS61cPDkL6jrdQ6eS6_owfFQ/edit',
+		api : 'https://docs.google.com/forms/d/1MG7FlNwwi-W4X1rOj88NS61cPDkL6jrdQ6eS6_owfFQ/formResponse',
+		table:'https://docs.google.com/spreadsheets/d/162sX2oqD3_y-fSKUJ7q5xBq2lO_ShnAeREx2U1LNBmM/edit'};
 	localStorage.firstUse = localStorage.firstUse || localStorage.username || now;
 	var device,browser;
 	console.log(pathPoints,pathString)
-  var data = { 
+  var data = {
     'entry.1761026478': localStorage.firstUse, // day of first use of the app
     'entry.438665866' : now,
 		'entry.1395362580': timezone,
@@ -249,13 +253,33 @@ var postHanziStrokeActivity = function(item, strokeNum, mistakesOnStroke,totalMi
     'entry.576376173' : pathPoints + '',
     'entry.123309060' : pathString + '',
     'entry.389356582' : device || '',
-    'entry.1048606120' : browser || '',
+    'entry.1048606120': browser || '',
     'submit':'Send' };
-	// if (mistakesOnStroke>0 || strokesRemaining == 0) {
 		$.ajax({
 			'url': form.api,
 			'type': "post",
 			'data': data
+		});
+	 var data2 = { 
+    'entry.1761026478': localStorage.firstUse, // day of first use of the app
+    'entry.438665866' : now,
+		'entry.776151121' : timezone,
+    'entry.1524121348': item,
+    'entry.2059787468': strokeNum,
+    'entry.1572100286': mistakesOnStroke,
+    'entry.1157264548': totalMistakes,
+		'entry.1362265786': strokesRemaining,
+    'entry.1000849146': strokesRemaining>0? 'ongoing':'completed',
+    'entry.1181692109': pathPoints + '',
+    'entry.1404033850': pathString + '',
+    'entry.924012441' : device || '',
+    'entry.563399744' : browser || '',
+    'submit':'Send' };
+	// if (mistakesOnStroke>0 || strokesRemaining == 0) {
+		$.ajax({
+			'url': form2.api,
+			'type': "post",
+			'data': data2
 		});
 	// }
 }
