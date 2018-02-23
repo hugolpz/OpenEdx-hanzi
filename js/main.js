@@ -129,13 +129,13 @@ var addSection = function (arrayDictionary,lesson,item){
 			sinogramsInLessonArray=[],
 			sinogramsInLessonHtmlArray=[],
 			sinogramsInLessonHtml= ``;
+	console.log('addSection lS.knol : ',localStorage.knol)
 	var knol = JSON.parse(localStorage.knol);
 
 	/* filters to find items in a given lesson*/
 	// sinogramsInLesson = arrayDictionary.map(filterSinogramsInLesson(o, lesson));
 	sinogramsInLessonObjects = sinograms.filter(function (obj){ return obj.lesson == lesson; });
 	for (var k = 0; k<sinogramsInLessonObjects.length; k++) {
-		console.log('2',knol)
 		var hans = sinogramsInLessonObjects[k].hans,
 				masteryLevel = knolLevelForCharacter(knol,hans)
 		sinogramsInLessonArray.push(hans)
@@ -252,6 +252,7 @@ var postHanziStrokeActivity = function(item, strokeNum, mistakesOnStroke,totalMi
 		$.ajax({
 			'url': form.api,
 			'type': "post",
+			'dataType': 'jsonp',
 			'data': data
 		});
 	// }
