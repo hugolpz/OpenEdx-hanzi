@@ -255,7 +255,6 @@ var postHanziStrokeActivity = function(item, strokeNum, mistakesOnStroke,totalMi
 		$.ajax({
 			'url': form.api,
 			'type': "post",
-			'dataType': 'json',
 			'data': data
 		});
 	// }
