@@ -180,11 +180,11 @@ var injectMultimedia = function (item,i) {
 	writer[key] = new HanziWriter('write'+key, hans, opts.writer);
 	writer[key].quiz({ 
 		// d = {character: "中", strokeNum: 1, mistakesOnStroke: 1, totalMistakes: 1, strokesRemaining: 3}
-		onMistake : function(d){ console.log('onMistake',d) }, 
+		onMistake : function(d){ console.log('onMistake: ',d) }, 
 		onCorrectStroke: function(d){ 
-			console.log('onCorrectStroke',d) 
+			console.log('onCorrectStroke: ',d) 
 			var status = 'ongoing' || 'complete';
-			postHanziStrokeActivity(d.character, d.strokeNum, d.mistakesOnStroke,d.totalMistakes,d.strokesRemaining,status)
+			postHanziStrokeActivity(d.character, d.strokeNum, d.mistakesOnStroke,d.totalMistakes,d.strokesRemaining,d.drawnPath.points,d.drawnPath.pathString,status)
 		
 		},
 		onComplete: function(d){ updateKnol(d) }
@@ -225,7 +225,7 @@ var updateKnol = function(data) {
 /* *********************************************************************** */
 /* MONITORING-NANO ******************************************************* */
 /* Get real info on where the learners meet counter-intuitive stroke order */
-var postHanziStrokeActivity = function(item, strokeNum, mistakesOnStroke,totalMistakes,strokesRemaining,status,device,browser) { 
+var postHanziStrokeActivity = function(item, strokeNum, mistakesOnStroke,totalMistakes,strokesRemaining,pathPoints,pathString,status,device,browser) { 
 	var now = new Date().toJSON().replace(/[-:.]/g,':').replace(/Z/g,''),
 			timezone = -new Date().getTimezoneOffset()/60,
 // var url1 = 'https://docs.google.com/forms/d/1s9UqzwVLQNajSnfgUE6GZ1yam38rxdWpILx_49KYknI/formResponse';
@@ -235,6 +235,7 @@ var postHanziStrokeActivity = function(item, strokeNum, mistakesOnStroke,totalMi
 		table:'https://docs.google.com/spreadsheets/d/1wsI0YuTMa9Qx-cGml5WGTFZSoJHOyenjGcRBxFlWXbM/edit'};
 	localStorage.firstUse = localStorage.firstUse || localStorage.username || now;
 	var device,browser;
+	console.log(pathPoints,pathString)
   var data = { 
     'entry.1761026478': localStorage.firstUse, // day of first use of the app
     'entry.438665866' : now,
@@ -245,14 +246,16 @@ var postHanziStrokeActivity = function(item, strokeNum, mistakesOnStroke,totalMi
     'entry.588973715' : totalMistakes,
 		'entry.1552943138': strokesRemaining,
     'entry.726465628' : strokesRemaining>0? 'ongoing':'completed',
-    'entry.576376173' : device || '',
-    'entry.123309060' : browser || '',
+    'entry.576376173' : pathPoints + '',
+    'entry.123309060' : pathString + '',
+    'entry.389356582' : device || '',
+    'entry.1048606120' : browser || '',
     'submit':'Send' };
 	// if (mistakesOnStroke>0 || strokesRemaining == 0) {
 		$.ajax({
 			'url': form.api,
 			'type': "post",
-			'dataType': 'jsonp',
+			'dataType': 'json',
 			'data': data
 		});
 	// }
