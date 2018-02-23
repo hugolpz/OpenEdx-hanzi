@@ -205,6 +205,7 @@ var colorScales = {
 	'black7': ['#ffffff','#f7f7f7','#cccccc','#969696','#636363','#252525','#000000'],
 	'redToGreen5': ['#d7191c','#fdae61','#ffffbf','#a6d96a','#1a9641']
 };
+localStorage.knol[0] != '{'? localStorage.knol= '{}': '';
 localStorage.knol= localStorage.knol || '{}';
 var updateKnol = function(data) {
 	// my new information
@@ -227,20 +228,33 @@ var updateKnol = function(data) {
 /* Get real info on where the learners meet counter-intuitive stroke order */
 var postHanziStrokeActivity = function(item, strokeNum, mistakesOnStroke,totalMistakes,strokesRemaining,pathPoints,pathString,status,device,browser) { 
 	var now = new Date().toJSON().replace(/[-:.]/g,':').replace(/Z/g,''),
-			timezone = -new Date().getTimezoneOffset()/60,
-// var url1 = 'https://docs.google.com/forms/d/1s9UqzwVLQNajSnfgUE6GZ1yam38rxdWpILx_49KYknI/formResponse';
-	form = {
+			timezone = -new Date().getTimezoneOffset()/60, /*
+form0 ={ 
+		edit: 'https://docs.google.com/forms/d/1s9UqzwVLQNajSnfgUE6GZ1yam38rxdWpILx_49KYknI/edit',
+		api:  'https://docs.google.com/forms/d/1s9UqzwVLQNajSnfgUE6GZ1yam38rxdWpILx_49KYknI/formResponse',
+		table:'https://docs.google.com/spreadsheets/d/1wsI0YuTMa9Qx-cGml5WGTFZSoJHOyenjGcRBxFlWXbM/edit'}, */
+	form1 = { // prod
 		edit: 'https://docs.google.com/forms/d/10AElkFjLXHXOsfObsOmjoDgQp0glGW6WmCZ9JdYsewQ/edit',
 		api:  'https://docs.google.com/forms/d/10AElkFjLXHXOsfObsOmjoDgQp0glGW6WmCZ9JdYsewQ/formResponse',
-		table:'https://docs.google.com/spreadsheets/d/1wsI0YuTMa9Qx-cGml5WGTFZSoJHOyenjGcRBxFlWXbM/edit'},
-	form2 = {
-		edit: 'https://docs.google.com/forms/d/1MG7FlNwwi-W4X1rOj88NS61cPDkL6jrdQ6eS6_owfFQ/edit',
-		api : 'https://docs.google.com/forms/d/1MG7FlNwwi-W4X1rOj88NS61cPDkL6jrdQ6eS6_owfFQ/formResponse',
-		table:'https://docs.google.com/spreadsheets/d/162sX2oqD3_y-fSKUJ7q5xBq2lO_ShnAeREx2U1LNBmM/edit'};
+		table: 'https://docs.google.com/spreadsheets/d/1yt9q1u_0DR0X3MZOX85rN_SbgHgHBwHzHee8OTFvORw/edit'},
+	form3 = { // next
+		edit: 'https://docs.google.com/forms/d/1XdUEjCBuQ7vH-s2wIsEhV_fXhDzi7r6-oxxnvJesQI8/edit',
+		api : 'https://docs.google.com/forms/d/1XdUEjCBuQ7vH-s2wIsEhV_fXhDzi7r6-oxxnvJesQI8/formResponse',
+		table:'https://docs.google.com/spreadsheets/d/1zt7DP_eIqLm0zX58G4Sdrb-Jgdu1jEdrztb1jU41Kus/edit' };
+	
 	localStorage.firstUse = localStorage.firstUse || localStorage.username || now;
 	var device,browser;
-	console.log(pathPoints,pathString)
-  var data = {
+	
+	var data3 = {
+    'entry.1761026478': localStorage.firstUse,
+    'entry.438665866' : now,
+    'submit':'Send' };
+	$.ajax({
+		'url': form3.api,
+		'type': "post",
+		'data': data3
+	});
+  var data1 = {
     'entry.1761026478': localStorage.firstUse, // day of first use of the app
     'entry.438665866' : now,
 		'entry.1395362580': timezone,
@@ -250,38 +264,22 @@ var postHanziStrokeActivity = function(item, strokeNum, mistakesOnStroke,totalMi
     'entry.588973715' : totalMistakes,
 		'entry.1552943138': strokesRemaining,
     'entry.726465628' : strokesRemaining>0? 'ongoing':'completed',
-    'entry.576376173' : pathPoints + '',
-    'entry.123309060' : pathString + '',
+    // 'entry.576376173' : 'ya', // pathPoints + '',
+    // 'entry.123309060' : 'yo', // pathString + '',
+    'entry.463796561' : JSON.stringify(pathPoints).replace(/["']/g, ""),
+		'entry.1982999163': pathString,
     'entry.389356582' : device || '',
     'entry.1048606120': browser || '',
     'submit':'Send' };
 		$.ajax({
-			'url': form.api,
+			'url': form1.api,
 			'type': "post",
-			'data': data
-		});
-	 var data2 = { 
-    'entry.1761026478': localStorage.firstUse, // day of first use of the app
-    'entry.438665866' : now,
-		'entry.776151121' : timezone,
-    'entry.1524121348': item,
-    'entry.2059787468': strokeNum,
-    'entry.1572100286': mistakesOnStroke,
-    'entry.1157264548': totalMistakes,
-		'entry.1362265786': strokesRemaining,
-    'entry.1000849146': strokesRemaining>0? 'ongoing':'completed',
-    'entry.1181692109': pathPoints + '',
-    'entry.1404033850': pathString + '',
-    'entry.924012441' : device || '',
-    'entry.563399744' : browser || '',
-    'submit':'Send' };
-	// if (mistakesOnStroke>0 || strokesRemaining == 0) {
-		$.ajax({
-			'url': form2.api,
-			'type': "post",
-			'data': data2
+			'data': data1
 		});
 	// }
+	
+	console.log('pathPoints: ',JSON.stringify(pathPoints).replace(/["']/g, ""));
+	console.log('pathString: ',pathString);
 }
 /* function(d){ 
 	var status = 'ongoing' || 'complete';
