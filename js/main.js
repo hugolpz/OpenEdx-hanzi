@@ -6,45 +6,38 @@ var player = [],
 		writer = [],
 		audios = [];
 
+/* *********************************************************************** */
+/* USER SPECIFICS ******************************************************** */
+var device = bowser.mobile?'mobile': bowser.tablet?'tablet':'PC';
+var OsAndWebBrowser = bowser.osname + ';'+ bowser.name + ' ' + bowser.version;
+localStorage.firstUse = localStorage.firstUse || localStorage.username || now;
 
-
-/**
- * Gets the browser name or returns an empty string if unknown. 
- * This function also caches the result to provide for any 
- * future calls this function has.
- *
- * @returns {string}
- */
-var webbrowser = function() {
-  if (webbrowser.prototype._cachedResult)
-    return webbrowser.prototype._cachedResult;
-  // Opera 8.0+
-  var isOpera = (!!window.opr && !!opr.addons) || !!window.opera || navigator.userAgent.indexOf(' OPR/') >= 0;
-  // Firefox 1.0+
-  var isFirefox = typeof InstallTrigger !== 'undefined';
-  // Safari 3.0+ "[object HTMLElementConstructor]" 
-  var isSafari = /constructor/i.test(window.HTMLElement) || (function(p) {
-    return p.toString() === "[object SafariRemoteNotification]";
-  })(!window['safari'] || safari.pushNotification);
-  // Internet Explorer 6-11
-  var isIE = /*@cc_on!@*/ false || !!document.documentMode;
-  // Edge 20+
-  var isEdge = !isIE && !!window.StyleMedia;
-  // Chrome 1+
-  var isChrome = !!window.chrome && !!window.chrome.webstore;
-  // Blink engine detection
-  var isBlink = (isChrome || isOpera) && !!window.CSS;
-  return webbrowser.prototype._cachedResult =
-    isOpera ? 'Opera' :
-    isFirefox ? 'Firefox' :
-    isSafari ? 'Safari' :
-    isChrome ? 'Chrome' :
-    isIE ? 'IE' :
-    isEdge ? 'Edge' :
-    isBlink ? 'Blink' :
-    "Don't know";
+/* *********************************************************************** */
+/* LOCAL MEMORY ********************************************************** */
+var colorScales = {
+	'green5': ['#edf8e9','#bae4b3','#74c476','#31a354','#006d2c'],
+	'black5': ['#e0e0e0','#bababa','#878787','#4d4d4d','#000000'],
+	'black7': ['#ffffff','#f7f7f7','#cccccc','#969696','#636363','#252525','#000000'],
+	'redToGreen5': ['#d7191c','#fdae61','#ffffbf','#a6d96a','#1a9641']
 };
-console.log(webbrowser())
+localStorage.knol= localStorage.knol || '{}';
+if(localStorage.knol[0] != '{'){ localStorage.knol= '{}'; }
+var updateKnol = function(data) {
+	// my new information
+	// var data = {character: "中", totalMistakes: 0};
+	var hans  = data.character;
+	// unpack, update, repackage knol
+	var knol = JSON.parse(localStorage.knol);
+	knol[hans] = data;
+	localStorage.knol = JSON.stringify(knol);
+	// Print to check if all went well.
+	console.log('data: ',data);
+	console.log('han: ',hans);
+	console.log('knol: ',knol);
+	console.log('localStorage.knol: ',localStorage.knol);
+	console.log('localStorage.knol: ',JSON.parse(localStorage.knol));
+	console.log('localStorage.knol[han]: ',JSON.parse(localStorage.knol)[hans]);
+};
 /* *********************************************************************** */
 /* DATA LOADING APPROACH ************************************************* */
 var vocabulary,
@@ -238,36 +231,11 @@ var injectMultimedia = function (item,i) {
   audios[key] = sound;
 }
 
-/* *********************************************************************** */
-/* LOCAL MEMORY ********************************************************** */
-var colorScales = {
-	'green5': ['#edf8e9','#bae4b3','#74c476','#31a354','#006d2c'],
-	'black5': ['#e0e0e0','#bababa','#878787','#4d4d4d','#000000'],
-	'black7': ['#ffffff','#f7f7f7','#cccccc','#969696','#636363','#252525','#000000'],
-	'redToGreen5': ['#d7191c','#fdae61','#ffffbf','#a6d96a','#1a9641']
-};
-localStorage.knol= localStorage.knol || '{}';
-if(localStorage.knol[0] != '{'){ localStorage.knol= '{}'}
-var updateKnol = function(data) {
-	// my new information
-	// var data = {character: "中", totalMistakes: 0};
-	var hans  = data.character;
-	// unpack, update, repackage knol
-	var knol = JSON.parse(localStorage.knol)
-	knol[hans] = data;
-	localStorage.knol = JSON.stringify(knol);
-	// Print to check if all went well.
-	console.log('data: ',data);
-	console.log('han: ',hans);
-	console.log('knol: ',knol);
-	console.log('localStorage.knol: ',localStorage.knol);
-	console.log('localStorage.knol: ',JSON.parse(localStorage.knol));
-	console.log('localStorage.knol[han]: ',JSON.parse(localStorage.knol)[hans]);
-}
+
 /* *********************************************************************** */
 /* MONITORING-NANO ******************************************************* */
 /* Get real info on where the learners meet counter-intuitive stroke order */
-var postHanziStrokeActivity = function(item, strokeNum, mistakesOnStroke,totalMistakes,strokesRemaining,pathPoints,pathString,status,device) { 
+var postHanziStrokeActivity = function(item, strokeNum, mistakesOnStroke,totalMistakes,strokesRemaining,pathPoints,pathString) { 
 	var now = new Date().toJSON().replace(/[-:.]/g,':').replace(/Z/g,''),
 			timezone = -new Date().getTimezoneOffset()/60, /*
 form0 ={ 
@@ -282,10 +250,6 @@ form0 ={
 		edit: 'https://docs.google.com/forms/d/1XdUEjCBuQ7vH-s2wIsEhV_fXhDzi7r6-oxxnvJesQI8/edit',
 		api : 'https://docs.google.com/forms/d/1XdUEjCBuQ7vH-s2wIsEhV_fXhDzi7r6-oxxnvJesQI8/formResponse',
 		table:'https://docs.google.com/spreadsheets/d/1zt7DP_eIqLm0zX58G4Sdrb-Jgdu1jEdrztb1jU41Kus/edit' };
-	
-	localStorage.firstUse = localStorage.firstUse || localStorage.username || now;
-	var device,
-			browser =  webbrowser();
 	
 	var data3 = {
     'entry.1761026478': localStorage.firstUse,
@@ -312,7 +276,7 @@ form0 ={
     'entry.463796561' : JSON.stringify(pathPoints).replace(/["']/g, ""),
 		'entry.1982999163': pathString,
     'entry.389356582' : device || '',
-    'entry.1048606120': browser || '',
+    'entry.1048606120': OsAndWebBrowser || '',
     'submit':'Send' };
 		$.ajax({
 			'url': form1.api,
