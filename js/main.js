@@ -2,11 +2,49 @@
 
 /* *********************************************************************** */
 /* INITIALISATION ******************************************************** */
-var list  = ['中','王','国','大','日','本','小','马','吗','很','不'];
 var player = [],
 		writer = [],
 		audios = [];
 
+
+
+/**
+ * Gets the browser name or returns an empty string if unknown. 
+ * This function also caches the result to provide for any 
+ * future calls this function has.
+ *
+ * @returns {string}
+ */
+var webbrowser = function() {
+  if (webbrowser.prototype._cachedResult)
+    return webbrowser.prototype._cachedResult;
+  // Opera 8.0+
+  var isOpera = (!!window.opr && !!opr.addons) || !!window.opera || navigator.userAgent.indexOf(' OPR/') >= 0;
+  // Firefox 1.0+
+  var isFirefox = typeof InstallTrigger !== 'undefined';
+  // Safari 3.0+ "[object HTMLElementConstructor]" 
+  var isSafari = /constructor/i.test(window.HTMLElement) || (function(p) {
+    return p.toString() === "[object SafariRemoteNotification]";
+  })(!window['safari'] || safari.pushNotification);
+  // Internet Explorer 6-11
+  var isIE = /*@cc_on!@*/ false || !!document.documentMode;
+  // Edge 20+
+  var isEdge = !isIE && !!window.StyleMedia;
+  // Chrome 1+
+  var isChrome = !!window.chrome && !!window.chrome.webstore;
+  // Blink engine detection
+  var isBlink = (isChrome || isOpera) && !!window.CSS;
+  return webbrowser.prototype._cachedResult =
+    isOpera ? 'Opera' :
+    isFirefox ? 'Firefox' :
+    isSafari ? 'Safari' :
+    isChrome ? 'Chrome' :
+    isIE ? 'IE' :
+    isEdge ? 'Edge' :
+    isBlink ? 'Blink' :
+    "Don't know";
+};
+console.log(webbrowser())
 /* *********************************************************************** */
 /* DATA LOADING APPROACH ************************************************* */
 var vocabulary,
@@ -180,12 +218,15 @@ var injectMultimedia = function (item,i) {
 	writer[key] = new HanziWriter('write'+key, hans, opts.writer);
 	writer[key].quiz({ 
 		// d = {character: "中", strokeNum: 1, mistakesOnStroke: 1, totalMistakes: 1, strokesRemaining: 3}
-		onMistake : function(d){ console.log('onMistake: ',d) }, 
+		onMistake : function(d){ 
+			console.log('onMistake: ',d)
+			var status = 'ongoing-mistake';
+			postHanziStrokeActivity(d.character, d.strokeNum, d.mistakesOnStroke,d.totalMistakes,d.strokesRemaining,d.drawnPath.points,d.drawnPath.pathString,status)
+		}, 
 		onCorrectStroke: function(d){ 
 			console.log('onCorrectStroke: ',d) 
 			var status = 'ongoing' || 'complete';
 			postHanziStrokeActivity(d.character, d.strokeNum, d.mistakesOnStroke,d.totalMistakes,d.strokesRemaining,d.drawnPath.points,d.drawnPath.pathString,status)
-		
 		},
 		onComplete: function(d){ updateKnol(d) }
 	});
@@ -205,8 +246,8 @@ var colorScales = {
 	'black7': ['#ffffff','#f7f7f7','#cccccc','#969696','#636363','#252525','#000000'],
 	'redToGreen5': ['#d7191c','#fdae61','#ffffbf','#a6d96a','#1a9641']
 };
-localStorage.knol[0] != '{'? localStorage.knol= '{}': '';
 localStorage.knol= localStorage.knol || '{}';
+if(localStorage.knol[0] != '{'){ localStorage.knol= '{}'}
 var updateKnol = function(data) {
 	// my new information
 	// var data = {character: "中", totalMistakes: 0};
@@ -226,7 +267,7 @@ var updateKnol = function(data) {
 /* *********************************************************************** */
 /* MONITORING-NANO ******************************************************* */
 /* Get real info on where the learners meet counter-intuitive stroke order */
-var postHanziStrokeActivity = function(item, strokeNum, mistakesOnStroke,totalMistakes,strokesRemaining,pathPoints,pathString,status,device,browser) { 
+var postHanziStrokeActivity = function(item, strokeNum, mistakesOnStroke,totalMistakes,strokesRemaining,pathPoints,pathString,status,device) { 
 	var now = new Date().toJSON().replace(/[-:.]/g,':').replace(/Z/g,''),
 			timezone = -new Date().getTimezoneOffset()/60, /*
 form0 ={ 
@@ -243,7 +284,8 @@ form0 ={
 		table:'https://docs.google.com/spreadsheets/d/1zt7DP_eIqLm0zX58G4Sdrb-Jgdu1jEdrztb1jU41Kus/edit' };
 	
 	localStorage.firstUse = localStorage.firstUse || localStorage.username || now;
-	var device,browser;
+	var device,
+			browser =  webbrowser();
 	
 	var data3 = {
     'entry.1761026478': localStorage.firstUse,
@@ -263,7 +305,8 @@ form0 ={
     'entry.1137969634': mistakesOnStroke,
     'entry.588973715' : totalMistakes,
 		'entry.1552943138': strokesRemaining,
-    'entry.726465628' : strokesRemaining>0? 'ongoing':'completed',
+    'entry.726465628' : strokesRemaining>0 && mistakesOnStroke? 'ongoing-mistake': 
+				strokesRemaining>0? 'ongoing':'completed', //
     // 'entry.576376173' : 'ya', // pathPoints + '',
     // 'entry.123309060' : 'yo', // pathString + '',
     'entry.463796561' : JSON.stringify(pathPoints).replace(/["']/g, ""),
