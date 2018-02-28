@@ -10,7 +10,8 @@ var player = [],
 /* USER SPECIFICS ******************************************************** */
 var device = bowser.mobile?'mobile': bowser.tablet?'tablet':'PC';
 var OsAndWebBrowser = bowser.osname + ';'+ bowser.name + ' ' + bowser.version;
-localStorage.firstUse = localStorage.firstUse || localStorage.username || now;
+var now = function() { return new Date().toJSON().replace(/[-:.]/g,':').replace(/Z/g,'') }
+localStorage.firstUse = localStorage.firstUse || localStorage.username || now();
 
 /* *********************************************************************** */
 /* LOCAL MEMORY ********************************************************** */
@@ -52,7 +53,7 @@ sinograms = vocabulary.filter(singleSinogramOnly);
 
 var opts = {
 	player : { width: 96, height: 96, padding: 5, 
-						strokeColor:"#333", radicalColor: '#660000' },
+						strokeColor:"#333", radicalColor: '#B10000' },
 	writer : { width: 300, height: 300, padding: 0, strokeColor:"#333", drawingWidth: 20,
 						showCharacter: false, showHintAfterMisses: 1,
 						ighlightOnComplete: true, highlightColor: "#B16666" },
@@ -236,8 +237,7 @@ var injectMultimedia = function (item,i) {
 /* MONITORING-NANO ******************************************************* */
 /* Get real info on where the learners meet counter-intuitive stroke order */
 var postHanziStrokeActivity = function(item, strokeNum, mistakesOnStroke,totalMistakes,strokesRemaining,pathPoints,pathString) { 
-	var now = new Date().toJSON().replace(/[-:.]/g,':').replace(/Z/g,''),
-			timezone = -new Date().getTimezoneOffset()/60, /*
+	var timezone = -new Date().getTimezoneOffset()/60, /*
 form0 ={ 
 		edit: 'https://docs.google.com/forms/d/1s9UqzwVLQNajSnfgUE6GZ1yam38rxdWpILx_49KYknI/edit',
 		api:  'https://docs.google.com/forms/d/1s9UqzwVLQNajSnfgUE6GZ1yam38rxdWpILx_49KYknI/formResponse',
@@ -253,7 +253,7 @@ form0 ={
 	
 	var data3 = {
     'entry.1761026478': localStorage.firstUse,
-    'entry.438665866' : now,
+    'entry.438665866' : now(),
     'submit':'Send' };
 	$.ajax({
 		'url': form3.api,
@@ -340,5 +340,3 @@ $('.selectors, .lessonHeader').on('click', function() {
 	$('.card').hide();
 	$lesson.show();
 });
-
-
