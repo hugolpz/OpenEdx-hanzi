@@ -9,8 +9,12 @@ var player = [],
 /* *********************************************************************** */
 /* USER SPECIFICS ******************************************************** */
 var device = bowser.mobile?'mobile': bowser.tablet?'tablet':'PC';
-var OsAndWebBrowser = bowser.osname + ';'+ bowser.name + ' ' + bowser.version;
-var now = function() { return new Date().toJSON().replace(/[-:.]/g,':').replace(/Z/g,'') }
+var browser= bowser.name + ' ' + bowser.version;
+var operatingSystem = bowser.osname + ' ' + bowser.osversion;
+var now = function() {
+	var val = new Date().toJSON().replace(/[-:.]/g,':').replace(/Z/g,'');
+	return val;
+};
 localStorage.firstUse = localStorage.firstUse || localStorage.username || now();
 
 /* *********************************************************************** */
@@ -53,7 +57,7 @@ sinograms = vocabulary.filter(singleSinogramOnly);
 
 var opts = {
 	player : { width: 96, height: 96, padding: 5, 
-						strokeColor:"#333", radicalColor: '#B10000' },
+						strokeColor:"#333", radicalColor: '#880000' },
 	writer : { width: 300, height: 300, padding: 0, strokeColor:"#333", drawingWidth: 20,
 						showCharacter: false, showHintAfterMisses: 1,
 						ighlightOnComplete: true, highlightColor: "#B16666" },
@@ -214,13 +218,11 @@ var injectMultimedia = function (item,i) {
 		// d = {character: "中", strokeNum: 1, mistakesOnStroke: 1, totalMistakes: 1, strokesRemaining: 3}
 		onMistake : function(d){ 
 			console.log('onMistake: ',d)
-			var status = 'ongoing-mistake';
-			postHanziStrokeActivity(d.character, d.strokeNum, d.mistakesOnStroke,d.totalMistakes,d.strokesRemaining,d.drawnPath.points,d.drawnPath.pathString,status)
-		}, 
-		onCorrectStroke: function(d){ 
-			console.log('onCorrectStroke: ',d) 
-			var status = 'ongoing' || 'complete';
-			postHanziStrokeActivity(d.character, d.strokeNum, d.mistakesOnStroke,d.totalMistakes,d.strokesRemaining,d.drawnPath.points,d.drawnPath.pathString,status)
+			postHanziStrokeActivity(d.character, d.strokeNum, d.mistakesOnStroke,d.totalMistakes,d.strokesRemaining,d.drawnPath.points,d.drawnPath.pathString,false)
+		},
+		onCorrectStroke: function(d){
+			console.log('onCorrectStroke: ',d);
+			postHanziStrokeActivity(d.character, d.strokeNum, d.mistakesOnStroke,d.totalMistakes,d.strokesRemaining,d.drawnPath.points,d.drawnPath.pathString,true)
 		},
 		onComplete: function(d){ updateKnol(d) }
 	});
@@ -236,7 +238,7 @@ var injectMultimedia = function (item,i) {
 /* *********************************************************************** */
 /* MONITORING-NANO ******************************************************* */
 /* Get real info on where the learners meet counter-intuitive stroke order */
-var postHanziStrokeActivity = function(item, strokeNum, mistakesOnStroke,totalMistakes,strokesRemaining,pathPoints,pathString) { 
+var postHanziStrokeActivity = function(item, strokeNum, mistakesOnStroke,totalMistakes,strokesRemaining,pathPoints,pathString,status) { 
 	var timezone = -new Date().getTimezoneOffset()/60, /*
 form0 ={ 
 		edit: 'https://docs.google.com/forms/d/1s9UqzwVLQNajSnfgUE6GZ1yam38rxdWpILx_49KYknI/edit',
@@ -251,15 +253,6 @@ form0 ={
 		api : 'https://docs.google.com/forms/d/1XdUEjCBuQ7vH-s2wIsEhV_fXhDzi7r6-oxxnvJesQI8/formResponse',
 		table:'https://docs.google.com/spreadsheets/d/1zt7DP_eIqLm0zX58G4Sdrb-Jgdu1jEdrztb1jU41Kus/edit' };
 	
-	var data3 = {
-    'entry.1761026478': localStorage.firstUse,
-    'entry.438665866' : now(),
-    'submit':'Send' };
-	$.ajax({
-		'url': form3.api,
-		'type': "post",
-		'data': data3
-	});
   var data1 = {
     'entry.1761026478': localStorage.firstUse, // day of first use of the app
     'entry.438665866' : now,
@@ -269,14 +262,15 @@ form0 ={
     'entry.1137969634': mistakesOnStroke,
     'entry.588973715' : totalMistakes,
 		'entry.1552943138': strokesRemaining,
-    'entry.726465628' : strokesRemaining>0 && mistakesOnStroke? 'ongoing-mistake': 
+    'entry.726465628' : strokesRemaining>0 && !status? 'ongoing-mistake': 
 				strokesRemaining>0? 'ongoing':'completed', //
     // 'entry.576376173' : 'ya', // pathPoints + '',
     // 'entry.123309060' : 'yo', // pathString + '',
     'entry.463796561' : JSON.stringify(pathPoints).replace(/["']/g, ""),
 		'entry.1982999163': pathString,
     'entry.389356582' : device || '',
-    'entry.1048606120': OsAndWebBrowser || '',
+    'entry.1048606120': browser || '',
+		'entry.1669332478': operatingSystem,
     'submit':'Send' };
 		$.ajax({
 			'url': form1.api,
