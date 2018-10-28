@@ -1,0 +1,35 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Chinese-to-PDFKit demo</title>
+    <script src="./js/d3.v.5.1.min.js"></script>
+    <script src="./js/pdfkit.v8.2.js"></script>
+    <script src="./js/blob-stream-v0.1.2.js"></script>
+    <script src="./js/pdfkit-svg.js"></script>
+    <script src="./js/hanzi-writer.v0.11.0.min.js"></script>
+    <script src="./js/pdf.js"></script>
+    <link rel="stylesheet" href="css/pdf-style.css">
+  </head>
+
+  <body onload="createPdf()">
+    <div id="column-1">
+      <h3><a href="https://github.com/alafr/SVG-to-PDFKit">SVG-to-PDFKit</a> demo page</h3>
+			<p>Ex: 是,火.</p>
+      <form>
+        <textarea id="input" 
+									onblur="createPdf()" 
+									placeholder="Paste svg code, then click out" 
+									style="margin-top: 0px; margin-bottom: 0px; height: 242px;"></textarea>
+      </form>
+    </div>
+    <div id="column-2">
+      <iframe id="pdf-file"></iframe>
+    </div>
+
+		<div id="hidden-div"></div>
+
+  </body>
+
+</html>
+<script type="text/javascript">
+</script>
