@@ -16,6 +16,20 @@ var now = function() {
 	return val;
 };
 localStorage.firstUse = localStorage.firstUse || localStorage.username || now();
+/* ******************************************************************** */
+/* SET UP ************************************************************* */
+/* ******************************************************************** */
+var dev = true;
+var cl = function(parameters){
+  if(dev){ console.log(parameters);}
+};
+var getUrlVars = function() {
+  var vars = {};
+  function createArray = window.location.href
+				.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) { vars[key] = value; });
+  return vars;
+}
+cl(["window.location.search",getUrlVars()["zi"]]);
 
 /* *********************************************************************** */
 /* LOCAL MEMORY ********************************************************** */
@@ -56,7 +70,7 @@ $.ajax({ type: 'GET', data: {},
 sinograms = vocabulary.filter(singleSinogramOnly);
 
 var opts = {
-	player : { width: 96, height: 96, padding: 5, 
+	player : { width: 96, height: 96, padding: 5,
 						strokeColor:"#333", radicalColor: '#880000' },
 	writer : { width: 300, height: 300, padding: 0, strokeColor:"#333", drawingWidth: 20,
 						showCharacter: false, showHintAfterMisses: 1,
@@ -66,7 +80,7 @@ var opts = {
   }}
 };
 
-var dataLoadingApproach = 'API'; 
+var dataLoadingApproach = 'API';
 if (dataLoadingApproach === 'local'){
 	for (var attrname in opts.localLoader) {
 		opts.player[attrname] = opts.localLoader[attrname];
@@ -77,7 +91,7 @@ if (dataLoadingApproach === 'local'){
 
 /* *********************************************************************** */
 /* CMNCARD *************************************************************** */
-var cardTpl = function(item, i) { 
+var cardTpl = function(item, i) {
 	var lesson = 'S'+item.lesson, hans = item.hans, pin1yin1 = item.pin1yin1, decomposition='', decompzh='', decompfr='';
 	if(item.decompositionzh && item.decompositionzh !== "--") {
 		decompzh = item.decompositionzh;
@@ -112,11 +126,11 @@ var cardTpl = function(item, i) {
 					<div class="media-content play audio">
 						<br>
 						<p class="title is-3">
-							<span class="hans">`+hans+`</span> 
+							<span class="hans">`+hans+`</span>
 							<span class="pinyin">`+item.pinyin+`</span>
 						</p>
 						<p class="subtitle is-5"><span class="definition">`+item.definition+`</span></p>
-						
+
 					</div>
 				</div>
 
@@ -142,7 +156,7 @@ var cardTpl = function(item, i) {
 /* SECTIONS ************************************************************** */
 var	filterSinogramsInLesson = function(obj, lesson) {if (obj.lesson == lesson) { return obj.hans;} };
 
-var knolLevelForCharacter = function(knol,character) { 
+var knolLevelForCharacter = function(knol,character) {
 	var totalMistakes = knol[character]?knol[character]['totalMistakes']:undefined,
 			mistakesLevel;
 	switch (true) {
@@ -160,7 +174,7 @@ var addSection = function (arrayDictionary,lesson,item){
 	var type = lesson.length==1?"Semaine":"Section",
 			orComponents = lesson=='rad'? ', clefs ou éléments graphiques ' : '',
 			sectionHtml='',
-			counter='', 
+			counter='',
 			sinogramsInLessonObjects=[],
 			sinogramsInLessonArray=[],
 			sinogramsInLessonHtmlArray=[],
@@ -185,17 +199,16 @@ var addSection = function (arrayDictionary,lesson,item){
 //							'sinogramsInLessonHtml : ',sinogramsInLessonHtml)
 
 	/* Section final code : */
-	
+
 	sectionHtml = `
-		<h1 id="S`+lesson+`" class="title lessonHeader has-text-grey" lesson="`+lesson+`"><a href="#S`+lesson+`" style="font-size:.6em;font-weight:normal;">#</a>`+type+` `+lesson+`</h1>
-		<h2 id="L`+lesson+`" class="subtitle lessonHeader has-text-grey" lesson="`+lesson+`">Sinogrammes `+ orComponents +`(<span class="counter">`+counter+`</span>) : `+sinogramsInLessonHtml+`.<!--
-	<div class="tags has-addons">
-		<span class="tag is-info"><span class="icon has-text-light"><i class="fas fa-info-circle"></i></span> En test </span>
-		<span class="tag is-light"> La couleur des sinogrammes listés ci-dessus indique votre degré de maitrise : <em class="masteryLevel5">⬤ vert</em> = maitrisé ; <em class="masteryLevel1">⬤ rouge</em> = à apprendre.</span>
-	</div> -->
-</h2>
-		<div class="hooks S`+lesson+`" lesson="`+lesson+`">
-</div>`;
+		<h1 id="S`+lesson+`" class="lessonHeader title has-text-grey" lesson="`+lesson+`"><a href="#S`+lesson+`" style="font-size:.6em;font-weight:normal;">#</a>`+type+` `+lesson+`</h1>
+		<h2 id="L`+lesson+`" class="lessonHeader subtitle has-text-grey" lesson="`+lesson+`">Sinogrammes `+ orComponents +`(<span class="counter">`+counter+`</span>) : `+sinogramsInLessonHtml+`.<!--
+			<div class="tags has-addons">
+				<span class="tag is-info"><span class="icon has-text-light"><i class="fas fa-info-circle"></i></span> En test </span>
+				<span class="tag is-light"> La couleur des sinogrammes listés ci-dessus indique votre degré de maitrise : <em class="masteryLevel5">⬤ vert</em> = maitrisé ; <em class="masteryLevel1">⬤ rouge</em> = à apprendre.</span>
+			</div> -->
+		</h2>
+		<div class="hooks S`+lesson+`" lesson="`+lesson+`"></div>`;
 	$('#hook').append(sectionHtml);
 };
 
@@ -204,19 +217,19 @@ var injectMultimedia = function (item,i) {
 	// console.log(`{{user:yug/hz|`+item.lesson+`|`+item.hans+`|`+item.hant+`}}`)
 	var lesson = 'S'+item.lesson, hans = item.hans, pin1yin1 = item.pin1yin1.replace('5', '1');
 	var key = lesson+hans+i;
-	
+
 	//Inject HTML
 	var cardHTML = cardTpl(item,i);
 	$('.hooks.S'+item.lesson).append(cardHTML);
-	
+
 	/* Inject and assign activities to arrays */
 	// Player (Stroke Order)
-	player[key] = new HanziWriter('play'+key, hans, opts.player); 
+	player[key] = new HanziWriter('play'+key, hans, opts.player);
 	// Writer
 	writer[key] = new HanziWriter('write'+key, hans, opts.writer);
-	writer[key].quiz({ 
+	writer[key].quiz({
 		// d = {character: "中", strokeNum: 1, mistakesOnStroke: 1, totalMistakes: 1, strokesRemaining: 3}
-		onMistake : function(d){ 
+		onMistake : function(d){
 			console.log('onMistake: ',d)
 			postHanziStrokeActivity(d.character, d.strokeNum, d.mistakesOnStroke,d.totalMistakes,d.strokesRemaining,d.drawnPath.points,d.drawnPath.pathString,false)
 		},
@@ -229,7 +242,7 @@ var injectMultimedia = function (item,i) {
 	// Audio
 	var audioRoot = 'https://raw.githubusercontent.com/hugolpz/audio-cmn/master/64k',
 			audioSuffix = item.audio ?'/hsk/cmn-'+hans+'.mp3':'/syllabs/cmn-'+pin1yin1+'.mp3',
-			audioUrl = audioRoot + audioSuffix; 
+			audioUrl = audioRoot + audioSuffix;
 	var sound = new Howl({ src: [ audioUrl ]});
   audios[key] = sound;
 }
@@ -238,9 +251,9 @@ var injectMultimedia = function (item,i) {
 /* *********************************************************************** */
 /* MONITORING-NANO ******************************************************* */
 /* Get real info on where the learners meet counter-intuitive stroke order */
-var postHanziStrokeActivity = function(item, strokeNum, mistakesOnStroke,totalMistakes,strokesRemaining,pathPoints,pathString,status) { 
+var postHanziStrokeActivity = function(item, strokeNum, mistakesOnStroke,totalMistakes,strokesRemaining,pathPoints,pathString,status) {
 	var timezone = -new Date().getTimezoneOffset()/60, /*
-form0 ={ 
+form0 ={
 		edit: 'https://docs.google.com/forms/d/1s9UqzwVLQNajSnfgUE6GZ1yam38rxdWpILx_49KYknI/edit',
 		api:  'https://docs.google.com/forms/d/1s9UqzwVLQNajSnfgUE6GZ1yam38rxdWpILx_49KYknI/formResponse',
 		table:'https://docs.google.com/spreadsheets/d/1wsI0YuTMa9Qx-cGml5WGTFZSoJHOyenjGcRBxFlWXbM/edit'}, */
@@ -252,7 +265,7 @@ form0 ={
 		edit: 'https://docs.google.com/forms/d/1XdUEjCBuQ7vH-s2wIsEhV_fXhDzi7r6-oxxnvJesQI8/edit',
 		api : 'https://docs.google.com/forms/d/1XdUEjCBuQ7vH-s2wIsEhV_fXhDzi7r6-oxxnvJesQI8/formResponse',
 		table:'https://docs.google.com/spreadsheets/d/1zt7DP_eIqLm0zX58G4Sdrb-Jgdu1jEdrztb1jU41Kus/edit' };
-	
+
   var data1 = {
     'entry.1761026478': localStorage.firstUse, // day of first use of the app
     'entry.438665866' : now,
@@ -262,7 +275,7 @@ form0 ={
     'entry.1137969634': mistakesOnStroke,
     'entry.588973715' : totalMistakes,
 		'entry.1552943138': strokesRemaining,
-    'entry.726465628' : strokesRemaining>0 && !status? 'ongoing-mistake': 
+    'entry.726465628' : strokesRemaining>0 && !status? 'ongoing-mistake':
 				strokesRemaining>0? 'ongoing':'completed', //
     // 'entry.576376173' : 'ya', // pathPoints + '',
     // 'entry.123309060' : 'yo', // pathString + '',
@@ -278,13 +291,13 @@ form0 ={
 			'data': data1
 		});
 	// }
-	
+
 	console.log('pathPoints: ',JSON.stringify(pathPoints).replace(/["']/g, ""));
 	console.log('pathString: ',pathString);
 }
-/* function(d){ 
+/* function(d){
 	var status = 'ongoing' || 'complete';
-	postHanziStrokeActivity(d.character, d.strokeNum, d.mistakesOnStroke,d.totalMistakes,d.strokesRemaining,status); 
+	postHanziStrokeActivity(d.character, d.strokeNum, d.mistakesOnStroke,d.totalMistakes,d.strokesRemaining,status);
 } */
 
 
@@ -292,7 +305,7 @@ form0 ={
 var sections = [];
 for (var i=0;i<sinograms.length; i++){
 	var item = sinograms[i], lesson = item.lesson;
-	if(!sections.find(function (s){ return s==lesson; }) ){ 
+	if(!sections.find(function (s){ return s==lesson; }) ){
 		sections.push(lesson);
 		addSection(sinograms,lesson,item);
 	}
@@ -301,20 +314,20 @@ for (var i=0;i<sinograms.length; i++){
 
 /* *********************************************************************** */
 /* INTERACTIONS ********************************************************** */
-$('.play').on('click', function() {  
+$('.play').on('click', function() {
 	var $parentCard = $(this).closest('.card');
 	var key = $parentCard.attr('lesson') + $parentCard.attr('zi') + $parentCard.attr('i');
 	// console.log(zi+"dfvdrf",JSON.stringify(player[zi][0]));
 	player[key].animateCharacter();
 	console.log('.play',key);
 });
-$(".writeReset").on('click', function(){ 
+$(".writeReset").on('click', function(){
 	var $parentCard = $(this).closest('.card');
 	var key = $parentCard.attr('lesson') + $parentCard.attr('zi') + $parentCard.attr('i');
 	writer[key].quiz({});
 	console.log('#writeReset',key);
 }); /**/
-$('.audio, .play').on('click', function() {  
+$('.audio, .play').on('click', function() {
 	var $parentCard = $(this).closest('.card');
 	var key = $parentCard.attr('lesson') + $parentCard.attr('zi') + $parentCard.attr('i');
 	//var id = audios[key]._sounds._id;
@@ -327,10 +340,42 @@ $('.audio, .play').on('click', function() {
 
 /* *********************************************************************** */
 /* SELECT VIEW ********************************************************** */
-
 $('.selectors, .lessonHeader').on('click', function() {
 	var lesson = $(this).attr('lesson'),
 			$lesson = $('.card.S'+lesson);
 	$('.card').hide();
 	$lesson.show();
 });
+
+var showTargetsOnly = function(){
+  console.log("showTargetsOnly is fired;")
+  console.log('Vars:',getUrlVars());
+			/* These 7 lines below are not necessary*/
+		  var section= getUrlVars()["section"], // comma separated list. S2|S3|S4|S5|S6|S7|date|num|radicals
+		      zi = getUrlVars()["zi"], // comma separated list
+		      skin= getUrlVars()["skin"], // light
+		      topbar= getUrlVars()["topbar"], // no, hide
+		      headers= getUrlVars()["headers"], // no, hide
+		      footer= getUrlVars()["footer"]; // no, hide
+		      console.log('sections and zis :',[section, zi, skin, topbar, headers, footer]);
+  if ( getUrlVars()["section"] ) {
+    var sectionArr = getUrlVars()["section"].split(",");
+    $(".hooks").hide();
+    for(var i=0;i<sectionArr.length;i++){
+      $('.hooks .'+sectionArr[i]).show();
+    }
+  }
+  if (getUrlVars()["zi"]){
+    var ziArr = getUrlVars()["zi"].split(",");
+    // Hide top bar, section headers, footers
+    if(skin == "light"){ $(".navbar, .notification, .lessonHeader, .footer").hide() }
+    if(topbar =="no" || topbar == "hide"){ $(".navbar, .notification").hide() }
+    if(headers=="no" || headers== "hide"){ $(".lessonHeader").hide() }
+    if(footer =="no" || footer == "hide"){ $(".footer").hide() }
+    // Hide all cards then show target cards
+    $('.card').hide();
+    //$(".card").toggle();
+    for(var i=0;i<ziArr.length;i++){ $('[zi="'+ziArr[i]+'"]:first').show(); }
+  }
+}
+showTargetsOnly();
