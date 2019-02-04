@@ -355,10 +355,10 @@ var showTargetsOnly = function(){
   console.log('vars:',getUrlVars());
   var section= getUrlVars()["section"], // comma separated list. S2|S3|S4|S5|S6|S7|Sdate|Snum|Sradicals
       only = decodeURIComponent(getUrlVars()["only"]), // comma separated list
-      skin= getUrlVars()["skin"], // light
-      topbar= getUrlVars()["topbar"], // no, hide
-      headers= getUrlVars()["headers"], // no, hide
-      footer= getUrlVars()["footer"]; // no, hide
+      skin = getUrlVars()["skin"], // light
+      navbar =getUrlVars()["navbar"], // no, hide
+      headers=getUrlVars()["headers"], // no, hide
+      footer =getUrlVars()["footer"]; // no, hide
       console.log('Parameters :',[section, only, skin, topbar, headers, footer]);
   if ( section ) {
     var sectionArr = section.split(",");
@@ -371,7 +371,7 @@ var showTargetsOnly = function(){
     var onlyArr = only.split(",");
     // Hide top bar, section headers, footers
     if(skin == "light"){ $(".navbar, .notification, .lessonHeader, .footer").hide() }
-    if(topbar=="no" || topbar == "hide"){ $(".navbar, .notification").hide() }
+    if(navbar=="no" || navbar == "hide"){ $(".navbar, .notification").hide() }
     if(headers=="no"|| headers== "hide"){ $(".lessonHeader").hide() }
     if(footer=="no" || footer == "hide"){ $(".footer").hide() }
     // Hide all cards then show target cards
