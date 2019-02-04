@@ -355,7 +355,7 @@ var showTargetsOnly = function(){
   console.log("showTargetsOnly is fired;")
   console.log('Vars:',getUrlVars());
   var section= getUrlVars()["section"], // comma separated list. S2|S3|S4|S5|S6|S7|date|num|radicals
-      zi = getUrlVars()["zi"], // comma separated list
+      zi = decodeURIComponent(getUrlVars()["zi"]), // comma separated list
       skin= getUrlVars()["skin"], // light
       topbar= getUrlVars()["topbar"], // no, hide
       headers= getUrlVars()["headers"], // no, hide
