@@ -352,15 +352,14 @@ $('.selectors, .lessonHeader').on('click', function() {
 });
 
 var showTargetsOnly = function(){
-  console.log("showTargetsOnly is fired;")
   console.log('Vars:',getUrlVars());
-  var section= getUrlVars()["section"], // comma separated list. S2|S3|S4|S5|S6|S7|date|num|radicals
+  var section= getUrlVars()["section"], // comma separated list. S2|S3|S4|S5|S6|S7|Sdate|Snum|Sradicals
       zi = decodeURIComponent(getUrlVars()["zi"]), // comma separated list
       skin= getUrlVars()["skin"], // light
       topbar= getUrlVars()["topbar"], // no, hide
       headers= getUrlVars()["headers"], // no, hide
       footer= getUrlVars()["footer"]; // no, hide
-      console.log('sections and zis :',[section, zi, skin, topbar, headers, footer]);
+      console.log('Parameters :',[section, zi, skin, topbar, headers, footer]);
   if ( section ) {
     var sectionArr = section.split(",");
     $(".hooks").hide();
@@ -376,7 +375,7 @@ var showTargetsOnly = function(){
     if(headers=="no"|| headers== "hide"){ $(".lessonHeader").hide() }
     if(footer=="no" || footer == "hide"){ $(".footer").hide() }
     // Hide all cards then show target cards
-    $('.card').toggle();
+    $('.card').hide();
     //$(".card").toggle();
     for(var i=0;i<ziArr.length;i++){ $('[zi="'+ziArr[i]+'"]:first').show(); }
   }
