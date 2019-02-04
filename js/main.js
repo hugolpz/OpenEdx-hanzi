@@ -24,10 +24,14 @@ var cl = function(parameters){
   if(dev){ console.log(parameters);}
 };
 var getUrlVars = function() {
-  var vars = {};
-  function createArray = window.location.href
-				.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) { vars[key] = value; });
-  return vars;
+  var parameters = {};
+  // fill vars
+  window.location.href
+    .replace(/[?&]+([^=&]+)=([^&]*)/gi, function(matchFullRegex,match1,match2) {
+        var key=match1, val=match2;
+        parameters[key] = val;
+      });
+  return parameters;
 }
 cl(["window.location.search",getUrlVars()["zi"]]);
 
@@ -350,30 +354,29 @@ $('.selectors, .lessonHeader').on('click', function() {
 var showTargetsOnly = function(){
   console.log("showTargetsOnly is fired;")
   console.log('Vars:',getUrlVars());
-			/* These 7 lines below are not necessary*/
-		  var section= getUrlVars()["section"], // comma separated list. S2|S3|S4|S5|S6|S7|date|num|radicals
-		      zi = getUrlVars()["zi"], // comma separated list
-		      skin= getUrlVars()["skin"], // light
-		      topbar= getUrlVars()["topbar"], // no, hide
-		      headers= getUrlVars()["headers"], // no, hide
-		      footer= getUrlVars()["footer"]; // no, hide
-		      console.log('sections and zis :',[section, zi, skin, topbar, headers, footer]);
-  if ( getUrlVars()["section"] ) {
-    var sectionArr = getUrlVars()["section"].split(",");
+  var section= getUrlVars()["section"], // comma separated list. S2|S3|S4|S5|S6|S7|date|num|radicals
+      zi = getUrlVars()["zi"], // comma separated list
+      skin= getUrlVars()["skin"], // light
+      topbar= getUrlVars()["topbar"], // no, hide
+      headers= getUrlVars()["headers"], // no, hide
+      footer= getUrlVars()["footer"]; // no, hide
+      console.log('sections and zis :',[section, zi, skin, topbar, headers, footer]);
+  if ( section ) {
+    var sectionArr = section.split(",");
     $(".hooks").hide();
     for(var i=0;i<sectionArr.length;i++){
       $('.hooks .'+sectionArr[i]).show();
     }
   }
-  if (getUrlVars()["zi"]){
-    var ziArr = getUrlVars()["zi"].split(",");
+  if (zi){
+    var ziArr = zi.split(",");
     // Hide top bar, section headers, footers
     if(skin == "light"){ $(".navbar, .notification, .lessonHeader, .footer").hide() }
-    if(topbar =="no" || topbar == "hide"){ $(".navbar, .notification").hide() }
-    if(headers=="no" || headers== "hide"){ $(".lessonHeader").hide() }
-    if(footer =="no" || footer == "hide"){ $(".footer").hide() }
+    if(topbar=="no" || topbar == "hide"){ $(".navbar, .notification").hide() }
+    if(headers=="no"|| headers== "hide"){ $(".lessonHeader").hide() }
+    if(footer=="no" || footer == "hide"){ $(".footer").hide() }
     // Hide all cards then show target cards
-    $('.card').hide();
+    $('.card').toggle();
     //$(".card").toggle();
     for(var i=0;i<ziArr.length;i++){ $('[zi="'+ziArr[i]+'"]:first').show(); }
   }
