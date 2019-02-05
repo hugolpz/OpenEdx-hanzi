@@ -176,7 +176,7 @@ var knolLevelForCharacter = function(knol,character) {
 
 var addSection = function (arrayDictionary,lesson,item){
 	var type = lesson.length==1?"Semaine":"Section",
-			orComponents = lesson=='rad'? ', clefs ou éléments graphiques ' : '',
+			orComponents = lesson=='radicals'? ', clefs ou éléments graphiques ' : '',
 			sectionHtml='',
 			counter='',
 			sinogramsInLessonObjects=[],
@@ -353,13 +353,13 @@ $('.selectors, .lessonHeader').on('click', function() {
 
 var showTargetsOnly = function(){
   console.log('vars:',getUrlVars());
-  var section= getUrlVars()["section"], // comma separated list. S2|S3|S4|S5|S6|S7|Sdate|Snum|Sradicals
-      only = decodeURIComponent(getUrlVars()["only"]), // comma separated list
+  var section= getUrlVars()["section"], // comma separated list. S2|S3|S4|S5|S6|S7|Sdate|Snumbers|Sradicals
+      only = getUrlVars()["only"]? decodeURIComponent(getUrlVars()["only"]) : getUrlVars()["only"], // comma separated list
       skin = getUrlVars()["skin"], // light
       navbar =getUrlVars()["navbar"], // no, hide
       headers=getUrlVars()["headers"], // no, hide
       footer =getUrlVars()["footer"]; // no, hide
-      console.log('Parameters :',[section, only, skin, topbar, headers, footer]);
+      console.log('Parameters :',[section, only, skin, navbar, headers, footer]);
   if ( section ) {
     var sectionArr = section.split(",");
     $(".hooks").hide();
