@@ -1,5 +1,6 @@
+
 [
-    {
+    {   "WHOLE DOC SOURCE": "https://docs.google.com/spreadsheets/d/1jWtLcidgkvfMFLtVNxY_ASmO-m6MobxPWrc9AtZvZNM/edit",
         "lesson": 2,
         "hans": "中国",
         "hant": "中國",
@@ -8,7 +9,8 @@
         "definition": "Chine",
         "usage": "中国人",
         "decomposition": "--",
-        "root": "--"
+        "root": "--",
+        "rootImage": ""
     },
     {
         "lesson": 2,
@@ -20,7 +22,8 @@
         "usage": "中国人",
         "decompositionzh": "口+丨",
         "decomposition": "--",
-        "root": "flêche au milieu de la cible"
+        "root": "flêche au milieu de la cible",
+        "rootImage": ""
     },
     {
         "lesson": 2,
@@ -32,7 +35,8 @@
         "usage": "中国人",
         "decompositionzh": "囗+玉",
         "decomposition": "frontières + jade",
-        "root": "une enceinte protectrice autour une pierre de jade"
+        "root": "une enceinte protectrice autour une pierre de jade",
+        "rootImage": ""
     },
     {
         "lesson": 2,
@@ -43,7 +47,8 @@
         "definition": "Japon",
         "usage": "日本人",
         "decomposition": "--",
-        "root": "--"
+        "root": "--",
+        "rootImage": ""
     },
     {
         "lesson": 2,
@@ -55,7 +60,8 @@
         "usage": "日本人",
         "decompositionzh": "口+一",
         "decomposition": "--",
-        "root": "un cercle solaire avec un point central"
+        "root": "un cercle solaire avec un point central",
+        "rootImage": ""
     },
     {
         "lesson": 2,
@@ -67,7 +73,8 @@
         "usage": "日本人",
         "decompositionzh": "木+一",
         "decomposition": "arbre + un",
-        "root": "un arbre marqué d'une racine"
+        "root": "un arbre marqué d'une racine",
+        "rootImage": ""
     },
     {
         "lesson": 2,
@@ -79,7 +86,8 @@
         "usage": "王国，国王，小王",
         "decompositionzh": "一+土",
         "decomposition": "un + la terre",
-        "root": "un glève, tranchant vers le bas"
+        "root": "un glève, tranchant vers le bas",
+        "rootImage": ""
     },
     {
         "lesson": 2,
@@ -91,7 +99,8 @@
         "usage": "小马",
         "decompositionzh": "马",
         "decomposition": "--",
-        "root": "cheval avec crinière"
+        "root": "cheval avec crinière",
+        "rootImage": ""
     },
     {
         "lesson": 2,
@@ -103,7 +112,8 @@
         "definition": "très",
         "decompositionzh": "彳+艮",
         "decomposition": "faire un pas du pied gauche + élément phonétique",
-        "root": "la moitier d'un carrefour"
+        "root": "la moitier d'un carrefour",
+        "rootImage": ""
     },
     {
         "lesson": 2,
@@ -116,7 +126,8 @@
         "usage": "不三不四",
         "decompositionzh": "一 +丿+卜",
         "decomposition": "--",
-        "root": "pedoncule de fleur"
+        "root": "pedoncule de fleur",
+        "rootImage": ""
     },
     {
         "lesson": 2,
@@ -128,7 +139,8 @@
         "usage": "大小，大人，人大",
         "decompositionzh": "一+人",
         "decomposition": "homme + un",
-        "root": "une personne écartant les bras"
+        "root": "une personne écartant les bras",
+        "rootImage": ""
     },
     {
         "lesson": 2,
@@ -140,7 +152,8 @@
         "usage": "小马",
         "decompositionzh": "小",
         "decomposition": "--",
-        "root": "trois grains de riz"
+        "root": "trois grains de riz",
+        "rootImage": ""
     },
     {
         "lesson": 2,
@@ -152,7 +165,8 @@
         "definition": "[marque de l'interrogatif]",
         "decompositionzh": "口+马",
         "decomposition": "bouche + cheval",
-        "root": "--"
+        "root": "--",
+        "rootImage": ""
     },
     {
         "lesson": 3,
@@ -166,7 +180,8 @@
         "usage": "你们",
         "decompositionzh": "亻+尔",
         "decomposition": "une personne + tu",
-        "root": "un homme et un verre de vin décoré"
+        "root": "un homme et un verre de vin décoré",
+        "rootImage": ""
     },
     {
         "lesson": 3,
@@ -180,7 +195,8 @@
         "usage": "我们，我国",
         "decompositionzh": "手+戈 (fusionné)",
         "decomposition": "élément de la main + hallebarde",
-        "root": "une grande arme ou outils agricole"
+        "root": "une grande arme ou outils agricole",
+        "rootImage": ""
     },
     {
         "lesson": 3,
@@ -188,7 +204,8 @@
         "hant": "他們",
         "pinyin": "tāmen",
         "pin1yin1": "ta1men5",
-        "definition": "ils"
+        "definition": "ils",
+        "rootImage": ""
     },
     {
         "lesson": 3,
@@ -200,7 +217,8 @@
         "primitive": "homme, personne",
         "usage": "人人，大人，小人",
         "decompositionzh": "人",
-        "root": "une personne debout de profil les bras pendant à gauche"
+        "root": "une personne debout de profil les bras pendant à gauche",
+        "rootImage": ""
     },
     {
         "lesson": 3,
@@ -208,7 +226,8 @@
         "hant": "法國人",
         "pinyin": "Fàguórén",
         "pin1yin1": "fa3guo2ren2",
-        "definition": "Français, Francaise"
+        "definition": "Français, Francaise",
+        "rootImage": ""
     },
     {
         "lesson": 3,
@@ -216,7 +235,8 @@
         "hant": "美國人",
         "pinyin": "Měiguórén",
         "pin1yin1": "mei3guo2ren2",
-        "definition": "Américain, Américaine"
+        "definition": "Américain, Américaine",
+        "rootImage": ""
     },
     {
         "lesson": 3,
@@ -224,7 +244,8 @@
         "hant": "日本人",
         "pinyin": "Rìběnrén",
         "pin1yin1": "ri4ben3ren2",
-        "definition": "Japonais, Japonaise"
+        "definition": "Japonais, Japonaise",
+        "rootImage": ""
     },
     {
         "lesson": 3,
@@ -232,7 +253,8 @@
         "hant": "中國人",
         "pinyin": "Zhōngguórén",
         "pin1yin1": "zhong1guo2ren2",
-        "definition": "Chinois, Chinoise"
+        "definition": "Chinois, Chinoise",
+        "rootImage": ""
     },
     {
         "lesson": 3,
@@ -246,7 +268,8 @@
         "usage": "小李",
         "decompositionzh": "木+子",
         "decomposition": "un arbre et un enfant",
-        "root": "le clan fils de l'arbre"
+        "root": "le clan fils de l'arbre",
+        "rootImage": ""
     },
     {
         "lesson": 3,
@@ -258,7 +281,8 @@
         "primitive": "champ, Tian (nom de famille)",
         "usage": "小田",
         "decompositionzh": "田",
-        "root": "un champ vu du ciel avec ses chemins de traverse"
+        "root": "un champ vu du ciel avec ses chemins de traverse",
+        "rootImage": ""
     },
     {
         "lesson": 3,
@@ -269,7 +293,8 @@
         "definition": "aussi",
         "primitive": "aussi, également",
         "decompositionzh": "也",
-        "root": "une vipère"
+        "root": "une vipère",
+        "rootImage": ""
     },
     {
         "lesson": 3,
@@ -281,7 +306,8 @@
         "usage": "是不是？是吗？",
         "decompositionzh": "日+正",
         "decomposition": "soleil + droit, juste, correct",
-        "root": "un soleil puissant et un pied bien posé, ce qui est correct et solide"
+        "root": "un soleil puissant et un pied bien posé, ce qui est correct et solide",
+        "rootImage": ""
     },
     {
         "lesson": 3,
@@ -291,7 +317,8 @@
         "pin1yin1": "na3",
         "definition": "quel ? lequel ?",
         "decompositionzh": "口+那",
-        "decomposition": "bouche + cela"
+        "decomposition": "bouche + cela",
+        "rootImage": ""
     },
     {
         "lesson": 3,
@@ -304,7 +331,8 @@
         "usage": "法中，中法",
         "decompositionzh": "氵+去",
         "decomposition": "élement de l'eau + aller",
-        "root": "cour d'eau et une personne voyageant"
+        "root": "cour d'eau et une personne voyageant",
+        "rootImage": ""
     },
     {
         "lesson": 3,
@@ -316,7 +344,8 @@
         "usage": "美人",
         "decompositionzh": "羊+大",
         "decomposition": "mouton + grand",
-        "root": "un homme portant un masque de mouton"
+        "root": "un homme portant un masque de mouton",
+        "rootImage": ""
     },
     {
         "lesson": 3,
@@ -327,7 +356,8 @@
         "audio": "hsk.",
         "definition": "il, lui",
         "decompositionzh": "亻+也",
-        "decomposition": "élément de l'homme + aussi"
+        "decomposition": "élément de l'homme + aussi",
+        "rootImage": ""
     },
     {
         "lesson": 3,
@@ -340,7 +370,8 @@
         "usage": "我们，你们，人们",
         "decompositionzh": "亻+门",
         "decomposition": "élément de l'homme + porte",
-        "root": "porte à deux battant"
+        "root": "porte à deux battant",
+        "rootImage": ""
     },
     {
         "lesson": 4,
@@ -349,7 +380,8 @@
         "pinyin": "nín",
         "pin1yin1": "nin2",
 				"audio": "hsk.",
-        "definition": "nom"
+        "definition": "nom",
+        "rootImage": ""
     },
     {
         "lesson": 4,
@@ -357,7 +389,8 @@
         "hant": "立陽",
         "pinyin": "Lìyáng",
         "pin1yin1": "li4yang2",
-        "definition": "Liyang (prénom)"
+        "definition": "Liyang (prénom)",
+        "rootImage": ""
     },
     {
         "lesson": 4,
@@ -365,7 +398,8 @@
         "hant": "月文",
         "pinyin": "Yuèwén",
         "pin1yin1": "yue4wen2",
-        "definition": "Yuewen (prénom)"
+        "definition": "Yuewen (prénom)",
+        "rootImage": ""
     },
     {
         "lesson": 4,
@@ -373,7 +407,8 @@
         "hant": "貴姓",
         "pinyin": "guìxìng",
         "pin1yin1": "gui4xing4",
-        "definition": "à qui ai-je l'honneur ?"
+        "definition": "à qui ai-je l'honneur ?",
+        "rootImage": ""
     },
     {
         "lesson": 4,
@@ -381,7 +416,8 @@
         "hant": "什麼",
         "pinyin": "shénme",
         "pin1yin1": "shen2me5",
-        "definition": "quel ?"
+        "definition": "quel ?",
+        "rootImage": ""
     },
     {
         "lesson": 4,
@@ -389,7 +425,8 @@
         "hant": "哪兒",
         "pinyin": "nǎ'er",
         "pin1yin1": "na3er5",
-        "definition": "où ?"
+        "definition": "où ?",
+        "rootImage": ""
     },
     {
         "lesson": 4,
@@ -399,7 +436,8 @@
         "pin1yin1": "nin2",
         "definition": "vous (de politesse)",
         "primitive": "vous, votre (de politesse)",
-        "decompositionzh": "你+心"
+        "decompositionzh": "你+心",
+        "rootImage": ""
     },
     {
         "lesson": 4,
@@ -410,7 +448,8 @@
         "definition": "cher, couteux ; précieux ; Chèr.e [adresse de politesse]",
         "primitive": "cher, coûteux; couter cher ; [qualificatif de politesse], votre honorable",
         "usage": "不贵，很贵，贵国",
-        "decompositionzh": "中+一 +贝"
+        "decompositionzh": "中+一 +贝",
+        "rootImage": ""
     },
     {
         "lesson": 4,
@@ -422,7 +461,8 @@
         "primitive": "se nommer ; nom de famille",
         "usage": "姓名",
         "decompositionzh": "女+生",
-        "decomposition": "femme + créature"
+        "decomposition": "femme + créature",
+        "rootImage": ""
     },
     {
         "lesson": 4,
@@ -433,7 +473,8 @@
         "definition": "Li (nom) ; tenir debout",
         "primitive": "se tenir debout ; édifier",
         "usage": "中立，中立国",
-        "decompositionzh": "亠+丷+一"
+        "decompositionzh": "亠+丷+一",
+        "rootImage": ""
     },
     {
         "lesson": 4,
@@ -444,7 +485,8 @@
         "audio": "hsk.",
         "definition": "Yang (prénom) ; soleil",
         "primitive": "versant ensoleillé d'une coline ; soleil",
-        "decompositionzh": "阝+日"
+        "decompositionzh": "阝+日",
+        "rootImage": ""
     },
     {
         "lesson": 4,
@@ -456,7 +498,8 @@
         "primitive": "lune ; mois",
         "usage": "月中，一月，二月，本月",
         "decompositionzh": "月",
-        "decomposition": "--"
+        "decomposition": "--",
+        "rootImage": ""
     },
     {
         "lesson": 4,
@@ -468,7 +511,8 @@
         "primitive": "signe écrit",
         "usage": "文人，文法，法文，中文",
         "decompositionzh": "文",
-        "decomposition": "--"
+        "decomposition": "--",
+        "rootImage": ""
     },
     {
         "lesson": 4,
@@ -479,7 +523,8 @@
         "definition": "s'appeler",
         "primitive": "s'appeler",
         "decompositionzh": "口, 丩",
-        "decomposition": "bouche + [ji]"
+        "decomposition": "bouche + [ji]",
+        "rootImage": ""
     },
     {
         "lesson": 4,
@@ -489,7 +534,8 @@
         "pin1yin1": "shen2",
         "audio": "hsk.",
         "definition": "[voir 什么]",
-        "decompositionzh": "亻+十"
+        "decompositionzh": "亻+十",
+        "rootImage": ""
     },
     {
         "lesson": 4,
@@ -498,7 +544,8 @@
         "pinyin": "me",
         "pin1yin1": "me5",
         "definition": "[voir 什么]",
-        "decompositionzh": "丿+厶"
+        "decompositionzh": "丿+厶",
+        "rootImage": ""
     },
     {
         "lesson": 4,
@@ -509,7 +556,8 @@
         "audio": "hsk.",
         "definition": "nom, appellation",
         "usage": "名人",
-        "decompositionzh": "夕, 口"
+        "decompositionzh": "夕, 口",
+        "rootImage": ""
     },
     {
         "lesson": 4,
@@ -520,7 +568,8 @@
         "definition": "caractère d'écriture, sinogramme, lettre",
         "usage": "文字，十字，八字",
         "decompositionzh": "宀+子",
-        "decomposition": "toit + enfant"
+        "decomposition": "toit + enfant",
+        "rootImage": ""
     },
     {
         "lesson": 4,
@@ -532,7 +581,8 @@
         "definition": "aller à",
         "primitive": "aller à",
         "usage": "去年",
-        "decompositionzh": "土+厶"
+        "decompositionzh": "土+厶",
+        "rootImage": ""
     },
     {
         "lesson": 4,
@@ -542,7 +592,8 @@
         "pin1yin1": "er5",
         "definition": "enfant ; [suffixe phonétique]",
         "usage": "名儿，姓儿，文儿，字儿",
-        "decompositionzh": "儿"
+        "decompositionzh": "儿",
+        "rootImage": ""
     },
     {
         "lesson": 5,
@@ -550,7 +601,8 @@
         "hant": "老師",
         "pinyin": "lǎoshī",
         "pin1yin1": "lao3shi1",
-        "definition": "professeur"
+        "definition": "professeur",
+        "rootImage": ""
     },
     {
         "lesson": 5,
@@ -558,7 +610,8 @@
         "hant": "學生",
         "pinyin": "xuésheng",
         "pin1yin1": "xue2sheng5",
-        "definition": "élève"
+        "definition": "élève",
+        "rootImage": ""
     },
     {
         "lesson": 5,
@@ -566,7 +619,8 @@
         "hant": "中文",
         "pinyin": "zhōngwén",
         "pin1yin1": "zhong1wen2",
-        "definition": "langue chinoise"
+        "definition": "langue chinoise",
+        "rootImage": ""
     },
     {
         "lesson": 5,
@@ -574,7 +628,8 @@
         "hant": "法文",
         "pinyin": "fǎwén",
         "pin1yin1": "fa3wen2",
-        "definition": "langue française"
+        "definition": "langue française",
+        "rootImage": ""
     },
     {
         "lesson": 5,
@@ -582,7 +637,8 @@
         "hant": "是的",
         "pinyin": "shìde",
         "pin1yin1": "shi4de5",
-        "definition": "c'est exact"
+        "definition": "c'est exact",
+        "rootImage": ""
     },
     {
         "lesson": 5,
@@ -594,7 +650,8 @@
         "definition": "étudier ; étude ; école",
         "usage": "学年，学期，小学，中学，大学，法学，美学，文学，文字学",
         "decompositionzh": "⺍ +冖+ 子",
-        "decomposition": "petit + couvercle+enfant"
+        "decomposition": "petit + couvercle+enfant",
+        "rootImage": ""
     },
     {
         "lesson": 5,
@@ -606,7 +663,8 @@
         "definition": "ceci, ce",
         "usage": "这儿，这么",
         "decompositionzh": "辶+文",
-        "decomposition": "marcher + signe écrit"
+        "decomposition": "marcher + signe écrit",
+        "rootImage": ""
     },
     {
         "lesson": 5,
@@ -615,7 +673,8 @@
         "pinyin": "shéi",
         "pin1yin1": "shei2",
         "definition": "qui ?",
-        "usage": "谁的？"
+        "usage": "谁的？",
+        "rootImage": ""
     },
     {
         "lesson": 5,
@@ -624,7 +683,8 @@
         "pinyin": "de",
         "pin1yin1": "de5",
         "definition": "[particule de détermination]",
-        "usage": "我的，你们的"
+        "usage": "我的，你们的",
+        "rootImage": ""
     },
     {
         "lesson": 5,
@@ -633,7 +693,8 @@
         "pinyin": "shū",
         "pin1yin1": "shu1",
         "definition": "livre ; écrire",
-        "usage": "书法，小人书，国书"
+        "usage": "书法，小人书，国书",
+        "rootImage": ""
     },
     {
         "lesson": 5,
@@ -643,7 +704,8 @@
         "pin1yin1": "na4",
         "audio": "hsk.",
         "definition": "cela, ce",
-        "usage": "那儿，那么"
+        "usage": "那儿，那么",
+        "rootImage": ""
     },
     {
         "lesson": 5,
@@ -652,7 +714,8 @@
         "pinyin": "lǎo",
         "pin1yin1": "lao3",
         "definition": "vieux ; être vieux ; toujours",
-        "usage": "老人，老夫，老二，老王，老年，老百姓"
+        "usage": "老人，老夫，老二，老王，老年，老百姓",
+        "rootImage": ""
     },
     {
         "lesson": 5,
@@ -662,7 +725,8 @@
         "pin1yin1": "shi1",
         "audio": "hsk.",
         "definition": "maître",
-        "usage": "大师"
+        "usage": "大师",
+        "rootImage": ""
     },
     {
         "lesson": 5,
@@ -672,7 +736,8 @@
         "pin1yin1": "dong1",
         "audio": "hsk.",
         "definition": "Dong (prénom) ; hivers",
-        "usage": "立冬"
+        "usage": "立冬",
+        "rootImage": ""
     },
     {
         "lesson": 5,
@@ -680,7 +745,8 @@
         "hant": "哦",
         "pinyin": "ò",
         "pin1yin1": "o4",
-        "definition": "ah bon ? [part. exclamative de doute, de surprise]"
+        "definition": "ah bon ? [part. exclamative de doute, de surprise]",
+        "rootImage": ""
     },
     {
         "lesson": 5,
@@ -690,7 +756,8 @@
         "pin1yin1": "sheng1",
         "audio": "hsk.",
         "definition": "naître",
-        "usage": "生日，生字，小学生，中学生，大学生，师生"
+        "usage": "生日，生字，小学生，中学生，大学生，师生",
+        "rootImage": ""
     },
     {
         "lesson": 6,
@@ -698,7 +765,8 @@
         "hant": "漢語",
         "pinyin": "hànyǔ",
         "pin1yin1": "han4yu3",
-        "definition": "langue chinoise"
+        "definition": "langue chinoise",
+        "rootImage": ""
     },
     {
         "lesson": 6,
@@ -706,7 +774,8 @@
         "hant": "外語",
         "pinyin": "wàiyǔ",
         "pin1yin1": "wai4yu3",
-        "definition": "langue étrangère"
+        "definition": "langue étrangère",
+        "rootImage": ""
     },
     {
         "lesson": 6,
@@ -714,7 +783,8 @@
         "hant": "漢字",
         "pinyin": "hànzì",
         "pin1yin1": "han4yu3",
-        "definition": "caractères chinois (sinogrammes)"
+        "definition": "caractères chinois (sinogrammes)",
+        "rootImage": ""
     },
     {
         "lesson": 6,
@@ -722,7 +792,8 @@
         "hant": "怎麼樣",
         "pinyin": "zěnmeyàng",
         "pin1yin1": "zen3me5yang4",
-        "definition": "comment ? être comment ?"
+        "definition": "comment ? être comment ?",
+        "rootImage": ""
     },
     {
         "lesson": 6,
@@ -731,7 +802,8 @@
         "pinyin": "hàn",
         "pin1yin1": "han4",
         "definition": "chinois, Han",
-        "usage": "汉人，汉学，汉文，夫汉"
+        "usage": "汉人，汉学，汉文，夫汉",
+        "rootImage": ""
     },
     {
         "lesson": 6,
@@ -741,7 +813,8 @@
         "pin1yin1": "yu3",
         "audio": "hsk.",
         "definition": "langue (orale)",
-        "usage": "语法，语文，法语，国语"
+        "usage": "语法，语文，法语，国语",
+        "rootImage": ""
     },
     {
         "lesson": 6,
@@ -751,7 +824,8 @@
         "pin1yin1": "shuo1",
         "audio": "hsk.",
         "definition": "parler, dire, dire que",
-        "usage": "说法，小说，好说，不好说，学说"
+        "usage": "说法，小说，好说，不好说，学说",
+        "rootImage": ""
     },
     {
         "lesson": 6,
@@ -759,7 +833,8 @@
         "hant": "得",
         "pinyin": "de",
         "pin1yin1": "de5",
-        "definition": "[suf. verbal d'appreciation]"
+        "definition": "[suf. verbal d'appreciation]",
+        "rootImage": ""
     },
     {
         "lesson": 6,
@@ -768,7 +843,8 @@
         "pinyin": "zěn",
         "pin1yin1": "zen3",
         "definition": "[voir 怎么样]",
-        "usage": "怎么，怎样，不怎么样"
+        "usage": "怎么，怎样，不怎么样",
+        "rootImage": ""
     },
     {
         "lesson": 6,
@@ -777,7 +853,8 @@
         "pinyin": "yàng",
         "pin1yin1": "yang4",
         "definition": "sorte, manière, type, modèle",
-        "usage": "样本，一样，不一样，这样，那样，字样"
+        "usage": "样本，一样，不一样，这样，那样，字样",
+        "rootImage": ""
     },
     {
         "lesson": 6,
@@ -786,7 +863,8 @@
         "pinyin": "wài",
         "pin1yin1": "wai4",
         "definition": "extérieur",
-        "usage": "外国，外文，国外，中外，老外"
+        "usage": "外国，外文，国外，中外，老外",
+        "rootImage": ""
     },
     {
         "lesson": 6,
@@ -795,7 +873,8 @@
         "pinyin": "dōu",
         "pin1yin1": "dou1",
         "definition": "en totalité",
-        "usage": "都不，不都"
+        "usage": "都不，不都",
+        "rootImage": ""
     },
     {
         "lesson": 6,
@@ -804,7 +883,8 @@
         "pinyin": "hǎo",
         "pin1yin1": "hao3",
         "definition": "bien, bon ; être bien",
-        "usage": "好学，好写，好不好"
+        "usage": "好学，好写，好不好",
+        "rootImage": ""
     },
     {
         "lesson": 6,
@@ -812,7 +892,8 @@
         "hant": "好",
         "pinyin": "hào",
         "pin1yin1": "hao4",
-        "definition": "être bon, aimer"
+        "definition": "être bon, aimer",
+        "rootImage": ""
     },
     {
         "lesson": 6,
@@ -821,7 +902,8 @@
         "pinyin": "ne",
         "pin1yin1": "ne5",
         "audio": "hsk.",
-        "definition": "[particule interrogative finale]"
+        "definition": "[particule interrogative finale]",
+        "rootImage": ""
     },
     {
         "lesson": 6,
@@ -830,7 +912,8 @@
         "pinyin": "xiě",
         "pin1yin1": "xie3",
         "definition": "écrire.",
-        "usage": "写字，书写"
+        "usage": "写字，书写",
+        "rootImage": ""
     },
     {
         "lesson": 7,
@@ -838,7 +921,8 @@
         "hant": "北方",
         "pinyin": "Běifāng",
         "pin1yin1": "bei1fang1",
-        "definition": "Nord"
+        "definition": "Nord",
+        "rootImage": ""
     },
     {
         "lesson": 7,
@@ -846,7 +930,8 @@
         "hant": "南方",
         "pinyin": "Nánfāng",
         "pin1yin1": "nan2fang1",
-        "definition": "Sud"
+        "definition": "Sud",
+        "rootImage": ""
     },
     {
         "lesson": 7,
@@ -854,7 +939,8 @@
         "hant": "上海",
         "pinyin": "Shànghǎi",
         "pin1yin1": "shang4hai3",
-        "definition": "Shanghai"
+        "definition": "Shanghai",
+        "rootImage": ""
     },
     {
         "lesson": 7,
@@ -862,7 +948,8 @@
         "hant": "孩子",
         "pinyin": "háizi",
         "pin1yin1": "hai2zi5",
-        "definition": "enfant"
+        "definition": "enfant",
+        "rootImage": ""
     },
     {
         "lesson": 7,
@@ -870,7 +957,8 @@
         "hant": "男孩子",
         "pinyin": "nánháizi",
         "pin1yin1": "nan2hai2zi5",
-        "definition": "garçon"
+        "definition": "garçon",
+        "rootImage": ""
     },
     {
         "lesson": 7,
@@ -878,7 +966,8 @@
         "hant": "女孩子",
         "pinyin": "nǚ háizi",
         "pin1yin1": "nv3hai2zi5",
-        "definition": "fille"
+        "definition": "fille",
+        "rootImage": ""
     },
     {
         "lesson": 7,
@@ -886,7 +975,8 @@
         "hant": "愛人",
         "pinyin": "àirén",
         "pin1yin1": "ai4ren2",
-        "definition": "conjoint"
+        "definition": "conjoint",
+        "rootImage": ""
     },
     {
         "lesson": 7,
@@ -894,7 +984,8 @@
         "hant": "中學",
         "pinyin": "zhōngxué",
         "pin1yin1": "zhong1xue2",
-        "definition": "école secondaire"
+        "definition": "école secondaire",
+        "rootImage": ""
     },
     {
         "lesson": 7,
@@ -902,7 +993,8 @@
         "hant": "工作",
         "pinyin": "gōngzuò",
         "pin1yin1": "gong1zuo4",
-        "definition": "métier, travail"
+        "definition": "métier, travail",
+        "rootImage": ""
     },
     {
         "lesson": 7,
@@ -910,7 +1002,8 @@
         "hant": "工作",
         "pinyin": "gōngzuò",
         "pin1yin1": "gong1zuo4",
-        "definition": "travailler"
+        "definition": "travailler",
+        "rootImage": ""
     },
     {
         "lesson": 7,
@@ -919,7 +1012,8 @@
         "pinyin": "jiā",
         "pin1yin1": "jia1",
         "definition": "foyer, famille",
-        "usage": "我家，大家，国家，文学家，书法家，老人家"
+        "usage": "我家，大家，国家，文学家，书法家，老人家",
+        "rootImage": ""
     },
     {
         "lesson": 7,
@@ -928,7 +1022,8 @@
         "pinyin": "yǒu",
         "pin1yin1": "you3",
         "definition": "avoir",
-        "usage": "有的...有的...，有人，有名，没有人"
+        "usage": "有的...有的...，有人，有名，没有人",
+        "rootImage": ""
     },
     {
         "lesson": 7,
@@ -937,7 +1032,8 @@
         "pinyin": "jǐ",
         "pin1yin1": "ji3",
         "definition": "combien ?",
-        "usage": "口语，人口"
+        "usage": "口语，人口",
+        "rootImage": ""
     },
     {
         "lesson": 7,
@@ -946,7 +1042,8 @@
         "pinyin": "kǒu",
         "pin1yin1": "kou3",
         "audio": "hsk.",
-        "definition": "[classificateur pour les membres d'une famille]"
+        "definition": "[classificateur pour les membres d'une famille]",
+        "rootImage": ""
     },
     {
         "lesson": 7,
@@ -955,7 +1052,8 @@
         "pinyin": "huí",
         "pin1yin1": "hui2",
         "definition": "retourner à",
-        "usage": "回去，回想"
+        "usage": "回去，回想",
+        "rootImage": ""
     },
     {
         "lesson": 7,
@@ -964,7 +1062,8 @@
         "pinyin": "zài",
         "pin1yin1": "zai4",
         "definition": "être à, se trouver à",
-        "usage": "在家，不在"
+        "usage": "在家，不在",
+        "rootImage": ""
     },
     {
         "lesson": 7,
@@ -973,7 +1072,8 @@
         "pinyin": "běi",
         "pin1yin1": "bei3",
         "definition": "Nord",
-        "usage": "东北"
+        "usage": "东北",
+        "rootImage": ""
     },
     {
         "lesson": 7,
@@ -982,7 +1082,8 @@
         "pinyin": "fāng",
         "pin1yin1": "fang1",
         "definition": "orientation, lieu ; moyen",
-        "usage": "方法，地方，东方，西方，大方"
+        "usage": "方法，地方，东方，西方，大方",
+        "rootImage": ""
     },
     {
         "lesson": 7,
@@ -991,7 +1092,8 @@
         "pinyin": "nán",
         "pin1yin1": "nan2",
         "definition": "Sud",
-        "usage": "西南"
+        "usage": "西南",
+        "rootImage": ""
     },
     {
         "lesson": 7,
@@ -1000,7 +1102,8 @@
         "pinyin": "shàng",
         "pin1yin1": "shang4",
         "definition": "au dessus, sur ; monter",
-        "usage": "上学，地上，马上"
+        "usage": "上学，地上，马上",
+        "rootImage": ""
     },
     {
         "lesson": 7,
@@ -1009,7 +1112,8 @@
         "pinyin": "hǎi",
         "pin1yin1": "hai3",
         "definition": "mer",
-        "usage": "海南，地中海，地中海人"
+        "usage": "海南，地中海，地中海人",
+        "rootImage": ""
     },
     {
         "lesson": 7,
@@ -1018,7 +1122,8 @@
         "pinyin": "méi",
         "pin1yin1": "mei2",
         "definition": "[négation]",
-        "usage": "没人，没什么"
+        "usage": "没人，没什么",
+        "rootImage": ""
     },
     {
         "lesson": 7,
@@ -1027,7 +1132,8 @@
         "pinyin": "hái",
         "pin1yin1": "hai2",
         "definition": "enfant",
-        "usage": "孩子王，小孩子"
+        "usage": "孩子王，小孩子",
+        "rootImage": ""
     },
     {
         "lesson": 7,
@@ -1036,7 +1142,8 @@
         "pinyin": "zi",
         "pin1yin1": "zi5",
         "definition": "enfant",
-        "usage": "字儿，子女，女子，老子"
+        "usage": "字儿，子女，女子，老子",
+        "rootImage": ""
     },
     {
         "lesson": 7,
@@ -1045,7 +1152,8 @@
         "pinyin": "zi",
         "pin1yin1": "zi5",
         "definition": "[suffixe]",
-        "usage": "日子，本子，样子，李子，儿子"
+        "usage": "日子，本子，样子，李子，儿子",
+        "rootImage": ""
     },
     {
         "lesson": 7,
@@ -1054,7 +1162,8 @@
         "pinyin": "gè",
         "pin1yin1": "ge4",
         "definition": "[classificateur des individus]",
-        "usage": "个人，那个那个，个子，个儿"
+        "usage": "个人，那个那个，个子，个儿",
+        "rootImage": ""
     },
     {
         "lesson": 7,
@@ -1063,7 +1172,8 @@
         "pinyin": "nán",
         "pin1yin1": "nan2",
         "definition": "gaçon, homme ; masculin",
-        "usage": "男人，男生，男的，男子"
+        "usage": "男人，男生，男的，男子",
+        "rootImage": ""
     },
     {
         "lesson": 7,
@@ -1072,7 +1182,8 @@
         "pinyin": "nǚ",
         "pin1yin1": "nv3",
         "definition": "fille, femme ; féminin",
-        "usage": "女人，女生，女的，女子，女儿"
+        "usage": "女人，女生，女的，女子，女儿",
+        "rootImage": ""
     },
     {
         "lesson": 7,
@@ -1081,7 +1192,8 @@
         "pinyin": "ài",
         "pin1yin1": "ai4",
         "definition": "aimer",
-        "usage": "爱国，爱好"
+        "usage": "爱国，爱好",
+        "rootImage": ""
     },
     {
         "lesson": 7,
@@ -1091,7 +1203,8 @@
         "pin1yin1": "gong1",
         "audio": "hsk.",
         "definition": "travail",
-        "usage": "工人，人工，男工，女工"
+        "usage": "工人，人工，男工，女工",
+        "rootImage": ""
     },
     {
         "lesson": 7,
@@ -1100,7 +1213,8 @@
         "pinyin": "zuò",
         "pin1yin1": "zuo4",
         "definition": "faire",
-        "usage": "做法，作家"
+        "usage": "做法，作家",
+        "rootImage": ""
     },
     {
         "lesson": 7,
@@ -1110,7 +1224,8 @@
         "pin1yin1": "ta1",
         "audio": "hsk.",
         "definition": "elle",
-        "usage": "她们"
+        "usage": "她们",
+        "rootImage": ""
     },
     {
         "lesson": 7,
@@ -1120,7 +1235,8 @@
         "pin1yin1": "dong1",
         "audio": "hsk.",
         "definition": "Est",
-        "usage": "东西，东京，中东"
+        "usage": "东西，东京，中东",
+        "rootImage": ""
     },
     {
         "lesson": 7,
@@ -1129,142 +1245,159 @@
         "pinyin": "xī",
         "pin1yin1": "xi1",
         "definition": "Ouest",
-        "usage": "西北，西南"
+        "usage": "西北，西南",
+        "rootImage": ""
     },
     {
-        "lesson": "num",
+        "lesson": "numbers",
         "hans": "一",
         "hant": "一",
         "pinyin": "yī",
         "pin1yin1": "yi1",
-        "definition": "un"
+        "definition": "un",
+        "rootImage": ""
     },
     {
-        "lesson": "num",
+        "lesson": "numbers",
         "hans": "二",
         "hant": "二",
         "pinyin": "èr",
         "pin1yin1": "er4",
-        "definition": "deux"
+        "definition": "deux",
+        "rootImage": ""
     },
     {
-        "lesson": "num",
+        "lesson": "numbers",
         "hans": "三",
         "hant": "三",
         "pinyin": "sān",
         "pin1yin1": "san1",
         "audio": "hsk.",
-        "definition": "trois"
+        "definition": "trois",
+        "rootImage": ""
     },
     {
-        "lesson": "num",
+        "lesson": "numbers",
         "hans": "四",
         "hant": "四",
         "pinyin": "sì",
         "pin1yin1": "si4",
-        "definition": "quatre"
+        "definition": "quatre",
+        "rootImage": ""
     },
     {
-        "lesson": "num",
+        "lesson": "numbers",
         "hans": "五",
         "hant": "五",
         "pinyin": "wǔ",
         "pin1yin1": "wu3",
         "audio": "hsk.",
-        "definition": "cinq"
+        "definition": "cinq",
+        "rootImage": ""
     },
     {
-        "lesson": "num",
+        "lesson": "numbers",
         "hans": "六",
         "hant": "六",
         "pinyin": "liù",
         "pin1yin1": "liu4",
-        "definition": "six"
+        "definition": "six",
+        "rootImage": ""
     },
     {
-        "lesson": "num",
+        "lesson": "numbers",
         "hans": "七",
         "hant": "七",
         "pinyin": "qī",
         "pin1yin1": "qi1",
-        "definition": "sept"
+        "definition": "sept",
+        "rootImage": ""
     },
     {
-        "lesson": "num",
+        "lesson": "numbers",
         "hans": "八",
         "hant": "八",
         "pinyin": "bā",
         "pin1yin1": "ba1",
-        "definition": "huit"
+        "definition": "huit",
+        "rootImage": ""
     },
     {
-        "lesson": "num",
+        "lesson": "numbers",
         "hans": "九",
         "hant": "九",
         "pinyin": "jiŭ",
         "pin1yin1": "jiu1",
-        "definition": "neuf"
+        "definition": "neuf",
+        "rootImage": ""
     },
     {
-        "lesson": "num",
+        "lesson": "numbers",
         "hans": "十",
         "hant": "十",
         "pinyin": "shí",
         "pin1yin1": "shi2",
-        "definition": "dix"
+        "definition": "dix",
+        "rootImage": ""
     },
     {
-        "lesson": "num",
+        "lesson": "numbers",
         "hans": "零",
         "hant": "零",
         "pinyin": "líng",
         "pin1yin1": "ling2",
         "definition": "zéro [alternative: 〇]",
-        "decomposition": "pluie + \"ling\""
+        "decomposition": "pluie + \"ling\"",
+        "rootImage": ""
     },
     {
-        "lesson": "num",
+        "lesson": "numbers",
         "hans": "两",
         "hant": "兩",
         "pinyin": "liǎng",
         "pin1yin1": "liang3",
         "audio": "hsk.",
-        "definition": "deux"
+        "definition": "deux",
+        "rootImage": ""
     },
     {
-        "lesson": "num",
+        "lesson": "numbers",
         "hans": "百",
         "hant": "百",
         "pinyin": "bǎi",
         "pin1yin1": "bai3",
-        "definition": "centaine"
+        "definition": "centaine",
+        "rootImage": ""
     },
     {
-        "lesson": "num",
+        "lesson": "numbers",
         "hans": "千",
         "hant": "千",
         "pinyin": "qiān",
         "pin1yin1": "qian1",
         "audio": "hsk.",
-        "definition": "millier"
+        "definition": "millier",
+        "rootImage": ""
     },
     {
-        "lesson": "num",
+        "lesson": "numbers",
         "hans": "万",
         "hant": "萬",
         "pinyin": "wàn",
         "pin1yin1": "wan4",
-        "definition": "dix millier"
+        "definition": "dix millier",
+        "rootImage": ""
     },
     {
-        "lesson": "num",
+        "lesson": "numbers",
         "hans": "第",
         "hant": "第",
         "pinyin": "dì",
         "pin1yin1": "di4",
         "definition": "-ème [préf. ordinal]",
         "decomposition": "bambou + petit frere (\"di\")",
-        "root": "corde enroulée a dif. niveaux"
+        "root": "corde enroulée a dif. niveaux",
+        "rootImage": ""
     },
     {
         "lesson": "date",
@@ -1272,7 +1405,8 @@
         "hant": "年",
         "pinyin": "nián",
         "pin1yin1": "nian2",
-        "definition": "année"
+        "definition": "année",
+        "rootImage": ""
     },
     {
         "lesson": "date",
@@ -1280,7 +1414,8 @@
         "hant": "月",
         "pinyin": "yuè",
         "pin1yin1": "yue4",
-        "definition": "mois"
+        "definition": "mois",
+        "rootImage": ""
     },
     {
         "lesson": "date",
@@ -1288,7 +1423,8 @@
         "hant": "日",
         "pinyin": "rì",
         "pin1yin1": "ri4",
-        "definition": "jour"
+        "definition": "jour",
+        "rootImage": ""
     },
     {
         "lesson": "date",
@@ -1299,7 +1435,8 @@
         "definition": "étoile",
         "decompositionzh": "日+生",
         "decomposition": "etoile + naitre/creature",
-        "root": "des étoiles au dessus d'un arbre"
+        "root": "des étoiles au dessus d'un arbre",
+        "rootImage": ""
     },
     {
         "lesson": "date",
@@ -1310,7 +1447,8 @@
         "definition": "période",
         "decompositionzh": "其+月",
         "decomposition": "ce + lune",
-        "root": "un tamis et la lune"
+        "root": "un tamis et la lune",
+        "rootImage": ""
     },
     {
         "lesson": "date",
@@ -1319,7 +1457,8 @@
         "pinyin": "xīngqī",
         "pin1yin1": "xingg1qi1",
         "definition": "semaine",
-        "decomposition": "étoile + période"
+        "decomposition": "étoile + période",
+        "rootImage": ""
     },
     {
         "lesson": "date",
@@ -1328,7 +1467,8 @@
         "pinyin": "xīngqīyī",
         "pin1yin1": "xingg1qi1yi1",
         "definition": "lundi",
-        "root": "1er jour de la semaine"
+        "root": "1er jour de la semaine",
+        "rootImage": ""
     },
     {
         "lesson": "date",
@@ -1337,7 +1477,8 @@
         "pinyin": "xīngqīèr",
         "pin1yin1": "xingg1qi1er4",
         "definition": "mardi",
-        "root": "2nd  jour de la semaine"
+        "root": "2nd  jour de la semaine",
+        "rootImage": ""
     },
     {
         "lesson": "date",
@@ -1346,7 +1487,8 @@
         "pinyin": "xīngqīsān",
         "pin1yin1": "xingg1qi1san1",
         "definition": "mercredi",
-        "root": "3e jour de la semaine"
+        "root": "3e jour de la semaine",
+        "rootImage": ""
     },
     {
         "lesson": "date",
@@ -1355,7 +1497,8 @@
         "pinyin": "xīngqīsì",
         "pin1yin1": "xingg1qi1si4",
         "definition": "jeudi",
-        "root": "4e jour de la semaine"
+        "root": "4e jour de la semaine",
+        "rootImage": ""
     },
     {
         "lesson": "date",
@@ -1364,7 +1507,8 @@
         "pinyin": "xīngqīwǔ",
         "pin1yin1": "xingg1qi1wu3",
         "definition": "vendredi",
-        "root": "5e jour de la semaine"
+        "root": "5e jour de la semaine",
+        "rootImage": ""
     },
     {
         "lesson": "date",
@@ -1373,7 +1517,8 @@
         "pinyin": "xīngqīliù",
         "pin1yin1": "xingg1qi1liu4",
         "definition": "samedi",
-        "root": "6e jour de la semaine"
+        "root": "6e jour de la semaine",
+        "rootImage": ""
     },
     {
         "lesson": "date",
@@ -1382,7 +1527,8 @@
         "pinyin": "xīngqīrì",
         "pin1yin1": "xingg1qi1ri4",
         "definition": "dimanche",
-        "root": "jour du soleil (dimanche)"
+        "root": "jour du soleil (dimanche)",
+        "rootImage": ""
     },
     {
         "lesson": "date",
@@ -1390,7 +1536,8 @@
         "hant": "一月",
         "pinyin": "yīyuè",
         "pin1yin1": "yi1yue4",
-        "definition": "janvier"
+        "definition": "janvier",
+        "rootImage": ""
     },
     {
         "lesson": "date",
@@ -1398,7 +1545,8 @@
         "hant": "二月",
         "pinyin": "èryuè",
         "pin1yin1": "er2yue4",
-        "definition": "février"
+        "definition": "février",
+        "rootImage": ""
     },
     {
         "lesson": "date",
@@ -1406,7 +1554,8 @@
         "hant": "三月",
         "pinyin": "sānyuè",
         "pin1yin1": "san1yue4",
-        "definition": "mars"
+        "definition": "mars",
+        "rootImage": ""
     },
     {
         "lesson": "date",
@@ -1414,7 +1563,8 @@
         "hant": "四月",
         "pinyin": "sìyuè",
         "pin1yin1": "si4yue4",
-        "definition": "avril"
+        "definition": "avril",
+        "rootImage": ""
     },
     {
         "lesson": "date",
@@ -1422,7 +1572,8 @@
         "hant": "五月",
         "pinyin": "wǔyuè",
         "pin1yin1": "wu3yue4",
-        "definition": "mai"
+        "definition": "mai",
+        "rootImage": ""
     },
     {
         "lesson": "date",
@@ -1430,7 +1581,8 @@
         "hant": "六月",
         "pinyin": "liùyuè",
         "pin1yin1": "liu4yue4",
-        "definition": "juin"
+        "definition": "juin",
+        "rootImage": ""
     },
     {
         "lesson": "date",
@@ -1438,7 +1590,8 @@
         "hant": "七月",
         "pinyin": "qīyuè",
         "pin1yin1": "qi1yue4",
-        "definition": "juillet"
+        "definition": "juillet",
+        "rootImage": ""
     },
     {
         "lesson": "date",
@@ -1446,7 +1599,8 @@
         "hant": "八月",
         "pinyin": "bāyuè",
         "pin1yin1": "ba1yue4",
-        "definition": "août"
+        "definition": "août",
+        "rootImage": ""
     },
     {
         "lesson": "date",
@@ -1454,7 +1608,8 @@
         "hant": "九月",
         "pinyin": "jiŭyuè",
         "pin1yin1": "jiu1yue4",
-        "definition": "septembre"
+        "definition": "septembre",
+        "rootImage": ""
     },
     {
         "lesson": "date",
@@ -1462,7 +1617,8 @@
         "hant": "十月",
         "pinyin": "shíyuè",
         "pin1yin1": "shi2yue4",
-        "definition": "octobre"
+        "definition": "octobre",
+        "rootImage": ""
     },
     {
         "lesson": "date",
@@ -1470,7 +1626,8 @@
         "hant": "十一月",
         "pinyin": "shíyīyuè",
         "pin1yin1": "shi2yi1yue4",
-        "definition": "novembre"
+        "definition": "novembre",
+        "rootImage": ""
     },
     {
         "lesson": "date",
@@ -1478,996 +1635,1104 @@
         "hant": "十二月",
         "pinyin": "shí'èryuè",
         "pin1yin1": "shi2er4yue4",
-        "definition": "décembre"
+        "definition": "décembre",
+        "rootImage": ""
     },
     {
-        "lesson": "rad",
+        "lesson": "radicals",
         "hans": "又",
         "hant": "又",
         "pinyin": "yòu",
         "pin1yin1": "you4",
         "definition": "main droite",
-        "usage": "友,双"
+        "usage": "友,双",
+        "rootImage": ""
     },
     {
-        "lesson": "rad",
+        "lesson": "radicals",
         "hans": "讠",
         "hant": "訁",
         "pinyin": "yán",
         "pin1yin1": "yan2",
         "audio": "hsk.",
         "definition": "parole",
-        "usage": "说,话"
+        "usage": "说,话",
+        "rootImage": ""
     },
     {
-        "lesson": "rad",
+        "lesson": "radicals",
         "hans": "亻",
         "hant": "亻",
         "pinyin": "rén",
         "pin1yin1": "ren2",
         "definition": "homme",
-        "usage": "你,他"
+        "usage": "你,他",
+        "rootImage": ""
     },
     {
-        "lesson": "rad",
+        "lesson": "radicals",
         "hans": "刂",
         "hant": "刂",
         "pinyin": "dāo",
         "pin1yin1": "dao1",
         "definition": "couteau",
-        "usage": "刻,到"
+        "usage": "刻,到",
+        "rootImage": ""
     },
     {
-        "lesson": "rad",
+        "lesson": "radicals",
         "hans": "阝",
         "hant": "阝",
         "pinyin": "fù",
         "pin1yin1": "fu4",
         "definition": "tertre",
-        "usage": "阳,阴"
+        "usage": "阳,阴",
+        "rootImage": ""
     },
     {
-        "lesson": "rad",
+        "lesson": "radicals",
         "hans": "阝",
         "hant": "阝",
         "pinyin": "yì",
         "pin1yin1": "yi4",
         "audio": "hsk.",
         "definition": "ville",
-        "usage": "都,那"
+        "usage": "都,那",
+        "rootImage": ""
     },
     {
-        "lesson": "rad",
+        "lesson": "radicals",
         "hans": "力",
         "hant": "力",
         "pinyin": "lì",
         "pin1yin1": "li4",
         "definition": "force",
-        "usage": "男,办"
+        "usage": "男,办",
+        "rootImage": ""
     },
     {
-        "lesson": "rad",
+        "lesson": "radicals",
         "hans": "冫",
         "hant": "冫",
         "pinyin": "bīng",
         "pin1yin1": "bing1",
         "definition": "glace",
-        "usage": "冷,凉"
+        "usage": "冷,凉",
+        "rootImage": ""
     },
     {
-        "lesson": "rad",
+        "lesson": "radicals",
         "hans": "卜",
         "hant": "卜",
         "pinyin": "bǔ",
         "pin1yin1": "bu3",
         "audio": "hsk.",
         "definition": "divination",
-        "usage": "外,站"
+        "usage": "外,站",
+        "rootImage": ""
     },
     {
-        "lesson": "rad",
+        "lesson": "radicals",
         "hans": "厶",
         "hant": "厶",
         "pinyin": "sī",
         "pin1yin1": "si1",
         "definition": "privé",
-        "usage": "公,么"
+        "usage": "公,么",
+        "rootImage": ""
     },
     {
-        "lesson": "rad",
+        "lesson": "radicals",
         "hans": "几",
         "hant": "幾",
         "pinyin": "jī",
         "pin1yin1": "ji1",
         "definition": "table basse",
-        "usage": "没,机"
+        "usage": "没,机",
+        "rootImage": ""
     },
     {
-        "lesson": "rad",
+        "lesson": "radicals",
         "hans": "八",
         "hant": "八",
         "pinyin": "bā",
         "pin1yin1": "ba1",
         "definition": "séparation",
-        "usage": "分,公"
+        "usage": "分,公",
+        "rootImage": ""
     },
     {
-        "lesson": "rad",
+        "lesson": "radicals",
         "hans": "匕",
         "hant": "匕",
         "pinyin": "bǐ",
         "pin1yin1": "bi3",
         "definition": "homme renversé",
-        "usage": "北,老"
+        "usage": "北,老",
+        "rootImage": ""
     },
     {
-        "lesson": "rad",
+        "lesson": "radicals",
         "hans": "宀",
         "hant": "宀",
         "pinyin": "gài",
         "pin1yin1": "gai4",
         "definition": "toit",
-        "usage": "安,家"
+        "usage": "安,家",
+        "rootImage": ""
     },
     {
-        "lesson": "rad",
+        "lesson": "radicals",
         "hans": "小",
         "hant": "小",
         "pinyin": "xiǎo",
         "pin1yin1": "xiao3",
         "definition": "petitesse",
-        "usage": "少,沙"
+        "usage": "少,沙",
+        "rootImage": ""
     },
     {
-        "lesson": "rad",
+        "lesson": "radicals",
         "hans": "巾",
         "hant": "巾",
         "pinyin": "jīn",
         "pin1yin1": "jin1",
         "definition": "tissu",
-        "usage": "市,带"
+        "usage": "市,带",
+        "rootImage": ""
     },
     {
-        "lesson": "rad",
+        "lesson": "radicals",
         "hans": "工",
         "hant": "工",
         "pinyin": "gōng",
         "pin1yin1": "gong1",
         "audio": "hsk.",
         "definition": "travail",
-        "usage": "江,左"
+        "usage": "江,左",
+        "rootImage": ""
     },
     {
-        "lesson": "rad",
+        "lesson": "radicals",
         "hans": "口",
         "hant": "口",
         "pinyin": "kǒu",
         "pin1yin1": "kou3",
         "audio": "hsk.",
         "definition": "bouche",
-        "usage": "吃,品"
+        "usage": "吃,品",
+        "rootImage": ""
     },
     {
-        "lesson": "rad",
+        "lesson": "radicals",
         "hans": "扌",
         "hant": "扌",
         "pinyin": "shǒu",
         "pin1yin1": "shou3",
         "audio": "hsk.",
         "definition": "main",
-        "usage": "打,报"
+        "usage": "打,报",
+        "rootImage": ""
     },
     {
-        "lesson": "rad",
+        "lesson": "radicals",
         "hans": "饣",
         "hant": "飠",
         "pinyin": "shí",
         "pin1yin1": "shi2",
         "definition": "nourriture",
-        "usage": "饭,饿"
+        "usage": "饭,饿",
+        "rootImage": ""
     },
     {
-        "lesson": "rad",
+        "lesson": "radicals",
         "hans": "门",
         "hant": "門",
         "pinyin": "mén",
         "pin1yin1": "men2",
         "definition": "porte",
-        "usage": "间,问"
+        "usage": "间,问",
+        "rootImage": ""
     },
     {
-        "lesson": "rad",
+        "lesson": "radicals",
         "hans": "彳",
         "hant": "彳",
         "pinyin": "chì",
         "pin1yin1": "chi4",
         "definition": "pas du pied gauche",
-        "usage": "很,街"
+        "usage": "很,街",
+        "rootImage": ""
     },
     {
-        "lesson": "rad",
+        "lesson": "radicals",
         "hans": "广",
         "hant": "廣",
         "pinyin": "guǎng",
         "pin1yin1": "guang3",
         "definition": "hangar",
-        "usage": "店,床"
+        "usage": "店,床",
+        "rootImage": ""
     },
     {
-        "lesson": "rad",
+        "lesson": "radicals",
         "hans": "弓",
         "hant": "弓",
         "pinyin": "gōng",
         "pin1yin1": "gong1",
         "audio": "hsk.",
         "definition": "arc",
-        "usage": "张,第"
+        "usage": "张,第",
+        "rootImage": ""
     },
     {
-        "lesson": "rad",
+        "lesson": "radicals",
         "hans": "辶",
         "hant": "辶",
         "pinyin": "chuò",
         "pin1yin1": "chuo4",
         "definition": "marche rapide",
-        "usage": "这,还"
+        "usage": "这,还",
+        "rootImage": ""
     },
     {
-        "lesson": "rad",
+        "lesson": "radicals",
         "hans": "日",
         "hant": "日",
         "pinyin": "rì",
         "pin1yin1": "ri4",
         "definition": "soleil",
-        "usage": "是,明"
+        "usage": "是,明",
+        "rootImage": ""
     },
     {
-        "lesson": "rad",
+        "lesson": "radicals",
         "hans": "马",
         "hant": "馬",
         "pinyin": "mǎ",
         "pin1yin1": "ma3",
         "definition": "cheval",
-        "usage": "骑,吗"
+        "usage": "骑,吗",
+        "rootImage": ""
     },
     {
-        "lesson": "rad",
+        "lesson": "radicals",
         "hans": "囗",
         "hant": "囗",
         "pinyin": "wéi",
         "pin1yin1": "wei2",
         "definition": "enceinte",
-        "usage": "国,园"
+        "usage": "国,园",
+        "rootImage": ""
     },
     {
-        "lesson": "rad",
+        "lesson": "radicals",
         "hans": "大",
         "hant": "大",
         "pinyin": "dà",
         "pin1yin1": "da4",
         "definition": "grandeur",
-        "usage": "太,头"
+        "usage": "太,头",
+        "rootImage": ""
     },
     {
-        "lesson": "rad",
+        "lesson": "radicals",
         "hans": "夂",
         "hant": "夂",
         "pinyin": "zhī",
         "pin1yin1": "zhi1",
         "definition": "pied renversé",
-        "usage": "处,务"
+        "usage": "处,务",
+        "rootImage": ""
     },
     {
-        "lesson": "rad",
+        "lesson": "radicals",
         "hans": "子",
         "hant": "子",
         "pinyin": "zǐ",
         "pin1yin1": "zi3",
         "definition": "enfant",
-        "usage": "孩,好"
+        "usage": "孩,好",
+        "rootImage": ""
     },
     {
-        "lesson": "rad",
+        "lesson": "radicals",
         "hans": "山",
         "hant": "山",
         "pinyin": "shān",
         "pin1yin1": "shan1",
         "definition": "montagne",
-        "usage": "岁,出"
+        "usage": "岁,出",
+        "rootImage": ""
     },
     {
-        "lesson": "rad",
+        "lesson": "radicals",
         "hans": "犭",
         "hant": "犭",
         "pinyin": "quǎn",
         "pin1yin1": "quan3",
         "audio": "hsk.",
         "definition": "animal griffu",
-        "usage": "狗,猪"
+        "usage": "狗,猪",
+        "rootImage": ""
     },
     {
-        "lesson": "rad",
+        "lesson": "radicals",
         "hans": "土",
         "hant": "土",
         "pinyin": "tǔ",
         "pin1yin1": "tu3",
         "audio": "hsk.",
         "definition": "terre",
-        "usage": "地,在"
+        "usage": "地,在",
+        "rootImage": ""
     },
     {
-        "lesson": "rad",
+        "lesson": "radicals",
         "hans": "士",
         "hant": "士",
         "pinyin": "shì",
         "pin1yin1": "shi4",
         "definition": "lettré",
-        "usage": "喜,声"
+        "usage": "喜,声",
+        "rootImage": ""
     },
     {
-        "lesson": "rad",
+        "lesson": "radicals",
         "hans": "女",
         "hant": "女",
         "pinyin": "nǚ",
         "pin1yin1": "nv3",
         "definition": "femme",
-        "usage": "她,好"
+        "usage": "她,好",
+        "rootImage": ""
     },
     {
-        "lesson": "rad",
+        "lesson": "radicals",
         "hans": "寸",
         "hant": "寸",
         "pinyin": "cùn",
         "pin1yin1": "cun4",
         "definition": "pouce",
-        "usage": "对,过"
+        "usage": "对,过",
+        "rootImage": ""
     },
     {
-        "lesson": "rad",
+        "lesson": "radicals",
         "hans": "也",
         "hant": "也",
         "pinyin": "yě",
         "pin1yin1": "ye3",
         "definition": "serpent",
-        "usage": "他,池"
+        "usage": "他,池",
+        "rootImage": ""
     },
     {
-        "lesson": "rad",
+        "lesson": "radicals",
         "hans": "亡",
         "hant": "亡",
         "pinyin": "wáng",
         "pin1yin1": "wang2",
         "audio": "hsk.",
         "definition": "disparition",
-        "usage": "忘,忙"
+        "usage": "忘,忙",
+        "rootImage": ""
     },
     {
-        "lesson": "rad",
+        "lesson": "radicals",
         "hans": "廾",
         "hant": "廾",
         "pinyin": "gǒng",
         "pin1yin1": "gong3",
         "audio": "hsk.",
         "definition": "mains jointes",
-        "usage": "开,弄"
+        "usage": "开,弄",
+        "rootImage": ""
     },
     {
-        "lesson": "rad",
+        "lesson": "radicals",
         "hans": "纟",
         "hant": "糹",
         "pinyin": "sī",
         "pin1yin1": "si1",
         "definition": "soie",
-        "usage": "红,给"
+        "usage": "红,给",
+        "rootImage": ""
     },
     {
-        "lesson": "rad",
+        "lesson": "radicals",
         "hans": "艹",
         "hant": "艹",
         "pinyin": "cǎo",
         "pin1yin1": "cao3",
         "definition": "herbe",
-        "usage": "茶,药"
+        "usage": "茶,药",
+        "rootImage": ""
     },
     {
-        "lesson": "rad",
+        "lesson": "radicals",
         "hans": "氵",
         "hant": "氵",
         "pinyin": "shuǐ",
         "pin1yin1": "shui3",
         "definition": "eau",
-        "usage": "河,江"
+        "usage": "河,江",
+        "rootImage": ""
     },
     {
-        "lesson": "rad",
+        "lesson": "radicals",
         "hans": "夕",
         "hant": "夕",
         "pinyin": "xī",
         "pin1yin1": "xi1",
         "definition": "crépuscule",
-        "usage": "外,名"
+        "usage": "外,名",
+        "rootImage": ""
     },
     {
-        "lesson": "rad",
+        "lesson": "radicals",
         "hans": "忄",
         "hant": "忄",
         "pinyin": "xīn",
         "pin1yin1": "xin1",
         "audio": "hsk.",
         "definition": "cœur debout",
-        "usage": "快,慢"
+        "usage": "快,慢",
+        "rootImage": ""
     },
     {
-        "lesson": "rad",
+        "lesson": "radicals",
         "hans": "心",
         "hant": "心",
         "pinyin": "xīn",
         "pin1yin1": "xin1",
         "audio": "hsk.",
         "definition": "cœur",
-        "usage": "想,思"
+        "usage": "想,思",
+        "rootImage": ""
     },
     {
-        "lesson": "rad",
+        "lesson": "radicals",
         "hans": "车",
         "hant": "車",
         "pinyin": "chē",
         "pin1yin1": "che1",
         "definition": "char",
-        "usage": "辆,较"
+        "usage": "辆,较",
+        "rootImage": ""
     },
     {
-        "lesson": "rad",
+        "lesson": "radicals",
         "hans": "夬",
         "hant": "夬",
         "pinyin": "guài",
         "pin1yin1": "guai4",
         "audio": "hsk.",
         "definition": "jade ébréché",
-        "usage": "快,块"
+        "usage": "快,块",
+        "rootImage": ""
     },
     {
-        "lesson": "rad",
+        "lesson": "radicals",
         "hans": "衣",
         "hant": "衣",
         "pinyin": "yī",
         "pin1yin1": "yi1",
         "definition": "vêtement",
-        "usage": "初,表"
+        "usage": "初,表",
+        "rootImage": ""
     },
     {
-        "lesson": "rad",
+        "lesson": "radicals",
         "hans": "衤",
         "hant": "衤",
         "pinyin": "yī",
         "pin1yin1": "yi1",
-        "definition": "vêtement [forme réduite 衣]"
+        "definition": "vêtement [forme réduite 衣]",
+        "rootImage": ""
     },
     {
-        "lesson": "rad",
+        "lesson": "radicals",
         "hans": "月",
         "hant": "月",
         "pinyin": "yuè",
         "pin1yin1": "yue4",
         "definition": "chair/lune",
-        "usage": "有,期"
+        "usage": "有,期",
+        "rootImage": ""
     },
     {
-        "lesson": "rad",
+        "lesson": "radicals",
         "hans": "灬",
         "hant": "灬",
         "pinyin": "huǒ",
         "pin1yin1": "huo3",
         "definition": "feu",
-        "usage": "热,点"
+        "usage": "热,点",
+        "rootImage": ""
     },
     {
-        "lesson": "rad",
+        "lesson": "radicals",
         "hans": "火",
         "hant": "火",
         "pinyin": "huǒ",
         "pin1yin1": "huo3",
         "definition": "feu",
-        "usage": "灯,灾"
+        "usage": "灯,灾",
+        "rootImage": ""
     },
     {
-        "lesson": "rad",
+        "lesson": "radicals",
         "hans": "木",
         "hant": "木",
         "pinyin": "mù",
         "pin1yin1": "mu4",
         "definition": "bois",
-        "usage": "机,杯"
+        "usage": "机,杯",
+        "rootImage": ""
     },
     {
-        "lesson": "rad",
+        "lesson": "radicals",
         "hans": "攵",
         "hant": "攵",
         "pinyin": "pū",
         "pin1yin1": "pu1",
         "audio": "hsk.",
         "definition": "main tenant un bâton",
-        "usage": "教,放"
+        "usage": "教,放",
+        "rootImage": ""
     },
     {
-        "lesson": "rad",
+        "lesson": "radicals",
         "hans": "贝",
         "hant": "貝",
         "pinyin": "bèi",
         "pin1yin1": "bei4",
         "definition": "coquillage",
-        "usage": "贵,败"
+        "usage": "贵,败",
+        "rootImage": ""
     },
     {
-        "lesson": "rad",
+        "lesson": "radicals",
         "hans": "见",
         "hant": "見",
         "pinyin": "jiàn",
         "pin1yin1": "jian4",
         "definition": "vue",
-        "usage": "现,视"
+        "usage": "现,视",
+        "rootImage": ""
     },
     {
-        "lesson": "rad",
+        "lesson": "radicals",
         "hans": "巴",
         "hant": "巴",
         "pinyin": "bā",
         "pin1yin1": "ba1",
         "definition": "boa",
-        "usage": "把,吧"
+        "usage": "把,吧",
+        "rootImage": ""
     },
     {
-        "lesson": "rad",
+        "lesson": "radicals",
         "hans": "斤",
         "hant": "斤",
         "pinyin": "jīn",
         "pin1yin1": "jin1",
         "definition": "hache",
-        "usage": "近,新"
+        "usage": "近,新",
+        "rootImage": ""
     },
     {
-        "lesson": "rad",
+        "lesson": "radicals",
         "hans": "户",
         "hant": "戶",
         "pinyin": "hù",
         "pin1yin1": "hu4",
         "definition": "battant de porte",
-        "usage": "房,所"
+        "usage": "房,所",
+        "rootImage": ""
     },
     {
-        "lesson": "rad",
+        "lesson": "radicals",
         "hans": "爪",
         "hant": "爪",
         "pinyin": "zhǎo",
         "pin1yin1": "zhao3",
         "definition": "griffe",
-        "usage": "爱,菜"
+        "usage": "爱,菜",
+        "rootImage": ""
     },
     {
-        "lesson": "rad",
+        "lesson": "radicals",
         "hans": "爫",
         "hant": "爫",
         "pinyin": "zhǎo",
         "pin1yin1": "zhao3",
         "definition": "griffe  [forme réduite 爪]",
-        "usage": "爱,菜"
+        "usage": "爱,菜",
+        "rootImage": ""
     },
     {
-        "lesson": "rad",
+        "lesson": "radicals",
         "hans": "牛",
         "hant": "牛",
         "pinyin": "niú",
         "pin1yin1": "niu2",
         "audio": "hsk.",
         "definition": "bœuf",
-        "usage": "物,特"
+        "usage": "物,特",
+        "rootImage": ""
     },
     {
-        "lesson": "rad",
+        "lesson": "radicals",
         "hans": "示",
         "hant": "示",
         "pinyin": "shì",
         "pin1yin1": "shi4",
         "definition": "rites",
-        "usage": "票,礼"
+        "usage": "票,礼",
+        "rootImage": ""
     },
     {
-        "lesson": "rad",
+        "lesson": "radicals",
         "hans": "礻",
         "hant": "礻",
         "pinyin": "shì",
         "pin1yin1": "shi4",
         "definition": "rites  [forme réduite de 示]",
-        "usage": "票,礼"
+        "usage": "票,礼",
+        "rootImage": ""
     },
     {
-        "lesson": "rad",
+        "lesson": "radicals",
         "hans": "元",
         "hant": "元",
         "pinyin": "yuán",
         "pin1yin1": "yuan2",
         "definition": "unité",
-        "usage": "完,院"
+        "usage": "完,院",
+        "rootImage": ""
     },
     {
-        "lesson": "rad",
+        "lesson": "radicals",
         "hans": "方",
         "hant": "方",
         "pinyin": "fāng",
         "pin1yin1": "fang1",
         "definition": "espace",
-        "usage": "放,房"
+        "usage": "放,房",
+        "rootImage": ""
     },
     {
-        "lesson": "rad",
+        "lesson": "radicals",
         "hans": "不",
         "hant": "不",
         "pinyin": "bù",
         "pin1yin1": "bu4",
         "audio": "hsk.",
         "definition": "négation",
-        "usage": "还,杯"
+        "usage": "还,杯",
+        "rootImage": ""
     },
     {
-        "lesson": "rad",
+        "lesson": "radicals",
         "hans": "欠",
         "hant": "欠",
         "pinyin": "qiàn",
         "pin1yin1": "qian4",
         "definition": "homme bouche ouverte",
-        "usage": "欢,歌"
+        "usage": "欢,歌",
+        "rootImage": ""
     },
     {
-        "lesson": "rad",
+        "lesson": "radicals",
         "hans": "戈",
         "hant": "戈",
         "pinyin": "gē",
         "pin1yin1": "ge1",
         "definition": "hallebarde",
-        "usage": "找,我"
+        "usage": "找,我",
+        "rootImage": ""
     },
     {
-        "lesson": "rad",
+        "lesson": "radicals",
         "hans": "止",
         "hant": "止",
         "pinyin": "zhǐ",
         "pin1yin1": "zhi3",
         "definition": "orteil",
-        "usage": "正,是"
+        "usage": "正,是",
+        "rootImage": ""
     },
     {
-        "lesson": "rad",
+        "lesson": "radicals",
         "hans": "长",
         "hant": "長",
         "pinyin": "cháng",
         "pin1yin1": "chang2",
         "audio": "hsk.",
         "definition": "longueur",
-        "usage": "长,张"
+        "usage": "长,张",
+        "rootImage": ""
     },
     {
-        "lesson": "rad",
+        "lesson": "radicals",
         "hans": "耂",
         "hant": "耂",
         "pinyin": "lǎo",
         "pin1yin1": "lao3",
         "definition": "vieillesse",
-        "usage": "老,者"
+        "usage": "老,者",
+        "rootImage": ""
     },
     {
-        "lesson": "rad",
+        "lesson": "radicals",
         "hans": "毛",
         "hant": "毛",
         "pinyin": "máo",
         "pin1yin1": "mao2",
         "audio": "hsk.",
         "definition": "poil",
-        "usage": "毛,笔"
+        "usage": "毛,笔",
+        "rootImage": ""
     },
     {
-        "lesson": "rad",
+        "lesson": "radicals",
         "hans": "气",
         "hant": "氣",
         "pinyin": "qì",
         "pin1yin1": "qi4",
         "definition": "souffle",
-        "usage": "气,汽"
+        "usage": "气,汽",
+        "rootImage": ""
     },
     {
-        "lesson": "rad",
+        "lesson": "radicals",
         "hans": "反",
         "hant": "反",
         "pinyin": "fǎn",
         "pin1yin1": "fan3",
         "definition": "opposition",
-        "usage": "饭,板"
+        "usage": "饭,板",
+        "rootImage": ""
     },
     {
-        "lesson": "rad",
+        "lesson": "radicals",
         "hans": "占",
         "hant": "佔",
         "pinyin": "zhàn",
         "pin1yin1": "zhan4",
         "definition": "prédiction",
-        "usage": "站,点"
+        "usage": "站,点",
+        "rootImage": ""
     },
     {
-        "lesson": "rad",
+        "lesson": "radicals",
         "hans": "乍",
         "hant": "乍",
         "pinyin": "zhà",
         "pin1yin1": "zha4",
         "definition": "encolure",
-        "usage": "作,怎"
+        "usage": "作,怎",
+        "rootImage": ""
     },
     {
-        "lesson": "rad",
+        "lesson": "radicals",
         "hans": "钅",
         "hant": "釒",
         "pinyin": "jīn",
         "pin1yin1": "jin1",
         "definition": "métal",
-        "usage": "钱,错"
+        "usage": "钱,错",
+        "rootImage": ""
     },
     {
-        "lesson": "rad",
+        "lesson": "radicals",
         "hans": "矢",
         "hant": "矢",
         "pinyin": "shǐ",
         "pin1yin1": "shi3",
         "definition": "flèche",
-        "usage": "知,医"
+        "usage": "知,医",
+        "rootImage": ""
     },
     {
-        "lesson": "rad",
+        "lesson": "radicals",
         "hans": "目",
         "hant": "目",
         "pinyin": "mù",
         "pin1yin1": "mu4",
         "definition": "œil",
-        "usage": "看,想"
+        "usage": "看,想",
+        "rootImage": ""
     },
     {
-        "lesson": "rad",
+        "lesson": "radicals",
         "hans": "母",
         "hant": "母",
         "pinyin": "mǔ",
         "pin1yin1": "mu3",
         "definition": "mère",
-        "usage": "每,海"
+        "usage": "每,海",
+        "rootImage": ""
     },
     {
-        "lesson": "rad",
+        "lesson": "radicals",
         "hans": "疒",
         "hant": "疒",
         "pinyin": "bìng",
         "pin1yin1": "bing4",
         "definition": "maladie",
-        "usage": "病,疼"
+        "usage": "病,疼",
+        "rootImage": ""
     },
     {
-        "lesson": "rad",
+        "lesson": "radicals",
         "hans": "穴",
         "hant": "穴",
         "pinyin": "xuè",
         "pin1yin1": "xue4",
         "audio": "hsk.",
         "definition": "grotte",
-        "usage": "空,突"
+        "usage": "空,突",
+        "rootImage": ""
     },
     {
-        "lesson": "rad",
+        "lesson": "radicals",
         "hans": "玉",
         "hant": "玉",
         "pinyin": "yù",
         "pin1yin1": "yu4",
         "definition": "jade",
-        "usage": "国,玩"
+        "usage": "国,玩",
+        "rootImage": ""
     },
     {
-        "lesson": "rad",
+        "lesson": "radicals",
         "hans": "禾",
         "hant": "禾",
         "pinyin": "hé",
         "pin1yin1": "he2",
         "definition": "céréale",
-        "usage": "和,种"
+        "usage": "和,种",
+        "rootImage": ""
     },
     {
-        "lesson": "rad",
+        "lesson": "radicals",
         "hans": "鸟",
         "hant": "鳥",
         "pinyin": "niǎo",
         "pin1yin1": "niao3",
         "audio": "hsk.",
         "definition": "oiseau",
-        "usage": "鸡,鸣"
+        "usage": "鸡,鸣",
+        "rootImage": ""
     },
     {
-        "lesson": "rad",
+        "lesson": "radicals",
         "hans": "石",
         "hant": "石",
         "pinyin": "shí",
         "pin1yin1": "shi2",
         "definition": "pierre",
-        "usage": "硬,码"
+        "usage": "硬,码",
+        "rootImage": ""
     },
     {
-        "lesson": "rad",
+        "lesson": "radicals",
         "hans": "田",
         "hant": "田",
         "pinyin": "tián",
         "pin1yin1": "tian2",
         "audio": "hsk.",
         "definition": "champ",
-        "usage": "男,电"
+        "usage": "男,电",
+        "rootImage": ""
     },
     {
-        "lesson": "rad",
+        "lesson": "radicals",
         "hans": "白",
         "hant": "白",
         "pinyin": "bái",
         "pin1yin1": "bai2",
         "definition": "blanc",
-        "usage": "的,百"
+        "usage": "的,百",
+        "rootImage": ""
     },
     {
-        "lesson": "rad",
+        "lesson": "radicals",
         "hans": "立",
         "hant": "立",
         "pinyin": "lì",
         "pin1yin1": "li4",
         "definition": "station debout",
-        "usage": "站,新"
+        "usage": "站,新",
+        "rootImage": ""
     },
     {
-        "lesson": "rad",
+        "lesson": "radicals",
         "hans": "且",
         "hant": "且",
         "pinyin": "qiě",
         "pin1yin1": "qie3",
         "definition": "natte à offrandes",
-        "usage": "姐,租"
+        "usage": "姐,租",
+        "rootImage": ""
     },
     {
-        "lesson": "rad",
+        "lesson": "radicals",
         "hans": "虫",
         "hant": "虫",
         "pinyin": "chóng",
         "pin1yin1": "chong2",
         "definition": "bestiole, insecte",
-        "usage": "虽,虾"
+        "usage": "虽,虾",
+        "rootImage": ""
     },
     {
-        "lesson": "rad",
+        "lesson": "radicals",
         "hans": "竹",
         "hant": "竹",
         "pinyin": "zhú",
         "pin1yin1": "zhu2",
         "audio": "hsk.",
         "definition": "bambou",
-        "usage": "筷,算"
+        "usage": "筷,算",
+        "rootImage": ""
     },
     {
-        "lesson": "rad",
+        "lesson": "radicals",
         "hans": "舟",
         "hant": "舟",
         "pinyin": "zhōu",
         "pin1yin1": "zhou1",
         "audio": "hsk.",
         "definition": "barque",
-        "usage": "般,搬"
+        "usage": "般,搬",
+        "rootImage": ""
     },
     {
-        "lesson": "rad",
+        "lesson": "radicals",
         "hans": "羊",
         "hant": "羊",
         "pinyin": "yáng",
         "pin1yin1": "yang2",
         "audio": "hsk.",
         "definition": "mouton",
-        "usage": "样,美"
+        "usage": "样,美",
+        "rootImage": ""
     },
     {
-        "lesson": "rad",
+        "lesson": "radicals",
         "hans": "米",
         "hant": "米",
         "pinyin": "mǐ",
         "pin1yin1": "mi3",
         "definition": "riz",
-        "usage": "楼,精"
+        "usage": "楼,精",
+        "rootImage": ""
     },
     {
-        "lesson": "rad",
+        "lesson": "radicals",
         "hans": "交",
         "hant": "交",
         "pinyin": "jiāo",
         "pin1yin1": "jiao1",
         "audio": "hsk.",
         "definition": "croisement",
-        "usage": "校,较"
+        "usage": "校,较",
+        "rootImage": ""
     },
     {
-        "lesson": "rad",
+        "lesson": "radicals",
         "hans": "亥",
         "hant": "亥",
         "pinyin": "hài",
         "pin1yin1": "hai4",
         "definition": "élément ‘hai’",
-        "usage": "孩,该"
+        "usage": "孩,该",
+        "rootImage": ""
     },
     {
-        "lesson": "rad",
+        "lesson": "radicals",
         "hans": "艮",
         "hant": "艮",
         "pinyin": "gèn",
         "pin1yin1": "gen4",
         "audio": "hsk.",
         "definition": "élément ‘gen’",
-        "usage": "跟,很"
+        "usage": "跟,很",
+        "rootImage": ""
     },
     {
-        "lesson": "rad",
+        "lesson": "radicals",
         "hans": "西",
         "hant": "西",
         "pinyin": "xī",
         "pin1yin1": "xi1",
         "definition": "ouest",
-        "usage": "要,票"
+        "usage": "要,票",
+        "rootImage": ""
     },
     {
-        "lesson": "rad",
+        "lesson": "radicals",
         "hans": "走",
         "hant": "走",
         "pinyin": "zǒu",
         "pin1yin1": "zou3",
         "definition": "marche",
-        "usage": "起,赶"
+        "usage": "起,赶",
+        "rootImage": ""
     },
     {
-        "lesson": "rad",
+        "lesson": "radicals",
         "hans": "足",
         "hant": "足",
         "pinyin": "zú",
         "pin1yin1": "zu2",
         "definition": "pied",
-        "usage": "跟,跳"
+        "usage": "跟,跳",
+        "rootImage": ""
     },
     {
-        "lesson": "rad",
+        "lesson": "radicals",
         "hans": "雨",
         "hant": "雨",
         "pinyin": "yǔ",
         "pin1yin1": "yu3",
         "audio": "hsk.",
         "definition": "pluie",
-        "usage": "零,需"
+        "usage": "零,需",
+        "rootImage": ""
     },
     {
-        "lesson": "rad",
+        "lesson": "radicals",
         "hans": "隹",
         "hant": "隹",
         "pinyin": "zhuī",
         "pin1yin1": "zhui1",
         "definition": "oiseau à queue courte",
-        "usage": "谁,难"
+        "usage": "谁,难",
+        "rootImage": ""
     },
     {
-        "lesson": "rad",
+        "lesson": "radicals",
         "hans": "青",
         "hant": "青",
         "pinyin": "qīng",
         "pin1yin1": "qing1",
         "definition": "bleu-vert",
-        "usage": "请,清"
+        "usage": "请,清",
+        "rootImage": ""
     },
     {
-        "lesson": "rad",
+        "lesson": "radicals",
         "hans": "其",
         "hant": "其",
         "pinyin": "qí",
         "pin1yin1": "qi2",
         "definition": "tamis",
-        "usage": "期,基"
+        "usage": "期,基",
+        "rootImage": ""
     }
 ]
