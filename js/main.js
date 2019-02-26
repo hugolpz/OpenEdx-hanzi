@@ -315,6 +315,7 @@ form0 ={
 		$.ajax({
 			'url': form2019.api,
 			'type': "post",
+  		'dataType': 'jsonp',
 			'data': data2019
 		});
 	// }
