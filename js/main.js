@@ -268,7 +268,11 @@ form0 ={
 	form3 = { // next
 		edit: 'https://docs.google.com/forms/d/1XdUEjCBuQ7vH-s2wIsEhV_fXhDzi7r6-oxxnvJesQI8/edit',
 		api : 'https://docs.google.com/forms/d/1XdUEjCBuQ7vH-s2wIsEhV_fXhDzi7r6-oxxnvJesQI8/formResponse',
-		table:'https://docs.google.com/spreadsheets/d/1zt7DP_eIqLm0zX58G4Sdrb-Jgdu1jEdrztb1jU41Kus/edit' };
+		table:'https://docs.google.com/spreadsheets/d/1zt7DP_eIqLm0zX58G4Sdrb-Jgdu1jEdrztb1jU41Kus/edit' },
+	form2019 = { // next
+		edit: 'https://docs.google.com/forms/d/1E5KwXyyz1KWasqZaXCdqK9UvFt0SpvTetQZuixq3Smc/edit',
+		api : 'https://docs.google.com/forms/d/1E5KwXyyz1KWasqZaXCdqK9UvFt0SpvTetQZuixq3Smc/formResponse',
+		table:'https://docs.google.com/spreadsheets/d/1d-wJXNYGLN_-wfe8uSkMqdhf7XyOt4e_53jnQeOYYDU/edit' };
 
   var data1 = {
     'entry.1761026478': localStorage.firstUse, // day of first use of the app
@@ -289,10 +293,29 @@ form0 ={
     'entry.1048606120': browser || '',
 		'entry.1669332478': operatingSystem,
     'submit':'Send' };
+		var data2019 = {
+			'entry.1536489944': localStorage.firstUse, // day of first use of the app
+			'entry.2013707699' : now,
+			'entry.1992508351': timezone,
+			'entry.1992508351': item,
+			'entry.229706132' : strokeNum,
+			'entry.863973133' : mistakesOnStroke,
+			'entry.1123796530': totalMistakes,
+			'entry.946953628' : strokesRemaining,
+			'entry.1946029446': strokesRemaining>0 && !status? 'ongoing-mistake':
+					strokesRemaining>0? 'ongoing':'completed', //
+			// 'entry.576376173' : 'ya', // pathPoints + '',
+			// 'entry.123309060' : 'yo', // pathString + '',
+			'entry.192730395' : JSON.stringify(pathPoints).replace(/["']/g, ""),
+			'entry.396843914' : pathString,
+			'entry.2128706942': device || '',
+			'entry.1800591435': browser || '',
+			'entry.1925419718': operatingSystem,
+			'submit':'Send' };
 		$.ajax({
-			'url': form1.api,
+			'url': form2019.api,
 			'type': "post",
-			'data': data1
+			'data': data2019
 		});
 	// }
 
