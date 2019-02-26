@@ -297,7 +297,7 @@ form0 ={
 			'entry.1536489944': localStorage.firstUse, // day of first use of the app
 			'entry.2013707699' : now,
 			'entry.1992508351': timezone,
-			'entry.1992508351': item,
+			'entry.117578850' : item,
 			'entry.229706132' : strokeNum,
 			'entry.863973133' : mistakesOnStroke,
 			'entry.1123796530': totalMistakes,
