@@ -7,8 +7,8 @@
 
 ### Features
 - [x] Official pages:
-  - [x] https://hanzi.cri-paris.org
-  - [x] http://hanzi.cri-paris.org
+  - [x] https://hugolpz.github.io/OpenEdx-hanzi
+  - [x] http://hugolpz.github.io/OpenEdx-hanzi
 - [x] Treatment of the listed sinograms for learners
 - [x] OpenEdX / FUN compatible
 - [x] Desktop and mobile friendly
@@ -20,24 +20,24 @@
 - [x] Writing skill learning by doing via "Quiz" (no grading)
 - [x] Easy to update on request to CRI developer
 - [x] Hypertext to ...
-  - [x] target lesson: `<a href="//hanzi.cri-paris.org/#L3"> Text </a>`
-  - [x] target character: `<a href="//hanzi.cri-paris.org/#L3们"> Text </a>`
+  - [x] target lesson: `<a href="//hugolpz.github.io/OpenEdx-hanzi/#L3"> Text </a>`
+  - [x] target character: `<a href="//hugolpz.github.io/OpenEdx-hanzi/#L3们"> Text </a>`
 - [x] Social Web for visibility
 - [x] Elegant
 
 ### Soon
 - [x] Improved audio
-- [ ] Vocabulary of the MOOC de Chinois
-- [ ] Anonymous learning monitoring / surveils
-- [ ] English readme.md
+- [x] Vocabulary of the MOOC de Chinois
+- [x] Anonymous learning monitoring / surveils
+- [x] English readme.md
 
 ### Usage
 Easy integration [via iframe](https://jsfiddle.net/752utup0/4/)
 
 ```
-<h4><strong>Exercice d'écriture, Semaine 2 (<a href="https://hanzi.cri-paris.org/#S2">pleine page</a>):</strong></h4>
+<h4><strong>Exercice d'écriture, Semaine 2 (<a href="https://hugolpz.github.io/OpenEdx-hanzi/#S2">pleine page</a>):</strong></h4>
 <p>
-  <iframe seamless="" title="Pratiquer l'&eacute;criture" src="https://hanzi.cri-paris.org/#S2" 
+  <iframe seamless="" title="Pratiquer l'&eacute;criture" src="https://hugolpz.github.io/OpenEdx-hanzi/#S2" 
           style="background-color: transparent; border: 0px none transparent; 
                  padding: 0; margin: 0; overflow: hidden; width: 100%; height: 1200px;">
   </iframe>
@@ -51,7 +51,7 @@ Easy integration [via iframe](https://jsfiddle.net/752utup0/4/)
 - [Bulma.css](https://bulma.io/documentation/overview/start/) -- CSS framework
 
 ### Data
-* [Chinese MOOC (French language)](https://www.fun-mooc.fr/courses/course-v1:Inalco+52004+session02/about)
+* [Chinese MOOC (French language)](https://www.fun-mooc.fr/courses/course-v1:Inalco+52004+session04/about)
 
 ### License
 - MIT License
